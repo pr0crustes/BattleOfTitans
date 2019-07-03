@@ -1,0 +1,9 @@
+"DOTAAbilities"
+{
+
+	// Balance changes.
+	// New items.
+	
+	$recursive "partials/items", ".txt"
+
+}

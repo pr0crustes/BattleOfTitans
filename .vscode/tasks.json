@@ -1,0 +1,35 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile kvs",
+            "type": "shell",
+            "command": "python kv_merger.py",
+            "problemMatcher": []
+        },
+        {
+            "label": "update content folder",
+            "type": "shell",
+            "command": "python update_content.py",
+            "problemMatcher": []
+        },
+        {
+            "label": "copy to run folder",
+            "type": "shell",
+            "command": "python setup_files.py",
+            "problemMatcher": []
+        },
+        {
+            "label": "compile and copy",
+            "type": "shell",
+            "command": "python compile_and_setup.py",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

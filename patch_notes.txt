@@ -1,0 +1,546 @@
+
+2.3.0:
+    With this update:
+
+    Earth Spirit: Earth Essence no longer has a duration, but a limit on the amount of stacks. Can be activated to heal.
+    Earth Spirit: Earth Form provides flat bonus STR instead of Earth Essences.
+
+    Reduced Travel Boots Recipe cost from "2000" to "1000".
+
+
+
+2.2.9:
+    With this update:
+
+    Tinker has a new lvl 25 talent.
+
+    Reworked Earth Spirit Q.
+    Reworked Earth Spirit W.
+    Reworked Earth Spirit E.
+    Reworked Earth Spirit R.
+
+
+2.2.8:
+    With this update:
+
+    Reworked Mirana's W.
+
+    Mirana Moonlight Shadow: Movement speed increased from "15" to "20 30 40", duration from "18" to "18 20 22".
+    Mirana Starfall: Damage increased from "75 150 225 300" to "75 190 270 390", cooldown changed from "12.0" to "13.0 12.0 11.0 10.0", scepter interval reduced from "10" to "4".
+
+    Pudge Meat Hook: Range reduced to "500", scepter damage doubled.
+
+    Reworked Riki's Q.
+
+
+2.2.7:
+    With this update:
+
+    Removed Leaving Penalties. Dev Note: As I said on the patch notes that enabled it, this was a test, and it is clear that without it is better, even if it means more leavers, I hope people stop messaging me asking to enable it.
+
+    Removed Tusk Aghs.
+
+    Sand King Caustic Finale: Duration reduced from "6" to "4 2 1 0.2", damage increased from "20 50 80 110" to "40 90 150 200", slow duration reduced from "3" to "1".
+    Sand King Epicenter: Damage increased from "110" to "160 260 360".
+
+    Invoker Tornado: Damage increased from "135 180 225 270 315 360 410 470" to "160 360 420 530 650 710 800 900".
+    Invoker Sun Strike: Damage increased from "225 287.5 350 412.5 475 537.5 600.0 700.0" to "280 400 560 770 900 1000 1200 1500".
+    Invoker Deafening Blast: Damage increased from "120 160 200 240 280 320 360 400" to "120 220 320 420 520 620 720 820".
+    Invoker Chaos Meteor: Base damage increased from "92.5 110 127.5 145 162.5 180 200 230" to "100 190 240 300 350 410 500 560".
+
+    Invoker Intelligence Gain reduced from "18.4" to "10.4".
+
+
+2.2.6:
+    HOTFIX:
+
+    Fixed broken bow stacking.
+
+
+
+2.2.5:
+    With this update:
+
+    Enabled Leaving Penalties as a test.
+
+    Underlord Atrophy Aura: Damage bonus increased from "5" to "5 10 15 20".
+
+    Morphiling: Strength Gain increased from "3.0" to "4.0".
+    Morphiling: Agility Gain increased from "4.3" to "5.0".
+
+    Invoker: Intelligence Gain increased from "4.6" to "18.4".
+
+    Lifestealer: Feat heal pct increased from "3.0 4.0 5.0" to "4.0 5.0 6.0".
+    Reworked Lifestealer W.
+
+    Tusk Walrus Punch: Damage mult increased from "500 700 900" to "700 900 1100".
+
+    Dark Willow: Strength Gain reduced from "2.0" to "1.0".
+    Dark Willow: Agility Gain increased from "1.6" to "2.0".
+    Dark Willow: Intelligence Gain increased from "3.5" to "7.0".
+
+    Queen Of Pain: Attack rate increased from "1.5" to "2.0".
+    Queen Of Pain: Intelligence Gain increased from "2.9" to "6.6".
+
+    Reworked Queen Of Pain Q.
+
+    Fixed Broken Bow tooltip.
+
+
+
+2.2.4:
+    With this update:
+
+    Night Stalker Crippling Fear: Day duration reduced from "3.0" to "2.0", night duration reduced from "5.0 6.0 7.0 8.0" to "2.0 3.0 4.0 5.0".
+
+    Viper Poison Wound: Damage pct increased from "10 20 30 40" to "20 40 60 80".
+
+    Reworked Underlord R.
+    Reworked Underlord W.
+
+    Reworked Tiny W.
+
+    End game screen no longer shows Networth.
+
+    Increased wave gold reward by 10%.
+
+
+
+2.2.3:
+    HOTFIX
+
+    Tomes and Speed Orb cost reduced by 100.
+    Fixed multiples bugs involving Tomes and Speed Orb.
+
+    Morphiling Adaptative Strike Agi: Cooldown reduced from "10" to "11 10 9 8".
+
+
+
+2.2.2:
+    With this update:
+
+    New Item: Broken Bow.
+    New Item: Infinite Rapier.
+
+    Polarized Plate: Damage to mana increased from "10" to "15", mana and health increased from "425" to "500".
+
+    Ultimate Daedalus: Crit damage increased from "300" to "320".
+
+    Ultimate Rapier: Damage increased from "400" to "430".
+
+    Ember Spirit Sleight Of Fist: Now deals MORE damage to bosses.
+
+    Medusa Mana Shield: Damage Per Mana increased from "1.6 1.9 2.2 2.5" to "1.5 2.0 3.0 3.5".
+
+    Chaos Knight Chaos Bolt: Max damage increased from "180 210 240 270" to "180 250 320 390".
+    Chaos Knight Chaos Strike: Cooldown reduced from "4" to "4 3.7 3.4 3.0"
+    Chaos Knight Phantasm: Ingoing damage reduced from "260" to "150".
+
+    Reworked Antimage Mana Break.
+
+    All bosses now have mana.
+
+    Fixed Loading screen.
+
+
+2.2.1:
+    With this update:
+
+    Lich Could Soul: Spell amp reduced from "50 100 150" to "40 70 100".
+
+    Techies - Reworked E.
+
+    Templar Assassin Refraction: Now increases dealt damage.
+
+    Reworked Medusa R.
+
+
+2.2.0:
+    With this update:
+
+    Replaced LVL 25 Lich talent.
+
+    Silencer Read a Book: Multiplier increased from "1.0 1.5 2.0" to "1.0 2.0 3.0".
+
+    Replaced Enigma Talents.
+
+    Centaur Return: Now has a "0.3" cooldown.
+
+    Skywrath Mage Inteligence Bonus: int bonus increased from "30 60 100" to "40 80 120".
+
+    Earthshaker Fissure: Damage increased from "110 160 210 260" to "110 260 310 460".
+    Earthshaker Enchant Totem: Damage increased from "300 400 500 600" to "300 400 500 700".
+    Earthshaker Aftershock: Damage increased from "75 100 125 150" to "75 100 225 350".
+    Earthshaker Echo Slam: Cooldown reduced from "150.0 130.0 110.0" to "70.0 60.0 50.0", damage increased from "70 90 110" to "100 140 180".
+
+    Night Stalker Hunter in the Night: Attack speed increased from "50 100 200 300" to "100 200 300 400".
+
+
+
+2.1.9:
+    With this update:
+
+    Fixed Lich.
+
+    New Worshop Logo, thanks to "ForaMon", who made it.
+
+    A few tweaks to Visage.
+
+
+
+2.1.8:
+    With this update:
+
+    New loading screen, special thanks to "ForaMon", who made it.
+
+    Reworked Visage.
+
+    Lich Frost Nova: Cooldown reduced from "7.0" to "7.0 6.8 6.4 6.0", damage increased from "50 100 150 200" to "100 200 300 400", aoe damage increased from "75 100 125 150" to "100 150 200 250".
+    Lich Frost Shield: Damage increased from "20 30 40 50" to "50 100 150 200", damage reduction reduced from "30 40 50 60" to "25 30 35 40".
+    Reworked Lich E and R.
+
+    Lone Druid: Attack rate increased from "1.7" to "2.0", str gain increased from "1.5" to "2.4", agi gain increased from "1.2" to "2.8".
+    Lone Druid Spirit Bear: Damage on bear death reduced from "90" to "50".
+
+
+2.1.7:
+    HOTFIX - Fixed Strategy Time.
+
+
+2.1.6:
+    With this update:
+
+    Discord link was moved to info tab.
+
+    New Item: High Tech Boots.
+
+    Renamed Ice Staff to Arcane Staff.
+
+    Added a nice particle to Polarized Plate.
+
+    Sniper Fast Riffle: Attack time changed from "1.0 0.75 0.65" to "0.90 0.80 0.70"
+
+    Replaced Jakiro 100 Agi talent with 25 spell amp.
+
+    Mars: Str per level reduced from "3.6" to "3.2", int per level reduced from "1.4" to "1.0".
+
+    Io: Agi per level reduced from "1.6" to "1.1", int per level reduced from "1.7" to "1.3".
+
+    Io Tether: Regen amp reduced from "1.05 1.2 1.35 1.5" to "0.8 0.9 1.0 1.1".
+    Io Overcharge: Cooldown increased from "18.0" to "24.0".
+    Io Fundamental Heal has a nice particle effect.
+
+    Nyx Assassin Mana Strike: multiplier increased from "0.4 0.5 0.6 0.7" to "0.6 0.7 0.8 0.9".
+    Nyx Assassin Vendetta: Crit increase increased from "90 110 130" to "110 130 150".
+
+    Bristleback Viscous Nasal Goo: Cooldown changed from "1.5 1.5 1.5 1.5" to "1.7 1.6 1.5 1.4", armor per stack reduced from "1.4 1.8 2.2 2.6" to "1.1 1.2 1.3 1.4".
+    Bristleback Additional Viscous Nasal Goo stacks talent replaced with cleave talent.
+    Bristleback Warpath: Duration increased from "14.0" to "20.0", stack damage reescaled from "18 24 30" to "10 20 30", max stacks increased from "5 7 9" to "9 11 13".
+    Bristleback Additional Warpath damage talent replaced with 40% cooldown reduction.
+
+    Night Stalker Void: Damage increased from "90 160 255 335" to "120 220 320 420".
+    Night Stalker Hunter In The Night: Bonus attack speed increased from "30 50 70 90" to "50 100 200 300".
+
+    Spirit Breaker Greater Bash: Damage increased from "8 16 24 32" to "20 40 60 80".
+
+    Vengeful Spirit Nether Power: Chance increased from "15" to "20".
+
+    Techies Talent Mine Movespeed Increased from "25" to "300".
+
+
+2.1.5:
+    With this update:
+
+    New Item: Health Bag LVL 2.
+
+    Omniknight Purification: Heal increased from "90 160 230 300" to "150 260 310 410".
+    Omniknight Guardian Angel: Cooldown reduced from "160 150 140" to "50.0".
+
+    Mars Spear: Damage increased from "100 175 250 325" to "100 200 300 400", cooldown reduced from "14.0" to "14.0 12.0 10.0 8.0".
+    Mars Gods Rebuke: Crit increased from "160 200 240 280" to "200 260 320 380".
+    Mars Arena Of Blood: Damage increased from "150 200 250" to "500 1000 1500", cooldown reduced from "90 75 60" to "50 45 40".
+
+    Abaddon Borrowed Time: Cooldown increased from "70.0 60.0 50.0" to "70.0 65.0 60.0".
+    Abaddon Aphotic Shield: Shield health increased from "110 140 170 200" to "110 200 290 380".
+
+    Lion Finger Of Death: Damage per use increased from "10" to "20 30 40".
+
+    Centaur Return: Str percentage increased from "40 50 60 70" to "40 60 80 100", added a nice particle.
+
+    Drow Marksmanship: Chance reduced from "10 20 30" to "10 17 25".
+
+    Fixed supreme assault buff not showing the icon.
+
+
+2.1.4:
+    With this update:
+
+    Changed the icons of a few items. Special thanks to "ForaMon", who granted me permission to use these icons by he created.
+
+    New item: Polarized Plate.
+
+    New item: Corrupted Diffusal Blade.
+
+    Recoded Refresher, attempting to solve stats bug.
+
+    Recoded Dragon Scale, aura now applies to caster.
+
+    Recoded Formidable Chest, attempting to solve missing armor bug.
+
+    Recoded Health Bag, small fixes.
+
+    Recoded Ice Staff, small fixes.
+
+    Recoded Supreme Assault, attempting to solve missing armor bug.
+
+    Only Dark Bloodstone has now the active - this fixes stacking bug.
+
+    Dragon Lance 2: Bonus ranged reduced from "280" to "240".
+
+    Fixed End Game Screen not always showing.
+
+    Fixed End Game Screen networth ignoring a few items.
+
+
+
+
+2.1.3:
+    With this update:
+
+    (FIXED) Added an end game screen with stats. Hopefully this works.
+    Special thanks to 'Angel Arena Black Star', project wich is open sourced under the Apache-2.0 license. This end game screen uses snippets from 'Angel Arena Black Star', respecting the project License. Without it I would not even know where to start codding this GUI.
+
+    Added a discord link ingame, I am still working on improving it, but there you are able to directly contact me and discuss builds and so on with other players.
+
+
+2.1.2:
+    With this update:
+
+    Added an end game screen with stats. Hopefully this works. Special thanks to 'Angel Arena Black Star', project wich is open sourced under the Apache-2.0 license. This end game screen uses snippets from 'Angel Arena Black Star', respecting the project License. Without it I would not even know where to start codding this GUI.
+
+
+2.1.1:
+    With this update:
+
+    Loading Screen countdown reduced to 3 seconds.
+
+    Clockwerk Hookshot: Active can now be used on allies or enemies, autocast no longer cast on allies, no longer deal damage to allies.
+
+    Pudge Dismember: Cooldown is now always "30".
+
+    Minor map changes, fixed spots that pudge could abuse to trap bosses.
+
+    Nature's Prophet Nature's Blessing: Moved to Q, now has a base heal.
+    Replaced Nature's Prophet Ultimate with "Nature's Warrior".
+
+    Mars Bulwark: Front Reduction reduced from "25 40 55 70" to "15 25 30 40", side reduction reduced from "12 20 27 35" to "5 10 15 20".
+
+    Lion Finger Of Death: Spell was rewrote to increase damage after every usage.
+
+    Ultimate Octarine Core: Lifesteal reduced from "20" to "15".
+
+
+2.1.0:
+    With this update:
+
+    New Item: Great Ethereal Blade.
+    New Item: Ultimate Ethereal Blade.
+    New Item: Cursed Bloodthorn.
+    New Item: Furious Eul's Scepter of Divinity.
+
+    Removed Blade Mail. Blade Mail could create an endless damage reflect loop, crashing the game.
+
+    Bloodthorn: Mana Regen increased from "5.5" to "25.0".
+
+    Reworked Axe's W.
+
+    Phantom Asssassin's Q now throws multiple daggers.
+
+    Witch Doctor Death Skull: Now deals extra damage based on int.
+
+    Monkey King Jingu Mastery: Lifesteal increased from "10 15 20 30" to "10 20 30 40".
+
+    Removed Phantom Asssassin (BOSS). She was just bad.
+
+    Increased Hellbear (BOSS) clap cast point.
+
+
+2.0.9:
+    With this update:
+
+    New boss wave (I will probably have to nerf or buff this one).
+
+    Nerfed PL (Boss) damage, made the original a little different.
+
+    Many changes to bosses.
+
+    Vampiric Blade: Heal reduced from "10 20 30 40" to "7 15 20 25", ranged from "5 10 15 20" to "3 5 7 10".
+
+    Bane Brain Sap: Enfeeble bonus damage increased from "50 100 150 200" to "100 200 300 400".
+
+    Found and fixed multiple missing particles.
+
+
+2.0.8:
+    With this update:
+
+    Many changes to bosses.
+
+    Small changes to Bloodseeker's ult, after feedback.
+
+    Spectre Dispersion: Reflected damage percentage decreased from "7 12 17 22" to "5 10 15 20".
+
+    Silencer Read a Book: Duration changed from "6.0 8.0 10.0" to always "8.0", multiplier increased from "1.0" to "1.0 1.5 2.0".
+
+    Tinker Energy Missile: Int multiplier increased from "1.2 1.6 2.0 2.6" to "1.0 1.6 2.3 3.0".
+
+    Necrophos ult has now a nice and smooth effect.
+
+    Small fixes.
+
+
+2.0.7:
+    With this update:
+
+    Many changes to bosses.
+    Bosses no longer give more gold to the last hitter.
+
+    New upgrades to Vampiric Blade.
+
+    Heroes abilities coded by me now have a green title.
+
+
+2.0.6:
+    With this update:
+
+    Clockwerk Hookshot: Now deals damage and interrupts.
+    Clockwerk Rocket Flare: Str damage increased from "200" to "50 100 200 300"
+
+    Spectre Spectral Dagger: Cooldown reduced from "16.0 16.0 16.0 16.0" to "14.0 13.0 12.0 11.0".
+    Spectre Desolate: Damage increased from "20 30 40 50" to "20 40 60 80".
+    Spectre Shadow Heal: No longer disables health regen.
+
+    Reworked Monkey King Jingu Mastery.
+
+
+2.0.5:
+    With this update:
+
+    Small changes to bosses.
+
+    Bane got a reworked.
+
+    Clockwerk got a full reworked.
+
+    Huskar Ultimate has new code.
+
+    Fixed a bug where Shadow Fiend's Scepter buff would not be revoked.
+
+    Ancient Apparition Ice Vortex: Slow decreased from "-15 -20 -25 -30" to "-5 -10 -15 -20", spell resistance decreased from "-15 -20 -25 -30" to "-5 -10 -15 -20".
+
+    Death Prophet Carrion Swarm: Damage increased from "75 150 225 300" to "75 150 300 500".
+    Death Prophet Spirit Siphon: Damage increased from "14 30 50 70" to "25 50 100 150", damage percentage increased from "0.05 0.10 0.15 0.20" to "0.05 0.1 0.2 0.3".
+    Death Prophet Exorcism: Cooldown reduced from "145.0" to "145.0 130.0 120.0", spirit count increased from "8 16 24" to "10 20 30", damage increased from "58" to "60 80 100".
+    Replaced Death Prophet Silence with a new spell: Moving Life.
+
+    Vengeful Spirit Magic Missile: Stun decreased from "1.5 1.6 1.7 1.8" to "1.5", damage increased from "100 175 250 325" to "150 250 350 450".
+    Vengeful Spirit Command Aura: Damage reduced from "12 18 24 30" to "5 10 15 20".
+    Vengeful Spirit Wave of Terror: Cooldown reduced from "16 14 12 10" to "13 11 9 8", armor red reduced from "-3 -4 -5 -6" to "-1 -2 -3 -4".
+    Replaced Vengeful Spirit Nether Swap with a new spell: Nether Power.
+
+    Treant Consume Tree: No longer stacks, bonus health increased to "500 900 1300 1700", now slows.
+    Replaced Treant Overgrow with a new spell: Ultimate Sacrifice.
+
+    Rock: Cost reduced from "200" to "110".
+    Tango: Cost reduced from "30" to "25".
+
+
+2.0.4:
+    With this update:
+
+    Nerfed Lich (BOSS) damage.
+    Nerfed Vampiric Blade.
+
+    Shadow Fiend Requiem has now a scepter upgrade.
+
+
+
+2.0.3:
+    With this update:
+
+    Many changes to Bosses abilities - not going to spoil.
+
+    Removed Bounty Hunter (BOSS), seens like he was causing the crash.
+
+    Undying Decay now has a scepter upgrade.
+    Meepo Dived We Stand now has a scepter upgrade.
+
+    Nerfed all Attack Speed Reduction.
+
+    Earth Spirit Boulder Smash: Cooldown reduced by 2 seconds, damage increased from "105 170 235 300" to "120 270 335 440".
+    Earth Spirit Rolling Boulder: Damage increased from "70 80 90 100" to "70 150 200 240", stun reduced from "0.4 0.6 0.8 1.0" to "0.2 0.3 0.4 0.5".
+    Earth Spirit Geomagnetic Grip: Cooldown reduced from "13" to "12 11 10 9", damage increased from "50 100 150 200" to "60 120 180 240", duration reduced from "2 2.5 3 3.5" to "1".
+    Earth Spirit Stone Caller: Max Charges reduced from "7" to "4", duration reduced from "120" to "60", cooldown reduced from "30.0" to "8.0".
+    Earth Spirit Petrify: Duration reduced from "3" to "1", cooldown reduced from "45" to "20", damage increased from "300" to "900".
+    Earth Spirit Magnetize: Damage increased from "50 75 100" to "250 450 650".
+
+    Legion Commander Duel: Damge increased from "6" to "7".
+
+
+2.0.2:
+    With this update:
+
+    Replaced Hellbear (BOSS) with a new boss: Lich (BOSS). This is an attempt to fix crash reports I'm receiving that seens to be Valve's server fault. If this strange crash / disconnect continues to happen, please report exactly when it happened. Whas it when a spell was used? When the boss was killed? And so on. Thanks.
+
+    Upgradable items now show their level.
+
+    Lone Druid Spirit Bear: Base Attack time increased by "0.2".
+
+    Antimage Mana Break: Mana per hit increased from "28 40 52 64" to "20 40 60 80".
+    Antimage Blink: Cooldown decreased from "15 12 9 6" to "10 8 6 4", manacost increased from "60" to "60 80 100 120".
+    Antimage Mana Void: Cooldown decreased from "70.0 70.0 70.0" to "35.0 30.0 25.0".
+
+    Timbersaw Whirling Death: Cooldown reduced from "6" to "6 6 6 5", damage increased from "90 120 150 180" to "90 180 270 360", damage per tree increased from "12 18 24 30" to "40 60 80 100", removed stats loss since it did not work on bosses.
+    Timbersaw Chain: Range increased from "850 1050 1250 1450" to "1200 1400 1600 2000", speed from "1600 2000 2400 2800" to "2400 2800 3200 3600", damage from "100 140 180 220" to "220 320 420 520".
+    Timbersaw Reactive Armor: Bonus armor reescaled from "1 1.1 1.2 1.3" to "0.6 0.7 0.8 0.9", bonus hp regen reescaled from "1 1.1 1.2 1.3" to "0.7 0.8 0.9 1.0", stack limit increased from "6 12 18 24" to "10 20 30 40", duration increased from "10 13 16 19" to "10 20 40 60".
+    Timbersaw Chakram: Pass damage increased from "100 140 180" to "200 250 300", dps increased from "50 75 100" to "250 350 550".
+
+    Brewmaster Thunder Clap: Cooldown reduced from "13" to "13 12 11 10", damage increased from "100 175 250 300" to "250 350 450 550".
+    Brewmaster Cinder Brew: Self Attack Chance reduced from "20 25 30 35" to "0", duration reduced from "5" to "3", dps increased from "20 30 40 50" to "100 200 300 400", threshold increased from "80" to "300".
+    Brewmaster Drunken Brawler: Dodge chance reduced from "50 60 70 80" to "40 45 50 55", crit damage increased from "140 180 220 260" to "180 220 260 300".
+    Brewmaster Ultimate Replaced.
+
+    Abyssal Blade: Cooldown increased from "35.0" t0 "40.0". Active stun duration increased from "2.0" to "5.0". Passive proc stun duration reduced from "1.5" to "1.0". Passive proc damage increased from "100" to "250".
+
+    Removed Ultimate Vladmir due to a bug. Buffed Vladmir in compensation.
+
+
+
+2.0.1:
+    With this update:
+
+    New Item: Vampiric Blade.
+    New Item: Wicked Vampiric Blade.
+
+    Balance Changes:
+    Rubick W: Decreased Cooldown, increased damage.
+    Rubick Arcane Supremacy: Spell amp increased from "14 18 22 26" to "12 18 24 30", status resistance decreased from "20 28 36 44" to "10 16 22 30".
+
+    Puck Illusory Orb: Cooldown reduced by 1 second, damage increased from "70 140 210 280" to "140 280 560 700".
+    Puck Waning Rift: Silence reduced from "2.0 2.5 3.0 3.5" to always "0.1", damage increased from "100 160 220 280" to "200 300 400 500".
+    Replaced Puck Ultimate.
+
+    Bane Enfeeble: Status Resistance Decrease decreased from "36 44 52 60" to "10 15 20 25".
+    Bane Brain Sap: Mana Cost increased from "90 115 140 165" to "100 130 160 190", damage increased from "75 150 225 300" to "150 300 600 1000".
+    Bane Nightmare: Duration reduced from "4.0 5.0 6.0 7.0" to "3.0 4.0 5.0 6.0".
+    Bane Friends Grip: Cooldown reduced from "120 110 100" to "110 100 90", damage increased from "100 155 215" to "300 500 800".
+
+    Ancient Apparition Cold Feet: Stun reduced from "2.0 2.5 3.0 3.5" to always "2.0", damage increased from "30 50 70 90" to "70 140 210 280".
+    Ancient Apartion Chilling Touch: Attack Range increased from "60 120 180 240" to "80 160 240 320", damage increased from "50 90 130 170" to "90 180 270 360".
+    Ancient Apartion Ice Blast: Kill percentage is now "7.0 8.0 9.0", duration is now always "10.0", damage increased from "12.5 20.0 32.0" to "100.0 150.0 200.0", Scepter duration increased to "20.0".
+
+    Tidehunter Gush: Damage increased from "110 160 210 260" to "130 260 390 420", negative armor reduced from "4 5 6 7" to "2 3 4 5", scepter cooldown is now "3".
+    Tidehunter Kraken Shell: Damage reduction increased from "12 24 36 48" to "20 40 60 80".
+    Tidehunter Anchor Smash: Damage increased from "45 90 135 180" to "90 180 270 360", damage reduction reduced from "-30 -40 -50 -60" to "-5 -8 -12 -15".
+    Tidehunter Ravage: Cooldown reduced from "150.0 150.0 150.0" to "100.0 95.0 90.0", damage increased from "200 300 400" to "700 1400 2100".
+

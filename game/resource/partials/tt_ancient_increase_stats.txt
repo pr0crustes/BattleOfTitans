@@ -1,0 +1,3 @@
+"DOTA_Tooltip_ability_ancient_damage_guard"							"Ancient Guard"
+"DOTA_Tooltip_ability_ancient_damage_guard_Description"				"This unit does not take damage from heroes."
+"DOTA_Tooltip_ability_ancient_damage_guard_Lore"					"The last ancient of it's kind."

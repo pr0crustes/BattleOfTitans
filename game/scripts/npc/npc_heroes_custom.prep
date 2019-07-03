@@ -1,0 +1,8 @@
+"DOTAHeroes"
+{
+
+	// Balance changes.
+
+	$recursive "partials/heroes", ".txt"
+
+}

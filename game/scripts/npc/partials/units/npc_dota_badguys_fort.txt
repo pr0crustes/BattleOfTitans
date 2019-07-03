@@ -1,0 +1,15 @@
+"npc_dota_badguys_fort"
+{
+    "ArmorPhysical"				"13"
+    "MagicalResistance"			"0"
+
+    "StatusHealth"				"10000"
+    "StatusHealthRegen"			"1"
+    "StatusMana"				"0"
+    "StatusManaRegen"			"0"
+
+    "VisionDaytimeRange"		"3600"
+    "VisionNighttimeRange"		"3600"
+
+    "Ability2"                  "ancient_damage_guard"
+}	

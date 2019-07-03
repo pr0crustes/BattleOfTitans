@@ -1,0 +1,12 @@
+"DOTAAbilities"
+{
+	"Version"       "1"
+	
+
+	// Balance Changes.
+	// Bosses abilities.
+	// New.
+
+	$recursive "partials/abilities", ".txt"
+
+}

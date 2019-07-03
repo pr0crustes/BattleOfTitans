@@ -1,0 +1,8 @@
+"DOTAUnits"
+{
+	"Version" "1"
+	
+
+	$recursive "partials/units", ".txt"
+
+}

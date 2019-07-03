@@ -1,0 +1,8 @@
+"ancient_damage_guard"
+{
+    "BaseClass"					    "ability_datadriven"
+
+    "AbilityBehavior"			    "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"		    "omniknight_repel"
+    "MaxLevel"					    "1"
+}

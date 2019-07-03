@@ -1,0 +1,7 @@
+"AddonInfo"
+{
+	"maps" 					"battle_of_titans"
+	"IsPlayable"  			"1"
+
+	//"EnablePickRules"		"1"
+}

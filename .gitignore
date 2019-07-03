@@ -1,0 +1,12 @@
+*.swp
+*~
+*.bak
+*.bin
+*.vpk
+settings.kv
+__pycache__
+npc_abilities_custom.txt
+npc_heroes_custom.txt
+npc_items_custom.txt
+npc_units_custom.txt
+addon_english.txt
