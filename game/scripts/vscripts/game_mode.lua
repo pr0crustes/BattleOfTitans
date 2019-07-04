@@ -44,10 +44,10 @@ function GameMode:DamageFilter(keys)
 		local damage = keys.damage
 
 		if attacker_unit and victim_unit then
-			local victim_name = victim_unit:GetName()
-			local attacker_name = attacker_unit:GetName()
+			local victim_name = victim_unit:GetUnitName()
+			local attacker_name = attacker_unit:GetUnitName()
 
-			if victim_name:find("_fort", 1, true) and not attacker_name:find("team_titan", 1, true) then
+			if string.find(victim_name, "_fort") and not string.find(attacker_name, "team_titan") then
 				return false
 			end
 		end
