@@ -13,6 +13,7 @@ function TitanSpawner:SpawnTitan(team, location, target, round)
 
 	local titan = CreateUnitByName("npc_team_titan", location, true, nil, nil, team)
 	titan:AddNewModifier(titan, nil, "modifier_titan_round_buff", { round = round })
+	titan:CreatureLevelUp(round)
 
 	titan:SetContextThink(
 		DoUniqueString("SpawnTitanAttackThink"),

@@ -5,12 +5,12 @@
     "SoundSet"					"Roshan"
 
     "ModelScale"				"1.2"
-    "Level"						"100"
+    "Level"						"0"
     "ConsideredHero"			"1"
     "CanBeDominated"			"0"
     "HasInventory"				"1"
 
-    "Ability1"					"team_titan_slam"
+    "Ability1"					""
     "Ability2"					""
 
     "ArmorPhysical"				"0"
