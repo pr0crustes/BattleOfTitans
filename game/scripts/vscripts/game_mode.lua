@@ -7,6 +7,7 @@ end
 
 function GameMode:InitGameMode()
 	self.round = 1
+	self.titan_interval = 2
 
 	self.ancient_radiant = Entities:FindByName(nil, "dota_goodguys_fort")
 	self.ancient_dire = Entities:FindByName(nil, "dota_badguys_fort")
@@ -64,7 +65,7 @@ function GameMode:OnGameRulesStateChange()
 		-- Pass
 	elseif nNewState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 		self:SpawnTitans()
-		GameRules:GetGameModeEntity():SetThink("SpawnTitans", self, 180)
+		GameRules:GetGameModeEntity():SetThink("SpawnTitans", self, self.titan_interval)
 	elseif nNewState == DOTA_GAMERULES_STATE_POST_GAME then
 		GameRules:SetSafeToLeave(true)
 		end_screen_setup(true)
@@ -76,6 +77,10 @@ function GameMode:SpawnTitans()
 	Notifications:TopToAll({text="The Titans Are Emerging", duration=6})
 	TitanSpawner:SpawnTitan(DOTA_TEAM_GOODGUYS, self.titan_spawn_radiant:GetAbsOrigin(), self.ancient_dire, self.round)
 	TitanSpawner:SpawnTitan(DOTA_TEAM_BADGUYS, self.titan_spawn_dire:GetAbsOrigin(), self.ancient_radiant, self.round)
+
+	self.round = self.round + 1
+
+	return self.titan_interval
 end
 
 
