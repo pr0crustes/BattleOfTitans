@@ -2,6 +2,11 @@
 modifier_titan_round_buff = class({})
 
 
+function modifier_titan_round_buff:IsHidden()
+    return true
+end
+
+
 function modifier_titan_round_buff:IsDebuff()
     return false
 end
@@ -18,7 +23,7 @@ end
 
 
 function modifier_titan_round_buff:OnCreated(keys)
-
+    self.round = keys.round
 end
 
 
@@ -30,6 +35,7 @@ function modifier_titan_round_buff:DeclareFunctions()
         MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,
         MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE,
         MODIFIER_PROPERTY_HEALTH_BONUS,
+        MODIFIER_PROPERTY_PROVIDES_FOW_POSITION,
     }
 end
 
@@ -61,4 +67,9 @@ end
 
 function modifier_titan_round_buff:GetModifierHealthBonus()
     return 0
+end
+
+
+function modifier_titan_round_buff:GetModifierProvidesFOWVision()
+    return 1
 end

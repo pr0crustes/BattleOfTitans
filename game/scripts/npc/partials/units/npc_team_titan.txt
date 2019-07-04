@@ -1,0 +1,73 @@
+"npc_team_titan"
+{
+    "Model"						"models/creeps/roshan/roshan.vmdl"
+    "BaseClass"					"npc_dota_creature"
+    "SoundSet"					"Roshan"
+
+    "ModelScale"				"1.2"
+    "Level"						"100"
+    "ConsideredHero"			"1"
+    "CanBeDominated"			"0"
+    "HasInventory"				"1"
+
+    "Ability1"					"team_titan_slam"
+    "Ability2"					""
+
+    "ArmorPhysical"				"0"
+    "MagicalResistance"			"0"
+
+    "AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+    "AttackDamageMin"			"1000"
+    "AttackDamageMax"			"1000"
+
+    "AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+    "AttackRate"				"2.0"
+    "AttackAnimationPoint"		"0.6"
+
+    "AttackAcquisitionRange"	"0"
+    "AttackRange"				"300"
+
+    "ProjectileModel"			""
+    "ProjectileSpeed"			""
+    "AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+
+    "BountyXP"					"0"
+    "BountyGoldMin"				"1"
+    "BountyGoldMax"				"1"
+
+    "BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+    "RingRadius"				"160"
+    "HealthBarOffset"			"400"
+
+    "MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+    "MovementSpeed"				"310"
+    "MovementTurnRate"			"0.5"
+
+    "StatusHealth"				"1000"
+    "StatusHealthRegen"			"0"
+    "StatusMana"				"1000"
+    "StatusManaRegen"			"10"
+
+    "TeamName"					"DOTA_TEAM_FIRST"
+    "CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+    "CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+    "UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+    "VisionDaytimeRange"		"1000"
+    "VisionNighttimeRange"		"1000"
+
+    "Creature"
+    {
+        "DisableResistance"          "30.0"
+
+        "OffensiveAbilities"
+        {
+            "Ability2"
+            {
+                "Name"              "team_titan_slam"
+                "MinimumTargets"	"1"
+                "Radius"			"350"
+            }
+        }
+    }
+}

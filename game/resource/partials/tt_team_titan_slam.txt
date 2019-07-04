@@ -1,0 +1,8 @@
+"DOTA_Tooltip_Ability_team_titan_slam"					        "Slam"
+"DOTA_Tooltip_Ability_team_titan_slam_Description"		        "Slams the ground, damaging and slowing all nearby enemies."
+"DOTA_Tooltip_Ability_team_titan_slam_radius"			        "RADIUS:"
+"DOTA_Tooltip_Ability_team_titan_slam_slow_duration_hero"	    "HERO DURATION:"
+"DOTA_Tooltip_Ability_team_titan_slam_slow_duration_unit"	    "UNIT DURATION:"
+"DOTA_Tooltip_Ability_team_titan_slam_slow_amount"		        "%SLOW:"
+"DOTA_Tooltip_Ability_team_titan_slam_damage"			        "DAMAGE:"
+"DOTA_Tooltip_Ability_team_titan_slam_damage_growth"			"DAMAGE GROWTH:"

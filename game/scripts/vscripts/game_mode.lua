@@ -9,7 +9,7 @@ function GameMode:InitGameMode()
 	self.round = 1
 
 	self.ancient_radiant = Entities:FindByName(nil, "dota_goodguys_fort")
-	self.ancient_dire = Entities:FindByName(nil, "npc_dota_badguys_fort")
+	self.ancient_dire = Entities:FindByName(nil, "dota_badguys_fort")
 
 	self.titan_spawn_radiant = Entities:FindByName(nil, "titan_spawn_radiant")
 	self.titan_spawn_dire = Entities:FindByName(nil, "titan_spawn_dire")
@@ -73,6 +73,7 @@ end
 
 
 function GameMode:SpawnTitans()
+	Notifications:TopToAll({text="The Titans Are Emerging", duration=6})
 	TitanSpawner:SpawnTitan(DOTA_TEAM_GOODGUYS, self.titan_spawn_radiant:GetAbsOrigin(), self.ancient_dire, self.round)
 	TitanSpawner:SpawnTitan(DOTA_TEAM_BADGUYS, self.titan_spawn_dire:GetAbsOrigin(), self.ancient_radiant, self.round)
 end
