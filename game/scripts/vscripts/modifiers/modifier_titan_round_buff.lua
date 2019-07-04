@@ -27,6 +27,13 @@ function modifier_titan_round_buff:OnCreated(keys)
 end
 
 
+function modifier_titan_round_buff:CheckState()
+	return {
+		[MODIFIER_STATE_FLYING_FOR_PATHING_PURPOSES_ONLY] = true,
+	}
+end
+
+
 function modifier_titan_round_buff:DeclareFunctions()
     return {
         MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
