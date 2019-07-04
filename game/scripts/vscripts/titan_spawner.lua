@@ -17,7 +17,7 @@ function TitanSpawner:SpawnTitan(team, location, target, round)
 	titan:SetContextThink(
 		DoUniqueString("SpawnTitanAttackThink"),
 		function()
-			if target and target:IsAlive() and titan:IsAlive() then
+			if (target and not target:IsNull() and target:IsAlive()) and (titan and not titan:IsNull() and titan:IsAlive()) then
 				ExecuteOrderFromTable({
 					UnitIndex = titan:entindex(), 
 					OrderType = DOTA_UNIT_ORDER_ATTACK_TARGET,
@@ -29,6 +29,6 @@ function TitanSpawner:SpawnTitan(team, location, target, round)
 
 			return nil
 		end,
-		1.0
+		0.05
 	)
 end

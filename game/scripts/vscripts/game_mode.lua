@@ -7,7 +7,7 @@ end
 
 function GameMode:InitGameMode()
 	self.round = 1
-	self.titan_interval = 2
+	self.titan_interval = 10
 
 	self.ancient_radiant = Entities:FindByName(nil, "dota_goodguys_fort")
 	self.ancient_dire = Entities:FindByName(nil, "dota_badguys_fort")

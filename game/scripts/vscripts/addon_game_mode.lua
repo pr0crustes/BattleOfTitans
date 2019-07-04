@@ -4,8 +4,9 @@ require "lib/end_screen"
 require "lib/data"
 require "lib/notifications"
 require "lib/popup"
-require "game_mode"
+require "titan_buff_calculator"
 require "titan_spawner"
+require "game_mode"
 
 
 function do_precache(elements, handle)

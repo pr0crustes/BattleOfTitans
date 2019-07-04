@@ -14,11 +14,11 @@
     "Ability2"					""
 
     "ArmorPhysical"				"0"
-    "MagicalResistance"			"0"
+    "MagicalResistance"			"-25"
 
     "AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-    "AttackDamageMin"			"100"
-    "AttackDamageMax"			"100"
+    "AttackDamageMin"			"50"
+    "AttackDamageMax"			"50"
 
     "AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
     "AttackRate"				"2.0"
@@ -32,15 +32,15 @@
     "AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
 
     "BountyXP"					"0"
-    "BountyGoldMin"				"1"
-    "BountyGoldMax"				"1"
+    "BountyGoldMin"				"0"
+    "BountyGoldMax"				"0"
 
     "BoundsHullName"			"DOTA_HULL_SIZE_HERO"
     "RingRadius"				"160"
     "HealthBarOffset"			"400"
 
     "MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-    "MovementSpeed"				"250"
+    "MovementSpeed"				"230"
     "MovementTurnRate"			"0.5"
 
     "StatusHealth"				"1000"

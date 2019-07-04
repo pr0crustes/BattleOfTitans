@@ -1,40 +1,4 @@
-
-
-
-if TitanBuffCalculator == nil then
-    TitanBuffCalculator = class({})
-end
-
-
-function TitanBuffCalculator:CalculateBuffs(round)
-    function bonus_life_for_round(n)
-        if n <= 1 then
-            return 1000
-        end
-        return (n * 1000) + bonus_life_for_round(n - 1)
-    end
-
-    print("CalculateBuffs... ", round, TitanBuffCalculator.last_calculated_round)
-
-    if round ~= TitanBuffCalculator.last_calculated_round then
-        print("Calculating")
-        TitanBuffCalculator.last_calculated_values = {
-            bonus_damage = round * 100,
-            bonus_armor = round * 2,
-            bonus_magic_res = round * 2,
-            bonus_health_regen = round * 10,
-            bonus_mana_regen = round * 10,
-            bonus_health = bonus_life_for_round(round),
-        }
-
-        TitanBuffCalculator.last_calculated_round = round
-    end
-
-    print("returning...")
-
-    return TitanBuffCalculator.last_calculated_values
-end
-
+require "titan_buff_calculator"
 
 
 modifier_titan_round_buff = class({})
@@ -61,11 +25,20 @@ end
 
 
 function modifier_titan_round_buff:OnCreated(keys)
+    self.buffs = {}
     if IsServer() then
-        self.round = keys.round
-
-        self.buffs = TitanBuffCalculator:CalculateBuffs(self.round)
+        self.buffs = TitanBuffCalculator:CalculateBuffs(keys.round)
     end
+    if IsClient() then
+        self.buffs = TitanBuffCalculator:GetBuffsOnClient()
+    end
+
+    self.bonus_damage = self.buffs.bonus_damage or 0
+    self.bonus_armor = self.buffs.bonus_armor or 0
+    self.bonus_magic_res = self.buffs.bonus_magic_res or 0
+    self.bonus_health_regen = self.buffs.bonus_health_regen or 0
+    self.bonus_mana_regen = self.buffs.bonus_mana_regen or 0
+    self.bonus_health = self.buffs.bonus_health or 0
 end
 
 
@@ -90,32 +63,32 @@ end
 
 
 function modifier_titan_round_buff:GetModifierPreAttack_BonusDamage()
-    return 0
+    return self.bonus_damage
 end
 
 
 function modifier_titan_round_buff:GetModifierPhysicalArmorBonus()
-    return 0
+    return self.bonus_armor
 end
 
 
 function modifier_titan_round_buff:GetModifierMagicalResistanceBonus()
-    return 0
+    return self.bonus_magic_res
 end
 
 
 function modifier_titan_round_buff:GetModifierConstantHealthRegen()
-    return 0
+    return self.bonus_health_regen
 end
 
 
 function modifier_titan_round_buff:GetModifierConstantManaRegen()
-    return 0
+    return self.bonus_mana_regen
 end
 
 
 function modifier_titan_round_buff:GetModifierHealthBonus()
-    return 0
+    return self.bonus_health
 end
 
 
