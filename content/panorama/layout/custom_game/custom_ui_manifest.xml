@@ -19,6 +19,7 @@
 	<Panel>
 		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/barebones_notifications.xml" /> 
 		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/statcollection.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/titan_countdown.xml" />
 		<CustomUIElement type="EndScreen" layoutfile="file://{resources}/layout/custom_game/end_screen.xml" />
 	</Panel>
 </root>

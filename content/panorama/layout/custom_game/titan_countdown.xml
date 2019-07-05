@@ -1,0 +1,14 @@
+<root>
+    <styles>
+        <include src="file://{resources}/styles/titan_countdown.css" />
+    </styles>
+    <scripts>
+        <include src="file://{resources}/scripts/titan_countdown.js"/>
+    </scripts>
+
+    <Panel class="TeamOverlay" hittest="false">
+        <Panel hittest="false" id="Block">
+            <Label id="TimerTextBlock" text="" hittest="false"/>
+        </Panel>
+    </Panel>
+</root>

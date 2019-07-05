@@ -8,8 +8,11 @@ end
 function GameMode:InitGameMode()
 	self.titan_round = 1
 	self.creep_round = 1
+
 	self.titan_interval = 180
 	self.creep_interval = 60
+
+	self.titan_countdown = 0
 
 	self.gold_share = 0.15
 	self.experience_share = 0.15
@@ -124,12 +127,48 @@ function GameMode:OnGameRulesStateChange()
 	elseif state == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 		self:SpawnCreeps()
 		GameRules:GetGameModeEntity():SetThink("SpawnCreeps", self, self.creep_interval)
-		self:SpawnTitans()
-		GameRules:GetGameModeEntity():SetThink("SpawnTitans", self, self.titan_interval)
+		GameRules:GetGameModeEntity():SetThink("TitanThink", self, 1.0)
 	elseif state == DOTA_GAMERULES_STATE_POST_GAME then
 		GameRules:SetSafeToLeave(true)
 		end_screen_setup(true)
 	end
+end
+
+
+function GameMode:TitanThink()
+
+	if self.titan_countdown <= 0 then
+		self:SpawnTitans()
+
+		self.titan_countdown = self.titan_interval
+	else
+		self.titan_countdown = self.titan_countdown - 1
+	end
+
+    local minutes = math.floor(self.titan_countdown / 60)
+	local seconds = self.titan_countdown - (minutes * 60)
+
+	local m10 = math.floor(minutes / 10)
+    local m01 = minutes - (m10 * 10)
+    local s10 = math.floor(seconds / 10)
+	local s01 = seconds - (s10 * 10)
+
+    local timer_text = m10 .. m01 .. ":" .. s10 .. s01
+
+    local text_color = "#FFFFFF"
+    if self.titan_countdown < 20 then
+        text_color = "#FF0000"
+    end
+
+    local data = {
+        string = "#titan_timer",
+        time_string = timer_text,
+        color = text_color,
+	}
+
+    CustomGameEventManager:Send_ServerToAllClients("titan_countdown_update", data)
+
+	return 1.0
 end
 
 
@@ -139,8 +178,6 @@ function GameMode:SpawnTitans()
 	TitanSpawner:SpawnTitan(DOTA_TEAM_BADGUYS, self.titan_spawn_dire:GetAbsOrigin(), self.ancient_radiant, self.titan_round)
 
 	self.titan_round = self.titan_round + 1
-
-	return self.titan_interval
 end
 
 

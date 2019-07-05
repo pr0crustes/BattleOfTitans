@@ -1,0 +1,2 @@
+"titan_timer"               "Next Titans In"
+"titan_timer_before"        "Waiting Game Start"
