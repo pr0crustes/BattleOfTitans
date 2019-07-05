@@ -7,7 +7,8 @@ end
 
 function GameMode:InitGameMode()
 	self.round = 1
-	self.titan_interval = 10
+	self.titan_interval = 180
+	self.creep_interval = 60
 
 	self.ancient_radiant = Entities:FindByName(nil, "dota_goodguys_fort")
 	self.ancient_dire = Entities:FindByName(nil, "dota_badguys_fort")
@@ -66,6 +67,8 @@ function GameMode:OnGameRulesStateChange()
 	elseif nNewState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 		self:SpawnTitans()
 		GameRules:GetGameModeEntity():SetThink("SpawnTitans", self, self.titan_interval)
+		self:SpawnCreeps()
+		GameRules:GetGameModeEntity():SetThink("SpawnCreeps", self, self.creep_interval)
 	elseif nNewState == DOTA_GAMERULES_STATE_POST_GAME then
 		GameRules:SetSafeToLeave(true)
 		end_screen_setup(true)
@@ -81,6 +84,14 @@ function GameMode:SpawnTitans()
 	self.round = self.round + 1
 
 	return self.titan_interval
+end
+
+
+function GameMode:SpawnCreeps()
+	print("GameMode:SpawnCreeps()")
+	CreepSpawner:SpawnCreeps(self.round)
+
+	return self.creep_interval
 end
 
 
@@ -108,6 +119,10 @@ function GameMode:OnEntityKilled(event)
 	if killed_unit then
 		if killed_unit:IsRealHero() and not killed_unit:IsReincarnating() then
 			killed_unit:SetTimeUntilRespawn(killed_unit:GetRespawnTime() * 0.33)
+		end
+
+		if killed_unit.is_custom_spawned_creep then
+			CreepSpawner:OnSpawnedCreepDeath(event)
 		end
 	end
 end
