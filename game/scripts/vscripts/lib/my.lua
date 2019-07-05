@@ -219,3 +219,18 @@ function PrintTable(t, indent, done)
 		end
 	end
 end
+
+
+function get_main_friendly_heroes(playerID)
+	local teamID = PlayerResource:GetTeam(playerID)
+	local out = {}
+
+	for playerID = 0, DOTA_MAX_PLAYERS do
+		local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+		if hero and PlayerResource:GetTeam(playerID) == teamID then
+			table.insert(out, hero)
+		end
+	end
+
+	return out
+end

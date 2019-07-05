@@ -11,6 +11,9 @@ function GameMode:InitGameMode()
 	self.titan_interval = 180
 	self.creep_interval = 60
 
+	self.gold_share = 0.15
+	self.experience_share = 0.15
+
 	self.ancient_radiant = Entities:FindByName(nil, "dota_goodguys_fort")
 	self.ancient_dire = Entities:FindByName(nil, "dota_badguys_fort")
 
@@ -36,6 +39,8 @@ function GameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetThink("OnThink", self, 0.25)
 
 	GameRules:GetGameModeEntity():SetDamageFilter(Dynamic_Wrap(GameMode, "DamageFilter"), self)
+	GameRules:GetGameModeEntity():SetModifyExperienceFilter(Dynamic_Wrap(GameMode, "ExperienceFilter"), self)
+	GameRules:GetGameModeEntity():SetModifyGoldFilter(Dynamic_Wrap(GameMode, "GoldFilter"), self )
 end
 
 
@@ -56,6 +61,57 @@ function GameMode:DamageFilter(keys)
 		end
 	end
 
+
+	return true
+end
+
+
+function GameMode:ExperienceFilter(keys)
+	local player_id = keys.player_id_const
+	local reason = keys.reason_const
+	local experience = keys.experience
+
+	local hero = player_id and PlayerResource:GetSelectedHeroEntity(player_id)
+
+	-- Start Share XP
+	local team_heroes = get_main_friendly_heroes(player_id)
+	local count = #team_heroes
+
+	local share_slice = experience * self.experience_share
+	local share_amount = math.ceil(share_slice / count)
+
+	keys.experience = keys.experience - share_slice
+
+	for i, hero in pairs(team_heroes) do
+		hero:AddExperience(share_amount, DOTA_ModifyXP_Unspecified, false, true)
+	end
+	-- End Share XP
+
+	return true
+end
+
+
+function GameMode:GoldFilter(keys)
+	local player_id = keys.player_id_const
+	local reason = keys.reason_const
+	local gold = keys.gold
+	local reliable = keys.reliable
+
+	local hero = player_id and PlayerResource:GetSelectedHeroEntity(player_id)
+
+	-- Start Share Gold
+	local team_heroes = get_main_friendly_heroes(player_id)
+	local count = #team_heroes
+
+	local share_slice = gold * self.gold_share
+	local share_amount = math.ceil(share_slice / count)
+
+	keys.gold = keys.gold - share_slice
+
+	for i, hero in pairs(team_heroes) do
+		PlayerResource:ModifyGold(hero:GetPlayerID(), share_amount, (1 == keys.reliable), DOTA_ModifyGold_SharedGold)
+	end
+	-- End Share Gold
 
 	return true
 end
@@ -108,8 +164,8 @@ function GameMode:OnThink()
 end
 
 
-function GameMode:OnEntitySpawned(event)
-	local unit = EntIndexToHScript(event.entindex)
+function GameMode:OnEntitySpawned(keys)
+	local unit = EntIndexToHScript(keys.entindex)
 
 	if unit then
 		-- Pass
@@ -117,15 +173,15 @@ function GameMode:OnEntitySpawned(event)
 end
 
 
-function GameMode:OnEntityKilled(event)
-	local killed_unit = EntIndexToHScript(event.entindex_killed)
+function GameMode:OnEntityKilled(keys)
+	local killed_unit = EntIndexToHScript(keys.entindex_killed)
 	if killed_unit then
 		if killed_unit:IsRealHero() and not killed_unit:IsReincarnating() then
 			killed_unit:SetTimeUntilRespawn(killed_unit:GetRespawnTime() * 0.33)
 		end
 
 		if killed_unit.is_custom_spawned_creep then
-			CreepSpawner:OnSpawnedCreepDeath(event)
+			CreepSpawner:OnSpawnedCreepDeath(keys)
 		end
 	end
 end
