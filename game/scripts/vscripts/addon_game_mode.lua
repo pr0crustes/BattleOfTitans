@@ -5,7 +5,6 @@ require "lib/data"
 require "lib/notifications"
 require "lib/popup"
 require "creep_spawner"
-require "titan_buff_calculator"
 require "titan_spawner"
 require "game_mode"
 

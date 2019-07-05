@@ -1,0 +1,41 @@
+
+modifier_titan = class({})
+
+
+function modifier_titan:IsHidden()
+    return true
+end
+
+
+function modifier_titan:IsDebuff()
+    return false
+end
+
+
+function modifier_titan:IsPurgable()
+    return false
+end
+
+
+function modifier_titan:IsPermanent()
+    return true
+end
+
+
+function modifier_titan:CheckState()
+	return {
+		[MODIFIER_STATE_FLYING_FOR_PATHING_PURPOSES_ONLY] = true,
+	}
+end
+
+
+function modifier_titan:DeclareFunctions()
+    return {
+        MODIFIER_PROPERTY_PROVIDES_FOW_POSITION,
+    }
+end
+
+
+function modifier_titan:GetModifierProvidesFOWVision()
+    return 1
+end

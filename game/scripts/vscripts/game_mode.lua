@@ -8,7 +8,7 @@ end
 function GameMode:InitGameMode()
 	self.titan_round = 1
 	self.creep_round = 1
-	self.titan_interval = 180
+	self.titan_interval = 10
 	self.creep_interval = 60
 
 	self.gold_share = 0.15

@@ -1,5 +1,5 @@
 
-LinkLuaModifier("modifier_titan_round_buff", "modifiers/modifier_titan_round_buff.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_titan", "modifiers/modifier_titan.lua", LUA_MODIFIER_MOTION_NONE)
 
 
 
@@ -8,12 +8,29 @@ if TitanSpawner == nil then
 end
 
 
+function TitanLifeForRound(n)
+	if n <= 1 then
+		return 1000
+	end
+	return (n * 500) + TitanLifeForRound(n - 1)
+end
+
+
 function TitanSpawner:SpawnTitan(team, location, target, round)
 	print("TitanSpawner:SpawnTitan")
 
 	local titan = CreateUnitByName("npc_team_titan", location, true, nil, nil, team)
-	titan:AddNewModifier(titan, nil, "modifier_titan_round_buff", { round = round })
+	titan:AddNewModifier(titan, nil, "modifier_titan", {})
 	titan:CreatureLevelUp(round)
+
+	local health = TitanLifeForRound(round)
+	titan:SetMaxHealth(health)
+	titan:SetBaseMaxHealth(health)
+	titan:SetHealth(health)
+
+	titan:SetBaseDamageMin(100 + 50 * round)
+	titan:SetBaseDamageMax(100 + 50 * round)
+	titan:SetPhysicalArmorBaseValue(round + 1)
 
 	titan:SetContextThink(
 		DoUniqueString("SpawnTitanAttackThink"),
