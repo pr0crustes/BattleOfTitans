@@ -1,0 +1,71 @@
+"npc_dota_neutral_small_thunder_lizard"
+{
+    // General
+    //----------------------------------------------------------------
+    "Model"						"models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_small.vmdl"	// Model.
+    "BaseClass"					"npc_dota_creep_neutral"
+    "SoundSet"					"n_creep_Ranged"
+    "Level"						"5"
+    "IsAncient"					"1"
+    "ModelScale" 				"0.65"
+    "IsNeutralUnitType"			"1"
+
+    // Abilities
+    //----------------------------------------------------------------
+    "Ability1"					""			// Ability 1
+    "Ability2"					""			// Ability 2
+    "Ability3"					""			// Ability 3
+    "Ability4"					""			// Ability 4
+
+    // Armor
+    //----------------------------------------------------------------
+    "ArmorPhysical"				"2"			// Physical protection.
+    "MagicalResistance"			"70"		// Magical protection.
+
+    // Attack
+    //----------------------------------------------------------------
+    "AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+    "AttackDamageMin"			"41"		// Damage range min.
+    "AttackDamageMax"			"48"		// Damage range max.
+    "AttackRate"				"1.8"		// Speed of attack.
+    "AttackAnimationPoint"		"0.5"		// Normalized time in animation cycle to attack.
+    "AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
+    "AttackRange"				"300"		// Range within a target can be attacked.
+    "ProjectileModel"			"particles/neutral_fx/thunderlizard_base_attack.vpcf"	// Particle system model for projectile.
+    "ProjectileSpeed"			"1500"		// Speed of projectile.
+
+    // Bounds
+    //----------------------------------------------------------------
+    "RingRadius"				"70"
+    "HealthBarOffset"			"220"
+
+    // Bounty
+    //----------------------------------------------------------------
+    "BountyXP"					"95"		// Experience earn.
+    "BountyGoldMin"				"44"		// Gold earned min.
+    "BountyGoldMax"				"51"		// Gold earned max.
+
+    // Movement
+    //----------------------------------------------------------------
+    "MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+    "MovementSpeed"				"270"		// Speed.
+
+    // Status
+    //----------------------------------------------------------------
+    "StatusHealth"				"800"		// Base health.
+    "StatusHealthRegen"			"0.5"		// Health regeneration rate.
+    "StatusMana"				"400"		// Base mana.
+    "StatusManaRegen"			"1.0"		// Mana regeneration rate.
+
+    // Vision
+    //----------------------------------------------------------------
+    "VisionDaytimeRange"		"1400"		// Range of vision during day light.
+    "VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+    // Team
+    //----------------------------------------------------------------
+    "TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+    "CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+    "CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+    "UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+}
