@@ -23,6 +23,8 @@ function GameMode:InitGameMode()
 	self.titan_spawn_radiant = Entities:FindByName(nil, "titan_spawn_radiant")
 	self.titan_spawn_dire = Entities:FindByName(nil, "titan_spawn_dire")
 
+	GameRules:SetShowcaseTime(0)
+
 	GameRules:SetCustomGameSetupAutoLaunchDelay(3.0)
 	GameRules:SetTimeOfDay(0.75)
 	GameRules:SetUseUniversalShopMode(true)
