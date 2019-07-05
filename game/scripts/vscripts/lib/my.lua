@@ -39,6 +39,17 @@ function decrease_modifier(caster, target, modifier)
 end
 
 
+function values_from_dict(dict)
+	local values = {}
+
+	for k, v in pairs(dict) do
+		table.insert(values, v)
+	end
+
+	return values
+end
+
+
 function random_from_table(the_table)
 	if #the_table < 1 then
 		return nil

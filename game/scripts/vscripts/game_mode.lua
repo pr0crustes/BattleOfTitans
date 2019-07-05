@@ -65,10 +65,10 @@ function GameMode:OnGameRulesStateChange()
 	if nNewState == DOTA_GAMERULES_STATE_PRE_GAME then
 		-- Pass
 	elseif nNewState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-		self:SpawnTitans()
-		GameRules:GetGameModeEntity():SetThink("SpawnTitans", self, self.titan_interval)
 		self:SpawnCreeps()
 		GameRules:GetGameModeEntity():SetThink("SpawnCreeps", self, self.creep_interval)
+		self:SpawnTitans()
+		GameRules:GetGameModeEntity():SetThink("SpawnTitans", self, self.titan_interval)
 	elseif nNewState == DOTA_GAMERULES_STATE_POST_GAME then
 		GameRules:SetSafeToLeave(true)
 		end_screen_setup(true)
