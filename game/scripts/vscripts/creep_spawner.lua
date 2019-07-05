@@ -41,20 +41,20 @@ end
 
 
 function CreepSpawner:SpawnCreepsAtPoint(point_name, creep_list, min_count, max_count, round)
-	print("CreepSpawner:SpawnCreepsAtPoint")
+	--print("CreepSpawner:SpawnCreepsAtPoint")
 
 	local point = Entities:FindByName(nil, point_name)
 
 	local spawn_pos = point:GetAbsOrigin()
 	local count = RandomInt(min_count, max_count)
-	print("Count ", count, min_count, max_count)
+	--print("Count ", count, min_count, max_count)
 
 	CreepSpawner:SpawnCreepsAtPos(spawn_pos, creep_list, count, round)
 end
 
 
 function CreepSpawner:SpawnCreepsAtPos(pos, creep_list, count, round)
-	print("CreepSpawner:SpawnCreepsAtPos")
+	--print("CreepSpawner:SpawnCreepsAtPos")
 
 	local round_multiplier = 1 + (round * 0.1)
 
@@ -64,7 +64,7 @@ function CreepSpawner:SpawnCreepsAtPos(pos, creep_list, count, round)
 		end
 
 		local creep_name = random_from_table(values_from_dict(creep_list))
-		print("Spawning creep ", creep_name)
+		--print("Spawning creep ", creep_name)
 		local creep = CreateUnitByName(creep_name, pos, true, nil, nil, DOTA_TEAM_NEUTRALS)
 
 		if creep then
@@ -85,6 +85,6 @@ end
 
 
 function CreepSpawner:OnSpawnedCreepDeath(event)
-	print("CreepSpawner:OnSpawnedCreepDeath(event)")
+	--print("CreepSpawner:OnSpawnedCreepDeath(event)")
 	CreepSpawner.CURRENT_ALIVE_CREEPS = CreepSpawner.CURRENT_ALIVE_CREEPS - 1
 end
