@@ -145,7 +145,7 @@ end
 
 
 function GameMode:SpawnCreeps()
-	print("GameMode:SpawnCreeps()")
+	print("GameMode:SpawnCreeps")
 	CreepSpawner:SpawnCreeps(self.creep_round)
 
 	self.creep_round = self.creep_round + 1
