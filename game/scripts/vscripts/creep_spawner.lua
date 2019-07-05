@@ -43,7 +43,7 @@ end
 
 
 function CreepSpawner:SpawnCreepsAtPoint(point_name, creep_list, min_count, max_count, round)
-    local point = Entities:FindByName(nil, point_name)
+	local point = Entities:FindByName(nil, point_name)
 
 	local spawn_pos = point:GetAbsOrigin()
 	local count = RandomInt(min_count, max_count)
