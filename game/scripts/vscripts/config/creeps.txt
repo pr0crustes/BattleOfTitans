@@ -1,0 +1,68 @@
+"root"
+{
+	"radiant"
+	{
+		"spawner_radiant_easy_1"
+		{
+			"1"     "npc_aa_creep_ursa_a"
+		}
+
+		"spawner_radiant_easy_2"
+		{
+			"1"     "npc_aa_creep_ursa_a"
+		}
+
+		"spawner_radiant_hard_1"
+		{
+			"1"     "npc_aa_creep_golem_a"
+		}
+
+		"spawner_radiant_hard_2"
+		{
+			"1"     "npc_aa_creep_golem_a"
+		}
+
+		"spawner_radiant_ancient_1"
+		{
+			"1"     "npc_aa_creep_croco_a"
+		}
+
+		"spawner_radiant_ancient_2"
+		{
+			"1"     "npc_aa_creep_salamander_a"
+		}
+	}
+
+	"dire"
+	{
+		"spawner_dire_easy_1"
+		{
+			"1"     "npc_aa_creep_troll_a"
+		}
+
+		"spawner_dire_easy_2"
+		{
+			"1"     "npc_aa_creep_troll_a"
+		}
+
+		"spawner_dire_hard_1"
+		{
+			"1"     "npc_aa_creep_wildwing_a"
+		}
+
+		"spawner_dire_hard_2"
+		{
+			"1"     "npc_aa_creep_wildwing_a"
+		}
+
+		"spawner_dire_ancient_1"
+		{
+			"1"     "npc_aa_creep_centaur_a"
+		}
+
+		"spawner_dire_ancient_2"
+		{
+			"1"     "npc_aa_creep_dragon_a"
+		}
+	}
+}

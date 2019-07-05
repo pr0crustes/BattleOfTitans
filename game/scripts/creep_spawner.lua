@@ -48,33 +48,40 @@ if CreepSpawner == nil then
 		"npc_dota_neutral_wildkin",
 		"npc_dota_wraith_ghost"
 	]
+
+	CreepSpawner.SPAWNERS = LoadKeyValues("scripts/config/creeps.txt")
+end
+
+
+function CreepSpawner:MinSpawnAmount(round)
+	if round == 1 then
+		return 2
+	end
+	return math.floor(math.max((round * 0.4) + 1, 10))
+end
+
+
+function CreepSpawner:MaxSpawnAmount(round)
+	if round == 1 then
+		return 2
+	end
+	return math.ceil(math.max((round * 0.75) + 1, 10))
 end
 
 
 function CreepSpawner:SpawnCreeps(round)
 	print("CreepSpawner:SpawnCreeps")
 
-	local titan = CreateUnitByName("npc_team_titan", location, true, nil, nil, team)
-	titan:AddNewModifier(titan, nil, "modifier_titan_round_buff", { round = round })
-	titan:CreatureLevelUp(round)
+	local min_count = CreepSpawner:MinSpawnAmount(round)
+	local max_count = CreepSpawner:MaxSpawnAmount(round)
 
-	titan:SetContextThink(
-		DoUniqueString("SpawnCreepsAttackThink"),
-		function()
-			if (target and not target:IsNull() and target:IsAlive()) and (titan and not titan:IsNull() and titan:IsAlive()) then
-				ExecuteOrderFromTable({
-					UnitIndex = titan:entindex(),
-					OrderType = DOTA_UNIT_ORDER_ATTACK_TARGET,
-					TargetIndex = target:entindex()
-				})
+	for spawner_name, creep_list in pairs(CreepSpawner.SPAWNERS["radiant"]) do
+		CreepSpawner:SpawnCreepsAtPoints(spawner_name, creep_list, min_count, max_count, round)
+	end
 
-				return 1.0
-			end
-
-			return nil
-		end,
-		0.05
-	)
+	for spawner_name, creep_list in pairs(CreepSpawner.SPAWNERS["dire"]) do
+		CreepSpawner:SpawnCreepsAtPoints(spawner_name, creep_list, min_count, max_count, round)
+	end
 end
 
 
@@ -92,6 +99,8 @@ end
 
 
 function CreepSpawner:SpawnCreepsAtPos(pos, creep_name, count, round)
+	local round_multiplier = 1 + (round * 0.1)
+
 	for i = 0, count do
 		if CreepSpawner.current_alive_creeeps > CreepSpawner.MAX_CREEP_COUNT then
 			return
@@ -102,6 +111,14 @@ function CreepSpawner:SpawnCreepsAtPos(pos, creep_name, count, round)
 		if creep then
 			creep.is_custom_spawned = true
 			CreepSpawner.current_alive_creeeps = CreepSpawner.current_alive_creeeps + 1
+
+			creep:SetMaxHealth(creep:GetMaxHealth() * round_multiplier)
+			creep:SetPhysicalArmorBaseValue(creep:GetPhysicalArmorBaseValue() * round_multiplier)
+
+			creep:SetDeathXP(creep:GetDeathXP() * round_multiplier)
+
+			creep:SetMinimumGoldBounty(creep:GetMinimumGoldBounty() * round_multiplier)
+			creep:SetMaximumGoldBounty(creep:GetMaximumGoldBounty() * round_multiplier)
 		end
 	end
 end
