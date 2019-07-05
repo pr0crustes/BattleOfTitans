@@ -39,3 +39,15 @@ end
 function modifier_titan:GetModifierProvidesFOWVision()
     return 1
 end
+
+
+if IsServer() then
+    function modifier_titan:OnCreated(keys)
+        self:StartIntervalThink(1.0)
+    end
+
+    function modifier_titan:OnIntervalThink()
+        self:GetParent():RemoveModifierByName("modifier_ursa_fury_swipes_damage_increase")
+		self:GetParent():RemoveModifierByName("modifier_maledict")
+    end
+end
