@@ -4,32 +4,37 @@
 	{
 		"spawner_radiant_easy_1"
 		{
-			"1"     "npc_aa_creep_ursa_a"
+			"1"     "npc_dota_neutral_polar_furbolg_champion"
 		}
 
 		"spawner_radiant_easy_2"
 		{
-			"1"     "npc_aa_creep_ursa_a"
+			"1"     "npc_dota_neutral_polar_furbolg_ursa_warrior"
 		}
 
 		"spawner_radiant_hard_1"
 		{
-			"1"     "npc_aa_creep_golem_a"
+			"1"     "npc_dota_neutral_fel_beast"
+			"2"		"npc_dota_neutral_ghost"
+			"3"		"npc_dota_neutral_centaur_outrunner"
+			"4"		"npc_dota_neutral_centaur_khan"
 		}
 
 		"spawner_radiant_hard_2"
 		{
-			"1"     "npc_aa_creep_golem_a"
+			"1"     "npc_dota_neutral_alpha_wolf"
+            "2"     "npc_dota_neutral_giant_wolf"
 		}
 
 		"spawner_radiant_ancient_1"
 		{
-			"1"     "npc_aa_creep_croco_a"
+			"1"     "npc_dota_neutral_big_thunder_lizard"
+            "2"     "npc_dota_neutral_granite_golem"
 		}
 
 		"spawner_radiant_ancient_2"
 		{
-			"1"     "npc_aa_creep_salamander_a"
+			"1"     "npc_dota_neutral_black_dragon"
 		}
 	}
 
@@ -37,32 +42,37 @@
 	{
 		"spawner_dire_easy_1"
 		{
-			"1"     "npc_aa_creep_troll_a"
+			"1"     "npc_dota_neutral_polar_furbolg_champion"
 		}
 
 		"spawner_dire_easy_2"
 		{
-			"1"     "npc_aa_creep_troll_a"
+			"1"     "npc_dota_neutral_polar_furbolg_ursa_warrior"
 		}
 
 		"spawner_dire_hard_1"
 		{
-			"1"     "npc_aa_creep_wildwing_a"
+			"1"     "npc_dota_neutral_fel_beast"
+			"2"		"npc_dota_neutral_ghost"
+			"3"		"npc_dota_neutral_centaur_outrunner"
+			"4"		"npc_dota_neutral_centaur_khan"
 		}
 
 		"spawner_dire_hard_2"
 		{
-			"1"     "npc_aa_creep_wildwing_a"
+			"1"     "npc_dota_neutral_alpha_wolf"
+            "2"     "npc_dota_neutral_giant_wolf"
 		}
 
 		"spawner_dire_ancient_1"
 		{
-			"1"     "npc_aa_creep_centaur_a"
+			"1"     "npc_dota_neutral_big_thunder_lizard"
+            "2"     "npc_dota_neutral_granite_golem"
 		}
 
 		"spawner_dire_ancient_2"
 		{
-			"1"     "npc_aa_creep_dragon_a"
+			"1"     "npc_dota_neutral_black_dragon"
 		}
 	}
 }
