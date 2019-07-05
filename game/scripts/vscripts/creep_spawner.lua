@@ -2,8 +2,7 @@
 if CreepSpawner == nil then
 	CreepSpawner = class({})
 
-	CreepSpawner.CURRENT_ALIVE_CREEPS = 0
-	CreepSpawner.MAX_CREEP_COUNT = 700
+	CreepSpawner.MAX_CREEP_PER_CAMP = 30
 
 	CreepSpawner.SPAWNERS = LoadKeyValues("scripts/config/creeps.txt")
 end
@@ -43,12 +42,14 @@ function CreepSpawner:SpawnCreepsAtPoint(point_name, creep_list, min_count, max_
 	--print("CreepSpawner:SpawnCreepsAtPoint")
 
 	local point = Entities:FindByName(nil, point_name)
-
 	local spawn_pos = point:GetAbsOrigin()
-	local count = RandomInt(min_count, max_count)
-	--print("Count ", count, min_count, max_count)
 
-	CreepSpawner:SpawnCreepsAtPos(spawn_pos, creep_list, count, round)
+	local nearby_creeps = FindUnitsInRadius(DOTA_TEAM_NEUTRALS, spawn_pos, nil, 700, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_CREEP, 0, 0, false)
+
+	if nearby_creeps and #nearby_creeps < CreepSpawner.MAX_CREEP_PER_CAMP then
+		local count = RandomInt(min_count, max_count)
+		CreepSpawner:SpawnCreepsAtPos(spawn_pos, creep_list, count, round)
+	end
 end
 
 
@@ -58,17 +59,12 @@ function CreepSpawner:SpawnCreepsAtPos(pos, creep_list, count, round)
 	local round_multiplier = 1 + ((round - 1) * 0.1)
 
 	for i = 1, count do
-		if CreepSpawner.CURRENT_ALIVE_CREEPS > CreepSpawner.MAX_CREEP_COUNT then
-			return
-		end
-
 		local creep_name = random_from_table(values_from_dict(creep_list))
 		--print("Spawning creep ", creep_name)
 		local creep = CreateUnitByName(creep_name, pos, true, nil, nil, DOTA_TEAM_NEUTRALS)
 
 		if creep then
 			creep.is_custom_spawned_creep = true
-			CreepSpawner.CURRENT_ALIVE_CREEPS = CreepSpawner.CURRENT_ALIVE_CREEPS + 1
 
 			creep:SetDeathXP(creep:GetDeathXP() * round_multiplier)
 
@@ -91,5 +87,4 @@ end
 
 function CreepSpawner:OnSpawnedCreepDeath(event)
 	--print("CreepSpawner:OnSpawnedCreepDeath(event)")
-	CreepSpawner.CURRENT_ALIVE_CREEPS = CreepSpawner.CURRENT_ALIVE_CREEPS - 1
 end
