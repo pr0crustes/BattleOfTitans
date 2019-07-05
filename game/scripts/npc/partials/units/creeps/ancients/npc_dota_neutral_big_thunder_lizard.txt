@@ -12,22 +12,22 @@
 
     // Abilities
     //----------------------------------------------------------------
-    "Ability1"					"big_thunder_lizard_frenzy"			// Ability 1
-    "Ability2"					"big_thunder_lizard_wardrums_aura"			// Ability 2
-    "Ability3"					"big_thunder_lizard_slam"			// Ability 3
+    "Ability1"					"big_thunder_lizard_slam"			// Ability 1
+    "Ability2"					""			// Ability 2
+    "Ability3"					""			// Ability 3
     "Ability4"					""			// Ability 4
 
     // Armor
     //----------------------------------------------------------------
-    "ArmorPhysical"				"2"			// Physical protection.
-    "MagicalResistance"			"70"		// Magical protection.
+    "ArmorPhysical"				"6"			// Physical protection.
+    "MagicalResistance"			"60"		// Magical protection.
 
     // Attack
     //----------------------------------------------------------------
     "AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
     "AttackDamageMin"			"60"		// Damage range min.
     "AttackDamageMax"			"65"		// Damage range max.
-    "AttackRate"				"1.8"		// Speed of attack.
+    "AttackRate"				"1.4"		// Speed of attack.
     "AttackAnimationPoint"		"0.5"		// Normalized time in animation cycle to attack.
     "AttackAcquisitionRange"	"300"		// Range within a target can be acquired.
     "AttackRange"				"300"		// Range within a target can be attacked.
@@ -52,7 +52,7 @@
 
     // Status
     //----------------------------------------------------------------
-    "StatusHealth"				"1400"		// Base health.
+    "StatusHealth"				"1600"		// Base health.
     "StatusHealthRegen"			"0.5"		// Health regeneration rate.
     "StatusMana"				"400"		// Base mana.
     "StatusManaRegen"			"1.0"		// Mana regeneration rate.

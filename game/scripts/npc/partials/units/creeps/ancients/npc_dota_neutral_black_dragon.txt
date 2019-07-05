@@ -14,20 +14,20 @@
     //----------------------------------------------------------------
     "Ability1"					"black_dragon_fireball"			// Ability 1
     "Ability2"					"black_dragon_splash_attack"			// Ability 2
-    "Ability3"					"black_dragon_dragonhide_aura"			// Ability 3
+    "Ability3"					""			// Ability 3
     "Ability4"					""			// Ability 4
 
     // Armor
     //----------------------------------------------------------------
-    "ArmorPhysical"				"3"			// Physical protection.
-    "MagicalResistance"			"70"		// Magical protection.
+    "ArmorPhysical"				"7"			// Physical protection.
+    "MagicalResistance"			"60"		// Magical protection.
 
     // Attack
     //----------------------------------------------------------------
     "AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
     "AttackDamageMin"			"48"		// Damage range min.
     "AttackDamageMax"			"81"		// Damage range max.
-    "AttackRate"				"1.5"		// Speed of attack.
+    "AttackRate"				"1.4"		// Speed of attack.
     "AttackAnimationPoint"		"0.94"		// Normalized time in animation cycle to attack.
     "AttackAcquisitionRange"	"300"		// Range within a target can be acquired.
     "AttackRange"				"300"		// Range within a target can be attacked.
@@ -52,8 +52,8 @@
 
     // Status
     //----------------------------------------------------------------
-    "StatusHealth"				"2000"		// Base health.
-    "StatusHealthRegen"			"2"			// Health regeneration rate.
+    "StatusHealth"				"2300"		// Base health.
+    "StatusHealthRegen"			"10"			// Health regeneration rate.
     "StatusMana"				"500"			// Base mana.
     "StatusManaRegen"			"1"			// Mana regeneration rate.
 

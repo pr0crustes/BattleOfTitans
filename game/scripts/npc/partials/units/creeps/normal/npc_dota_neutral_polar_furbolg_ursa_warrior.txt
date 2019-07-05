@@ -12,7 +12,7 @@
     // Abilities
     //----------------------------------------------------------------
     "Ability1"					"polar_furbolg_ursa_warrior_thunder_clap"			// Ability 1
-    "Ability2"					"centaur_khan_endurance_aura"			// Ability 2
+    "Ability2"					""			// Ability 2
     "Ability3"					""			// Ability 3
     "Ability4"					""			// Ability 4
 
@@ -23,8 +23,8 @@
     // Attack
     //----------------------------------------------------------------
     "AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-    "AttackDamageMin"			"49"		// Damage range min.
-    "AttackDamageMax"			"55"		// Damage range max.
+    "AttackDamageMin"			"27"		// Damage range min.
+    "AttackDamageMax"			"35"		// Damage range max.
     "AttackRate"				"1.55"		// Speed of attack.
     "AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
     "AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
@@ -39,9 +39,9 @@
 
     // Bounty
     //----------------------------------------------------------------
-    "BountyXP"					"95"		// Experience earn.
-    "BountyGoldMin"				"61"		// Gold earned min.
-    "BountyGoldMax"				"70"		// Gold earned max.
+    "BountyXP"					"70"		// Experience earn.
+    "BountyGoldMin"				"36"		// Gold earned min.
+    "BountyGoldMax"				"44"		// Gold earned max.
 
     // Movement
     //----------------------------------------------------------------
@@ -50,7 +50,7 @@
 
     // Status
     //----------------------------------------------------------------
-    "StatusHealth"				"950"		// Base health.
+    "StatusHealth"				"600"		// Base health.
     "StatusHealthRegen"			"1"			// Health regeneration rate.
     "StatusMana"				"300"		// Base mana.
     "StatusManaRegen"			"1.0"		// Mana regeneration rate.
