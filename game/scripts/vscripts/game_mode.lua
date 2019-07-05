@@ -6,7 +6,8 @@ end
 
 
 function GameMode:InitGameMode()
-	self.round = 1
+	self.titan_round = 1
+	self.creep_round = 1
 	self.titan_interval = 180
 	self.creep_interval = 60
 
@@ -78,10 +79,10 @@ end
 
 function GameMode:SpawnTitans()
 	Notifications:TopToAll({text="The Titans Are Emerging", duration=6})
-	TitanSpawner:SpawnTitan(DOTA_TEAM_GOODGUYS, self.titan_spawn_radiant:GetAbsOrigin(), self.ancient_dire, self.round)
-	TitanSpawner:SpawnTitan(DOTA_TEAM_BADGUYS, self.titan_spawn_dire:GetAbsOrigin(), self.ancient_radiant, self.round)
+	TitanSpawner:SpawnTitan(DOTA_TEAM_GOODGUYS, self.titan_spawn_radiant:GetAbsOrigin(), self.ancient_dire, self.titan_round)
+	TitanSpawner:SpawnTitan(DOTA_TEAM_BADGUYS, self.titan_spawn_dire:GetAbsOrigin(), self.ancient_radiant, self.titan_round)
 
-	self.round = self.round + 1
+	self.titan_round = self.titan_round + 1
 
 	return self.titan_interval
 end
@@ -89,7 +90,9 @@ end
 
 function GameMode:SpawnCreeps()
 	print("GameMode:SpawnCreeps()")
-	CreepSpawner:SpawnCreeps(self.round)
+	CreepSpawner:SpawnCreeps(self.creep_round)
+
+	self.creep_round = self.creep_round + 1
 
 	return self.creep_interval
 end

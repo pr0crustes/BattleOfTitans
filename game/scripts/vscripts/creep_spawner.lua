@@ -1,13 +1,12 @@
 
 if CreepSpawner == nil then
 	CreepSpawner = class({})
+
+	CreepSpawner.CURRENT_ALIVE_CREEPS = 0
+	CreepSpawner.MAX_CREEP_COUNT = 700
+
+	CreepSpawner.SPAWNERS = LoadKeyValues("scripts/config/creeps.txt")
 end
-
-
-CreepSpawner.CURRENT_ALIVE_CREEPS = 0
-CreepSpawner.MAX_CREEP_COUNT = 700
-
-CreepSpawner.SPAWNERS = LoadKeyValues("scripts/config/creeps.txt")
 
 
 function CreepSpawner:MinSpawnAmount(round)
@@ -56,7 +55,7 @@ end
 function CreepSpawner:SpawnCreepsAtPos(pos, creep_list, count, round)
 	--print("CreepSpawner:SpawnCreepsAtPos")
 
-	local round_multiplier = 1 + (round * 0.1)
+	local round_multiplier = 1 + ((round - 1) * 0.125)
 
 	for i = 1, count do
 		if CreepSpawner.CURRENT_ALIVE_CREEPS > CreepSpawner.MAX_CREEP_COUNT then
@@ -71,14 +70,20 @@ function CreepSpawner:SpawnCreepsAtPos(pos, creep_list, count, round)
 			creep.is_custom_spawned_creep = true
 			CreepSpawner.CURRENT_ALIVE_CREEPS = CreepSpawner.CURRENT_ALIVE_CREEPS + 1
 
-			creep:SetMaxHealth(creep:GetMaxHealth() * round_multiplier)
-			creep:SetHealth(creep:GetMaxHealth())
-			creep:SetPhysicalArmorBaseValue(creep:GetPhysicalArmorBaseValue() * round_multiplier)
-
 			creep:SetDeathXP(creep:GetDeathXP() * round_multiplier)
 
 			creep:SetMinimumGoldBounty(creep:GetMinimumGoldBounty() * round_multiplier)
-			creep:SetMaximumGoldBounty(creep:GetMaximumGoldBounty() * round_multiplier)
+			creep:SetMaximumGoldBounty(creep:GetMaximumGoldBounty()  * round_multiplier)
+
+			creep:SetMaxHealth(creep:GetMaxHealth() * round_multiplier)
+			creep:SetBaseMaxHealth(creep:GetBaseMaxHealth() * round_multiplier)
+			creep:SetHealth(creep:GetMaxHealth() * round_multiplier)
+
+			creep:SetBaseDamageMin(creep:GetBaseDamageMin() * round_multiplier)
+			creep:SetBaseDamageMax(creep:GetBaseDamageMax() * round_multiplier)
+			creep:SetBaseMoveSpeed(creep:GetBaseMoveSpeed() * round_multiplier)
+
+			creep:SetPhysicalArmorBaseValue(creep:GetPhysicalArmorBaseValue() * round_multiplier)
 		end
 	end
 end
