@@ -55,7 +55,7 @@ end
 function CreepSpawner:SpawnCreepsAtPos(pos, creep_list, count, round)
 	--print("CreepSpawner:SpawnCreepsAtPos")
 
-	local round_multiplier = 1 + ((round - 1) * 0.125)
+	local round_multiplier = 1 + ((round - 1) * 0.1)
 
 	for i = 1, count do
 		if CreepSpawner.CURRENT_ALIVE_CREEPS > CreepSpawner.MAX_CREEP_COUNT then
