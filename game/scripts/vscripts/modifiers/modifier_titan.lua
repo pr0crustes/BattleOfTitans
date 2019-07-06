@@ -31,8 +31,14 @@ end
 
 function modifier_titan:DeclareFunctions()
     return {
+        MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE,
         MODIFIER_PROPERTY_PROVIDES_FOW_POSITION,
     }
+end
+
+
+function modifier_titan:GetModifierMoveSpeed_Absolute()
+    return 200
 end
 
 

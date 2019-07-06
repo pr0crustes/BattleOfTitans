@@ -87,7 +87,7 @@ end
 
 
 function EndScreen:Setup(winner_team)
-    print("Winning team is ", winner_team)
+    --print("Winning team is ", winner_team)
     local data = EndScreen:BuildData(winner_team)
 
     CustomNetTables:SetTableValue("end_game_scoreboard", "game_info", data)
