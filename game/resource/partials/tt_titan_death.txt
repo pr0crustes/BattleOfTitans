@@ -1,0 +1,6 @@
+"DOTA_Tooltip_Ability_titan_death"					        "Wanted Reward"
+"DOTA_Tooltip_Ability_titan_death_Description"		        "Killing this unit rewards everybody on your team with gold and experience."
+"DOTA_Tooltip_Ability_titan_death_base_gold"		        "BASE GOLD:"
+"DOTA_Tooltip_Ability_titan_death_gold_per_level"	        "EXTRA GOLD PER ROUND:"
+"DOTA_Tooltip_Ability_titan_death_base_experience"		    "BASE EXPERIENCE"
+"DOTA_Tooltip_Ability_titan_death_experience_per_level"	    "EXTRA EXPERIENCE PER ROUND:"
