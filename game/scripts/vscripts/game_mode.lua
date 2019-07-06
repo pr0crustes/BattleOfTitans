@@ -122,6 +122,20 @@ function GameMode:GoldFilter(keys)
 end
 
 
+-- Only call this after DOTA_GAMERULES_STATE_POST_GAME
+function GameMode:GetWinningTeam()
+	if not self.ancient_dire:IsAlive() then
+		return DOTA_TEAM_GOODGUYS
+	end
+
+	if not self.ancient_radiant:IsAlive() then
+		return DOTA_TEAM_BADGUYS
+	end
+
+	return DOTA_TEAM_NOTEAM
+end
+
+
 function GameMode:OnGameRulesStateChange()
 	local state = GameRules:State_Get()
 	if state == DOTA_GAMERULES_STATE_PRE_GAME then
@@ -132,7 +146,7 @@ function GameMode:OnGameRulesStateChange()
 		GameRules:GetGameModeEntity():SetThink("TitanThink", self, 1.0)
 	elseif state == DOTA_GAMERULES_STATE_POST_GAME then
 		GameRules:SetSafeToLeave(true)
-		EndScreen:Setup(DOTA_TEAM_GOODGUYS)
+		EndScreen:Setup(self:GetWinningTeam())
 	end
 end
 
