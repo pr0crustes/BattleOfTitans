@@ -72,7 +72,7 @@
 				<Label class="DeathsColumn" text="{d:deaths}" />
 				<Label class="AssistsColumn" text="{d:assists}" />
 
-				<Label class="NetWorthColumn" text="{s:goldSpent}" />
+				<Label class="NetWorthColumn" text="{s:gold}" />
 
 				<Label class="LastHitsColumn" text="{d:creepLastHits}" />
 

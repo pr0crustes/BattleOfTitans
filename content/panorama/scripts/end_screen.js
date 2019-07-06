@@ -66,7 +66,7 @@ function Snippet_Player(playerId, rootPanel, index) {
 	panel.SetDialogVariableInt("deaths", playerData.deaths);
 	panel.SetDialogVariableInt("assists", playerData.assists);
 
-	panel.SetDialogVariable("goldSpent", playerData.goldSpent);
+	panel.SetDialogVariable("gold", playerData.gold);
 
 	panel.SetDialogVariableInt("creepLastHits", playerData.creepLastHits);
 
