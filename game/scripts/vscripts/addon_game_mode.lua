@@ -1,7 +1,6 @@
 require "lib/my"
 require "lib/timers"
 require "lib/end_screen"
-require "lib/data"
 require "lib/notifications"
 require "lib/popup"
 require "creep_spawner"
