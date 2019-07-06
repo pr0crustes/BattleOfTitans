@@ -132,7 +132,7 @@ function GameMode:OnGameRulesStateChange()
 		GameRules:GetGameModeEntity():SetThink("TitanThink", self, 1.0)
 	elseif state == DOTA_GAMERULES_STATE_POST_GAME then
 		GameRules:SetSafeToLeave(true)
-		end_screen_setup(true)
+		EndScreen:Setup(DOTA_TEAM_GOODGUYS)
 	end
 end
 
