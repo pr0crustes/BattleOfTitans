@@ -9,18 +9,36 @@ end
 
 
 function CreepSpawner:MinSpawnAmount(round)
-	if round == 1 then
+	if round <= 3 then
 		return 2
 	end
-	return math.min(math.floor(round * 0.5) + 1, 5)
+	if round <= 6 then
+		return 3
+	end
+	if round <= 12 then
+		return 4
+	end
+	if round <= 20 then
+		return 5
+	end
+	return 6
 end
 
 
 function CreepSpawner:MaxSpawnAmount(round)
-	if round == 1 then
+	if round <= 3 then
 		return 2
 	end
-	return math.min(round + 1, 6)
+	if round <= 6 then
+		return 4
+	end
+	if round <= 12 then
+		return 5
+	end
+	if round <= 20 then
+		return 6
+	end
+	return 7
 end
 
 
