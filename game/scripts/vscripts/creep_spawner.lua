@@ -80,7 +80,7 @@ function CreepSpawner:SpawnCreepsAtPos(pos, creep_list, count, round)
 			creep:SetBaseDamageMax(creep:GetBaseDamageMax() * round_multiplier)
 			creep:SetBaseMoveSpeed(creep:GetBaseMoveSpeed() * round_multiplier)
 
-			creep:SetPhysicalArmorBaseValue(creep:GetPhysicalArmorBaseValue() + ((round - 1) * 0.5))
+			creep:SetPhysicalArmorBaseValue(creep:GetPhysicalArmorBaseValue() + ((round - 1) * 0.4))
 		end
 	end
 end
