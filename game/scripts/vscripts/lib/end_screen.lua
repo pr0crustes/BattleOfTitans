@@ -1,7 +1,3 @@
-require("lib/data")
-require("lib/my")
-
-
 --[[
     DISCLAIMER:
     This file is heavily inspired and based on the open sourced code from Angel Arena Black Star, respecting their Apache-2.0 License.
@@ -9,7 +5,12 @@ require("lib/my")
 ]]
 
 
-function formated_number(number)
+if EndScreen == nil then
+    EndScreen = class({})
+end
+
+
+function EndScreen:FormatNumber(number)
     local as_string = tostring(math.floor(number))
     if number < 1000 then
         return as_string
@@ -23,16 +24,53 @@ end
 
 
 
-function end_screen_get_data(isWinner)
+function EndScreen:BuildDataForPlayer(playerID, hero)
+    local playerInfo = {
+        steamid = tostring(PlayerResource:GetSteamID(playerID)),
+        level = hero:GetLevel(),
+        heroName = hero:GetName(),
+
+        kills = PlayerResource:GetKills(playerID),
+        deaths = PlayerResource:GetDeaths(playerID),
+        assists = PlayerResource:GetAssists(playerID),
+
+        gold = EndScreen:FormatNumber(PlayerResource:GetTotalGoldSpent(playerID) + PlayerResource:GetGold(playerID)),
+
+        creepLastHits = PlayerResource:GetLastHits(playerID),
+        creepDenies = PlayerResource:GetDenies(playerID),
+
+        goldPerMin = EndScreen:FormatNumber(PlayerResource:GetGoldPerMin(playerID)),
+        xpPerMin = EndScreen:FormatNumber(PlayerResource:GetXPPerMin(playerID)),
+
+        str = hero:GetStrength(),
+        agi = hero:GetAgility(),
+        int = hero:GetIntellect(),
+
+        items = {}
+    }
+
+    for item_slot = DOTA_ITEM_SLOT_1, DOTA_ITEM_SLOT_9 do
+        local item = hero:GetItemInSlot(item_slot)
+        if item then
+            playerInfo.items[item_slot] = item:GetAbilityName()
+        end
+    end
+
+    return playerInfo
+end
+
+
+
+function EndScreen:BuildData(winner_team)
     local time = GameRules:GetDOTATime(false, true)
     local matchID = tostring(GameRules:GetMatchID())
 
     local data = {
-        version = "2.1.2",
+        version = "1.0.1",
         matchID = matchID,
         mapName = GetMapName(),
         players = {},
-        isWinner = isWinner,
+        winner = winner_team,
         duration = math.floor(time),
         flags = {}
     }
@@ -41,35 +79,7 @@ function end_screen_get_data(isWinner)
         if PlayerResource:IsValidPlayerID(playerID) then
             local hero = PlayerResource:GetSelectedHeroEntity(playerID)
             if IsValidEntity(hero) then
-                local playerInfo = {
-                    steamid = tostring(PlayerResource:GetSteamID(playerID)),
-
-                    damageTaken = formated_number(player_data_get_value(playerID, "damageTaken")),
-                    bossDamage = formated_number(player_data_get_value(playerID, "bossDamage")),
-                    heroHealing = formated_number(PlayerResource:GetHealing(playerID)),
-
-                    deaths = PlayerResource:GetDeaths(playerID),
-                    goldBags = player_data_get_value(playerID, "goldBagsCollected"),
-                    saves = player_data_get_value(playerID, "saves"),
-
-                    heroName = hero:GetName(),
-
-                    str = hero:GetStrength(),
-                    agi = hero:GetAgility(),
-                    int = hero:GetIntellect(),
-
-                    level = hero:GetLevel(),
-                    items = {}
-                }
-
-                for item_slot = DOTA_ITEM_SLOT_1, DOTA_STASH_SLOT_6 do
-                    local item = hero:GetItemInSlot(item_slot)
-                    if item then
-                        playerInfo.items[item_slot] = item:GetAbilityName()
-                    end
-                end
-
-                data.players[playerID] = playerInfo
+                data.players[playerID] = EndScreen:BuildDataForPlayer(playerID, hero)
             end
         end
     end
@@ -77,11 +87,8 @@ function end_screen_get_data(isWinner)
 end
 
 
-local has_send_data = false
-
-
-function end_screen_setup(isWinner)
-    local data = end_screen_get_data(isWinner)
+function EndScreen:Setup(winner_team)
+    local data = EndScreen:BuildData(winner_team)
 
     CustomNetTables:SetTableValue("end_game_scoreboard", "game_info", data)
 end
