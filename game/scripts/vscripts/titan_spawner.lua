@@ -30,7 +30,7 @@ function TitanSpawner:SpawnTitan(team, location, target, round)
 
 	titan:SetBaseDamageMin(100 + 50 * round)
 	titan:SetBaseDamageMax(100 + 50 * round)
-	titan:SetPhysicalArmorBaseValue(round + 1)
+	titan:SetPhysicalArmorBaseValue(round - 1)
 
 	titan:SetContextThink(
 		DoUniqueString("SpawnTitanAttackThink"),
