@@ -18,7 +18,7 @@
 
     // Armor
     //----------------------------------------------------------------
-    "ArmorPhysical"				"3"			// Physical protection.
+    "ArmorPhysical"				"0"			// Physical protection.
 
     // Attack
     //----------------------------------------------------------------
@@ -52,7 +52,7 @@
     //----------------------------------------------------------------
     "StatusHealth"				"600"		// Base health.
     "StatusHealthRegen"			"0.5"		// Health regeneration rate.
-    "StatusMana"				"0"			// Base mana.
+    "StatusMana"				"500"	    // Base mana.
     "StatusManaRegen"			"1.0"		// Mana regeneration rate.
 
     // Vision
