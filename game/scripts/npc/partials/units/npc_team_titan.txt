@@ -10,7 +10,7 @@
     "CanBeDominated"			"0"
     "HasInventory"				"1"
 
-    "Ability1"					""
+    "Ability1"					"titan_death"
     "Ability2"					""
 
     "ArmorPhysical"				"0"

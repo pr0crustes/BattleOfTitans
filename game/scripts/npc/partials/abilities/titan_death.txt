@@ -1,0 +1,51 @@
+"titan_death"
+{
+    "BaseClass"					                "ability_datadriven"
+    "AbilityTextureName"                        "alchemist_goblins_greed"
+    "AbilityBehavior"			                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"						    "FIELD_INTEGER"
+            "base_gold"	                        "100"
+        }
+        "02"
+        {
+            "var_type"						    "FIELD_INTEGER"
+            "gold_per_level"	                "400"
+        }
+        "03"
+        {
+            "var_type"						    "FIELD_INTEGER"
+            "base_experience"	                "100"
+        }
+        "04"
+        {
+            "var_type"						    "FIELD_INTEGER"
+            "bonus_experience"	                "200"
+        }
+    }
+
+
+    "Modifiers"
+    {
+        "modifier_titan_death"
+        {
+            "Passive"               "1"
+            "IsBuff"	            "1"
+            "IsHidden"              "1"
+
+            "OnDeath"
+            {
+                "RunScript"
+                {
+                    "ScriptFile"	"abilities/units/titan_death.lua"
+                    "Function"		"OnDeath"
+                }
+            }
+        }
+    }
+}
