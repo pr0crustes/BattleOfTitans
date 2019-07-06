@@ -25,7 +25,7 @@
         "04"
         {
             "var_type"						    "FIELD_INTEGER"
-            "bonus_experience"	                "200"
+            "experience_per_level"	            "200"
         }
     }
 

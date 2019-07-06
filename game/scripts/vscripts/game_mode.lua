@@ -79,7 +79,7 @@ function GameMode:ExperienceFilter(keys)
 	local hero = player_id and PlayerResource:GetSelectedHeroEntity(player_id)
 
 	-- Start Share XP
-	local team_heroes = get_main_friendly_heroes(player_id)
+	local team_heroes = get_team_heroes(PlayerResource:GetTeam(player_id))
 	local count = #team_heroes
 
 	local share_slice = experience * self.experience_share
@@ -105,7 +105,7 @@ function GameMode:GoldFilter(keys)
 	local hero = player_id and PlayerResource:GetSelectedHeroEntity(player_id)
 
 	-- Start Share Gold
-	local team_heroes = get_main_friendly_heroes(player_id)
+	local team_heroes = get_team_heroes(PlayerResource:GetTeam(player_id))
 	local count = #team_heroes
 
 	local share_slice = gold * self.gold_share
