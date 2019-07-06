@@ -172,11 +172,30 @@
   width: 280px;
 }
 
-.SavesColumn {
+.GoldColumn,
+.NetWorthColumn
+{
+  width: 50px;
+  vertical-align: bottom;
+}
+
+.LastHitsColumn
+{
+	width: 42px;
+	margin-right: 4px;
+}
+
+.GPMColumn,
+.XPMColumn
+{
+  width: 70px;
+}
+
+.KillsColumn {
   width: 40px;
 }
 
-.GoldBagsColumn {
+.AssistsColumn {
   width: 40px;
 }
 
@@ -185,7 +204,7 @@
 }
 
 .ItemsColumn {
-  width: 300px;
+  width: 310px;
 }
 
 .BackpackItemsColumn {
@@ -215,12 +234,35 @@
   margin: 0 2px;
 }
 
+.GoldIcon
+{
+	background-image: url("s2r://panorama/images/hud/icon_gold_psd.vtex");
+	background-size: 100% 100%;
+	width: 24px;
+	height: 24px;
+	color: #C48103;
+	horizontal-align: right;
+	
+	vertical-align: bottom;
+	
+	tooltip-position: top;
+	tooltip-body-position: 50% 50%;
+}
+
+.LegendGold
+{
+	text-align: right;
+	horizontal-align: right;
+	color: #C48103;
+}
+
 .Team {
   width: 100%;
   animation-duration: .7s;
   animation-name: EndPlayerFadeLeft;
   animation-timing-function: ease-in-out;
   flow-children: down;
+  overflow: squish squish;
 }
 
 .Team.IsWinner #TeamInfo > .HeaderColumn > #WinnerPanel {
@@ -235,6 +277,7 @@
   background-color: gradient(linear, 0% 0%, 0% 100%, from(#222424), to(#121a1f));
   flow-children: right;
   horizontal-align: center;
+  overflow: squish squish;
 }
 
 .Team #TeamInfo > .HeaderColumn #TeamFlowBlock {
@@ -308,8 +351,6 @@
 
 .Team #TeamInfo > Label,
 .Team #TeamInfo > .NetWorthColumn {
-  max-height: 27px;
-  font-size: 20px;
   font-weight: thin;
   color: #768e8d;
   text-align: center;
@@ -329,6 +370,11 @@
 .Team #TeamInfo .IntColumn {
   height: 32px;
   padding: 0 8px;
+}
+
+.LegendPanel
+{
+
 }
 
 .Team #TeamInfo .LegendPanel {
@@ -441,9 +487,7 @@
 }
 
 .Player > .NetWorthColumn {
-  font-size: 22px;
   color: #e7ba01;
-  text-align: right;
   text-overflow: shrink;
 }
 

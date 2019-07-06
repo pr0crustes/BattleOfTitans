@@ -37,7 +37,6 @@ function EndScreen:BuildDataForPlayer(playerID, hero)
         gold = EndScreen:FormatNumber(PlayerResource:GetTotalGoldSpent(playerID) + PlayerResource:GetGold(playerID)),
 
         creepLastHits = PlayerResource:GetLastHits(playerID),
-        creepDenies = PlayerResource:GetDenies(playerID),
 
         goldPerMin = EndScreen:FormatNumber(PlayerResource:GetGoldPerMin(playerID)),
         xpPerMin = EndScreen:FormatNumber(PlayerResource:GetXPPerMin(playerID)),

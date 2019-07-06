@@ -3,6 +3,24 @@
     This file is heavily inspired and based on the open sourced code from Angel Arena Black Star, respecting their Apache-2.0 License.
     Thanks to Angel Arena Black Star.
  */
+"use strict";
+GameUI.CustomUIConfig().team_colors = {};
+GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_GOODGUYS] = '#008000';
+GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_BADGUYS] = '#FF0000';
+
+
+function get_hud() {
+    var p = $.GetContextPanel();
+    while (p !== null && p.id !== "Hud") {
+        p = p.GetParent();
+    }
+    return p;
+}
+
+
+function find_hud_element(find) {
+    return get_hud().FindChildTraverse(find)
+}
 
 
 
@@ -41,21 +59,23 @@ function Snippet_Player(playerId, rootPanel, index) {
 	});
 
 	panel.FindChildTraverse("HeroIcon").SetImage('file://{images}/heroes/' + playerData.heroName + '.png');
-	panel.SetDialogVariableInt("hero_level", Players.GetLevel(playerId));
+	panel.SetDialogVariableInt("hero_level", playerData.level);
 	panel.SetDialogVariable("hero_name", $.Localize(playerData.heroName));
+	
+	panel.SetDialogVariableInt("kills", playerData.kills);
+	panel.SetDialogVariableInt("deaths", playerData.deaths);
+	panel.SetDialogVariableInt("assists", playerData.assists);
 
-	panel.SetDialogVariableInt("deaths", Players.GetDeaths(playerId));
-	panel.SetDialogVariableInt("saves", playerData.saves);
-	panel.SetDialogVariableInt("goldBags", playerData.goldBags);
+	panel.SetDialogVariable("goldSpent", playerData.goldSpent);
 
-	panel.SetDialogVariable("damageTaken", playerData.damageTaken);
-	panel.SetDialogVariable("bossDamage", playerData.bossDamage);
-	panel.SetDialogVariable("heroHealing", playerData.heroHealing);
+	panel.SetDialogVariableInt("creepLastHits", playerData.creepLastHits);
+
+	panel.SetDialogVariable("goldPerMin", playerData.goldPerMin);
+	panel.SetDialogVariable("xpPerMin", playerData.xpPerMin);
 
 	panel.SetDialogVariableInt("strength", playerData.str);
 	panel.SetDialogVariableInt("agility", playerData.agi);
 	panel.SetDialogVariableInt("intellect", playerData.int);
-
 
 	for (var i = 0; i < 9; i++) {
 		var item = playerData.items[i];
@@ -74,13 +94,19 @@ function Snippet_Player(playerId, rootPanel, index) {
  * @param {Number} team Team Index
  */
 function Snippet_Team(team) {
+	var teamDetails = Game.GetTeamDetails(team);
+
 	var panel = $.CreatePanel("Panel", $("#TeamsContainer"), "");
 	panel.BLoadLayoutSnippet("Team");
-	panel.SetHasClass("IsRight", true);
-	panel.SetHasClass("IsWinner", GAME_RESULT.isWinner);
+	panel.SetHasClass("IsRight", team % 2 !== 0);
+	panel.SetDialogVariable('team_name', $.Localize(teamDetails["team_name"]));
+	panel.SetDialogVariableInt('team_score', teamDetails["team_score"]);
+	panel.SetHasClass('IsWinner', GAME_RESULT.winner === team);
+
+	var teamColor = GameUI.CustomUIConfig().team_colors[team];
+	panel.FindChildTraverse('TeamName').style.textShadow = '0px 0px 6px 1.0 ' + teamColor;
 
 	var ids = Game.GetPlayerIDsOnTeam(team)
-
 	for(var i = 0; i < ids.length; i++) {
 		Snippet_Player(ids[i], panel, i + 1);
 	}
@@ -94,24 +120,21 @@ function OnGameResult(table, key, gameResult) {
 		return;
 	}
 
-
 	$("#LoadingPanel").visible = false;
 	$("#EndScreenWindow").visible = true;
 	$("#TeamsContainer").RemoveAndDeleteChildren();
-	
+
+	if (gameResult.winner === 2) {
+		$('#EndScreenVictory').text = $.Localize("dota_game_end_victory_title_radiant");
+	} else if (gameResult.winner === 3) {
+		$('#EndScreenVictory').text = $.Localize("dota_game_end_victory_title_dire");
+	}
+
 	GAME_RESULT = gameResult;
 
-	Snippet_Team(2);
-
-
-	var result_label = $("#EndScreenVictory")
-	
-	if (GAME_RESULT.isWinner) {
-		result_label.text = $.Localize("end_screen_victory");
-		result_label.style.color = "#008000";
-	} else {
-		result_label.text = $.Localize("end_screen_defeat");
-		result_label.style.color = "#FF0000";
+	var teamIds = Game.GetAllTeamIDs();
+	for(var i = 0; i < teamIds.length; i++) {
+		Snippet_Team(teamIds[i]);
 	}
 }
 
