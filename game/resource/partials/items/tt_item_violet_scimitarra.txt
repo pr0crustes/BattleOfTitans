@@ -1,0 +1,6 @@
+"DOTA_Tooltip_ability_item_violet_scimitarra"                           "Violet Scimitarra"
+"DOTA_Tooltip_ability_item_violet_scimitarra_Description"               "<h1>Passive: Dragon's Reach</h1> Increases attack range of ranged heroes by %base_attack_range%.\n<h1>Passive: Violet Attack</h1> On attack, deals %attack_damage%%  of your attack damage to the %extra_attacks% closest enemies in a %extra_attack_radius% area around the target. Melee units cannot Violet Attack."
+"DOTA_Tooltip_ability_item_violet_scimitarra_Note0"                     "Passive does not stack."
+"DOTA_Tooltip_ability_item_violet_scimitarra_bonus_agility"             "+$agi"
+"DOTA_Tooltip_ability_item_violet_scimitarra_bonus_strength"            "+$str"
+"DOTA_Tooltip_ability_item_violet_scimitarra_Lore"                      "The forward charge of the wyvern host grants no quarter."

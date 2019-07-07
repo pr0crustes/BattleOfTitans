@@ -1,0 +1,65 @@
+"item_recipe_violet_scimitarra"
+{
+    "Model"							"models/props_gameplay/recipe.vmdl"
+    "BaseClass"						"item_recipe_magic_wand"
+
+    "ItemCost"						"0"
+    "ItemShopTags"					""
+
+    "ItemRecipe"					"1"
+    "ItemResult"					"item_violet_scimitarra"
+
+    "ItemRequirements"
+    {
+        "01"						"item_eagle;item_blade_of_alacrity;item_dragon_lance"
+    }
+}
+
+
+"item_violet_scimitarra"
+{
+    "BaseClass"						"item_lua"
+    "ScriptFile"                    "items/item_violet_scimitarra.lua"
+
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+    "AbilityTextureName"			"violet_scimitarra"
+
+    "ItemShopTags"					"damage;hard_to_tag"
+    "ItemQuality"					"epic"
+    "ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "bonus_agility"			"25"
+        }
+        "02"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "bonus_strength"		"15"
+        }
+        "03"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "base_attack_range"		"140"
+        }
+        "04"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "extra_attacks"		    "2"
+        }
+        "05"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "extra_attack_radius"   "500"
+        }
+        "06"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "attack_damage"		    "75"
+        }
+    }
+}
