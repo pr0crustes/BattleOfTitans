@@ -74,8 +74,8 @@ end
 function CreepSpawner:SpawnCreepsAtPos(pos, creep_list, count, round)
 	--print("CreepSpawner:SpawnCreepsAtPos")
 
-	local round_multiplier = 1 + ((round - 1) * 0.08)
-	local round_multiplier_plus = 1 + ((round - 1) * 0.16)
+	local round_multiplier = 1 + ((round - 1) * 0.05)
+	local round_multiplier_plus = 1 + ((round - 1) * 0.12)
 
 	for i = 1, count do
 		local creep_name = random_from_table(values_from_dict(creep_list))
