@@ -12,13 +12,13 @@ function CreepSpawner:MinSpawnAmount(round)
 	if round <= 3 then
 		return 2
 	end
-	if round <= 6 then
+	if round <= 9 then
 		return 3
 	end
-	if round <= 12 then
+	if round <= 15 then
 		return 4
 	end
-	if round <= 20 then
+	if round <= 25 then
 		return 5
 	end
 	return 6
@@ -29,13 +29,13 @@ function CreepSpawner:MaxSpawnAmount(round)
 	if round <= 3 then
 		return 2
 	end
-	if round <= 6 then
+	if round <= 9 then
 		return 4
 	end
-	if round <= 12 then
+	if round <= 15 then
 		return 5
 	end
-	if round <= 20 then
+	if round <= 25 then
 		return 6
 	end
 	return 7
