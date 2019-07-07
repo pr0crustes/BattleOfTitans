@@ -1,0 +1,2 @@
+"DOTA_Tooltip_ability_item_dev_blink"                           "Dev Blink"
+"DOTA_Tooltip_ability_item_dev_blink_Description"               "Blinks."

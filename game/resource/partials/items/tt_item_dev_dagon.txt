@@ -1,0 +1,2 @@
+"DOTA_Tooltip_ability_item_dev_dagon"                           "Dev Dagon"
+"DOTA_Tooltip_ability_item_dev_dagon_Description"               "Kills."
