@@ -9,6 +9,7 @@
     "ConsideredHero"			"1"
     "CanBeDominated"			"0"
     "HasInventory"				"1"
+    "IsAncient"                 "1"
 
     "Ability1"					"titan_death"
     "Ability2"					""
