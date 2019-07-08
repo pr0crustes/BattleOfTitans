@@ -2,8 +2,6 @@
 if CreepSpawner == nil then
 	CreepSpawner = class({})
 
-	CreepSpawner.MAX_CREEP_PER_CAMP = 30
-
 	CreepSpawner.SPAWNERS = LoadKeyValues("scripts/config/creeps.txt")
 end
 
@@ -48,25 +46,30 @@ function CreepSpawner:SpawnCreeps(round)
 	local min_count = CreepSpawner:MinSpawnAmount(round)
 	local max_count = CreepSpawner:MaxSpawnAmount(round)
 
-	for team, spawn_info in pairs(CreepSpawner.SPAWNERS) do
-		for spawner_name, creep_list in pairs(spawn_info) do
-			CreepSpawner:SpawnCreepsAtPoint(spawner_name, creep_list, min_count, max_count, round)
-		end
+	for i, spawner_info in pairs(CreepSpawner.SPAWNERS) do
+		local spawner_name = spawner_info["spawner_name"]
+		local disable_amount = spawner_info["disable_amount"]
+		local creeps = spawner_info["creeps"]
+
+		CreepSpawner:SpawnCreepsAtPoint(spawner_name, creeps, min_count, max_count, disable_amount, round)
 	end
 end
 
 
-function CreepSpawner:SpawnCreepsAtPoint(point_name, creep_list, min_count, max_count, round)
+function CreepSpawner:SpawnCreepsAtPoint(point_name, creep_list, min_count, max_count, disable_amount, round)
 	--print("CreepSpawner:SpawnCreepsAtPoint")
 
-	local point = Entities:FindByName(nil, point_name)
-	local spawn_pos = point:GetAbsOrigin()
+	local points = Entities:FindAllByName(point_name)
 
-	local nearby_creeps = FindUnitsInRadius(DOTA_TEAM_NEUTRALS, spawn_pos, nil, 700, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_CREEP, 0, 0, false)
+	for i, point in pairs(points) do
+		local spawn_pos = point:GetAbsOrigin()
 
-	if nearby_creeps and #nearby_creeps < CreepSpawner.MAX_CREEP_PER_CAMP then
-		local count = RandomInt(min_count, max_count)
-		CreepSpawner:SpawnCreepsAtPos(spawn_pos, creep_list, count, round)
+		local nearby_creeps = FindUnitsInRadius(DOTA_TEAM_NEUTRALS, spawn_pos, nil, 700, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_CREEP, 0, 0, false)
+
+		if #nearby_creeps < disable_amount then
+			local count = RandomInt(min_count, max_count)
+			CreepSpawner:SpawnCreepsAtPos(spawn_pos, creep_list, count, round)
+		end
 	end
 end
 

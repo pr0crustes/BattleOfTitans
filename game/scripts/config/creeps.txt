@@ -1,78 +1,83 @@
 "root"
 {
-	"radiant"
+	"1"
 	{
-		"spawner_radiant_easy_1"
+		"spawner_name"	    "spawner_creep_easy_1"
+		"disable_amount"	"20"
+
+		"creeps"
 		{
 			"1"     "npc_dota_neutral_polar_furbolg_champion"
-		}
-
-		"spawner_radiant_easy_2"
-		{
-			"1"     "npc_dota_neutral_polar_furbolg_ursa_warrior"
-		}
-
-		"spawner_radiant_hard_1"
-		{
-			"1"     "npc_dota_neutral_fel_beast"
-			"2"		"npc_dota_neutral_ghost"
-			"3"		"npc_dota_neutral_centaur_outrunner"
-			"4"		"npc_dota_neutral_centaur_khan"
-		}
-
-		"spawner_radiant_hard_2"
-		{
-			"1"     "npc_dota_neutral_alpha_wolf"
-            "2"     "npc_dota_neutral_giant_wolf"
-		}
-
-		"spawner_radiant_ancient_1"
-		{
-			"1"     "npc_dota_neutral_big_thunder_lizard"
-            "2"     "npc_dota_neutral_granite_golem"
-		}
-
-		"spawner_radiant_ancient_2"
-		{
-			"1"     "npc_dota_neutral_black_dragon"
 		}
 	}
 
-	"dire"
+	"2"
 	{
-		"spawner_dire_easy_1"
+		"spawner_name"	    "spawner_creep_easy_2"
+		"disable_amount"	"20"
+
+		"creeps"
 		{
 			"1"     "npc_dota_neutral_polar_furbolg_champion"
 		}
+	}
 
-		"spawner_dire_easy_2"
+	"3"
+	{
+		"spawner_name"	    "spawner_creep_easy_3"
+		"disable_amount"	"20"
+
+		"creeps"
 		{
 			"1"     "npc_dota_neutral_polar_furbolg_ursa_warrior"
 		}
+	}
 
-		"spawner_dire_hard_1"
+	"4"
+	{
+		"spawner_name"	    "spawner_creep_hard_1"
+		"disable_amount"	"20"
+
+		"creeps"
 		{
 			"1"     "npc_dota_neutral_fel_beast"
 			"2"		"npc_dota_neutral_ghost"
-			"3"		"npc_dota_neutral_centaur_outrunner"
-			"4"		"npc_dota_neutral_centaur_khan"
 		}
+	}
 
-		"spawner_dire_hard_2"
+	"5"
+	{
+		"spawner_name"	    "spawner_creep_hard_2"
+		"disable_amount"	"20"
+
+		"creeps"
 		{
-			"1"     "npc_dota_neutral_alpha_wolf"
-            "2"     "npc_dota_neutral_giant_wolf"
+			"1"		"npc_dota_neutral_centaur_outrunner"
+			"2"		"npc_dota_neutral_centaur_khan"
 		}
+	}
 
-		"spawner_dire_ancient_1"
+	"6"
+	{
+		"spawner_name"	    "spawner_creep_ancient_1"
+		"disable_amount"	"10"
+
+		"creeps"
 		{
 			"1"     "npc_dota_neutral_big_thunder_lizard"
-            "2"     "npc_dota_neutral_granite_golem"
+			"2"     "npc_dota_neutral_granite_golem"
 		}
+	}
 
-		"spawner_dire_ancient_2"
+	"7"
+	{
+		"spawner_name"	    "spawner_creep_ancient_2"
+		"disable_amount"	"10"
+
+		"creeps"
 		{
-			"1"     "npc_dota_neutral_black_dragon"
+			"1"     "npc_dota_neutral_polar_furbolg_champion"
+			"2"     "npc_dota_neutral_granite_golem"
 		}
 	}
 }
