@@ -38,7 +38,7 @@ end
 
 
 function modifier_titan:GetModifierMoveSpeed_Absolute()
-    return 200
+    return 150
 end
 
 
