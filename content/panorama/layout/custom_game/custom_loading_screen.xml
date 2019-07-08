@@ -1,0 +1,7 @@
+<root> 
+	<Panel>
+		<Panel>
+			<Image id="bgimage" src="file://{images}/custom_game/loading_screen/main_loading.png" scaling="stretch"/>
+		</Panel>
+	</Panel>
+</root>
