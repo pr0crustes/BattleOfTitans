@@ -1,0 +1,4 @@
+"dire_defense_shop"                     "Dire Defense Shop"
+"dire_offense_shop"                     "Dire Offense Shop"
+"radiant_defense_shop"                  "Radiant Defense Shop"
+"radiant_offense_shop"                  "Radiant Offense Shop"
