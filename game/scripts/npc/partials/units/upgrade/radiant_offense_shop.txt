@@ -31,8 +31,8 @@
     "ArmorPhysical"             "100"
     "StatusHealth"              "100000"
     "StatusHealthRegen"         "100000"
-    "StatusMana"                "0"
-    "StatusManaRegen"           "0"
+    "StatusMana"                "50000"
+    "StatusManaRegen"           "50000"
     "MagicalResistance"         "100"
 
     "TeamName"                  "DOTA_TEAM_GOODGUYS"

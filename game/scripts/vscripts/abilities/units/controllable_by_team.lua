@@ -2,10 +2,10 @@
 function OnCreated(keys)
     local caster = keys.caster
 
-    local heroes = get_team_heroes(caster:GetTeam())
-
-    for k, v in pairs(heroes) do
-        print("Setting SetControllableByPlayer")
-        caster:SetControllableByPlayer(v:GetPlayerID(), true)
+    for playerID = 0, DOTA_MAX_TEAM_PLAYERS - 1 do
+        if PlayerResource:GetTeam(playerID) == caster:GetTeam() then
+            print("OnCreated SetControllableByPlayer")
+            caster:SetControllableByPlayer(playerID, true)
+        end
     end
 end
