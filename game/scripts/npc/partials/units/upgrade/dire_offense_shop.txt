@@ -35,7 +35,7 @@
     "StatusManaRegen"           "0"
     "MagicalResistance"         "100"
 
-    "TeamName"                  "DOTA_TEAM_GOODGUYS"
+    "TeamName"                  "DOTA_TEAM_BADGUYS"
 
     "VisionDaytimeRange"        "100"
     "VisionNighttimeRange"      "100"
