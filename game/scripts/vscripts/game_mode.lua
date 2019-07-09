@@ -28,8 +28,6 @@ function GameMode:InitGameMode()
 	self.dire_offense_shop = nil
 	self.dire_defense_shop = nil
 
-	--print(self.radiant_defense_shop:GetHealth())
-
 	GameRules:SetShowcaseTime(0)
 
 	GameRules:SetCustomGameSetupAutoLaunchDelay(3.0)
