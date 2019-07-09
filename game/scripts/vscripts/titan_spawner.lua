@@ -8,14 +8,6 @@ if TitanSpawner == nil then
 end
 
 
-function TitanLifeForRound(n)
-	if n <= 1 then
-		return 1000
-	end
-	return (n * 500) + TitanLifeForRound(n - 1)
-end
-
-
 function TitanSpawner:SpawnTitan(team, location, target, round)
 	print("TitanSpawner:SpawnTitan")
 
@@ -23,14 +15,14 @@ function TitanSpawner:SpawnTitan(team, location, target, round)
 	titan:AddNewModifier(titan, nil, "modifier_titan", {})
 	titan:CreatureLevelUp(round)
 
-	local health = TitanLifeForRound(round)
+	local health = 10000 * round
 	titan:SetMaxHealth(health)
 	titan:SetBaseMaxHealth(health)
 	titan:SetHealth(health)
 
-	titan:SetBaseDamageMin(100 + 50 * round)
-	titan:SetBaseDamageMax(100 + 50 * round)
-	titan:SetPhysicalArmorBaseValue(round - 1)
+	titan:SetBaseDamageMin(100 + 100 * round)
+	titan:SetBaseDamageMax(100 + 100 * round)
+	titan:SetPhysicalArmorBaseValue(2 * round)
 
 	titan:SetContextThink(
 		DoUniqueString("SpawnTitanAttackThink"),
