@@ -9,10 +9,10 @@ function GameMode:InitGameMode()
 	self.titan_round = 1
 	self.creep_round = 1
 
-	self.titan_interval = 180
+	self.titan_interval = 60 * 5
 	self.creep_interval = 60
 
-	self.titan_countdown = 0
+	self.titan_countdown = self.titan_interval
 
 	self.gold_share = 0.15
 	self.experience_share = 0.15
