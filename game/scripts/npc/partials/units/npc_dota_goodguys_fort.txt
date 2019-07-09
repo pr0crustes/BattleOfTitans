@@ -1,15 +1,15 @@
 "npc_dota_goodguys_fort"
 {
-    "ArmorPhysical"				"13"
+    "ArmorPhysical"				"1"
     "MagicalResistance"			"0"
 
-    "StatusHealth"				"15000"
+    "StatusHealth"				"10000"
     "StatusHealthRegen"			"1"
     "StatusMana"				"0"
     "StatusManaRegen"			"0"
 
-    "VisionDaytimeRange"		"3600"
-    "VisionNighttimeRange"		"3600"
+    "VisionDaytimeRange"		"1900"
+    "VisionNighttimeRange"		"1900"
 
     "Ability2"                  "ancient_damage_guard"
 }	
