@@ -16,7 +16,7 @@
 
     "AbilityLayout"				"12"
     "Ability1"					"controllable_by_team"
-    "Ability2"					""
+    "Ability2"					"shop_buff"
     "Ability3"					""
     "Ability4"					""
     "Ability5"					""

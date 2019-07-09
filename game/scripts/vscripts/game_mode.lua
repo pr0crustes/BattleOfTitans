@@ -151,7 +151,8 @@ function GameMode:OnGameRulesStateChange()
 		self.dire_offense_shop = CreateUnitByName("dire_offense_shop", Vector(5000, 3500, 264), true, nil, nil, DOTA_TEAM_BADGUYS)
 		self.dire_defense_shop = CreateUnitByName("dire_defense_shop", Vector(3500, 5000, 264), true, nil, nil, DOTA_TEAM_BADGUYS)
 
-		print(self.radiant_defense_shop:GetHealth())
+		self.radiant_offense_shop:SetForwardVector(Vector(0, 1, 0))
+		self.dire_defense_shop:SetForwardVector(Vector(0, -1, 0))
 	elseif state == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 		self:SpawnCreeps()
 		GameRules:GetGameModeEntity():SetThink("SpawnCreeps", self, self.creep_interval)
