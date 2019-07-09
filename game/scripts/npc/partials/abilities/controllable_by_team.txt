@@ -1,0 +1,24 @@
+"controllable_by_team"
+{
+    "BaseClass"					                "ability_datadriven"
+    "AbilityBehavior"			                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+    "Modifiers"
+    {
+        "modifier_controllable_by_team"
+        {
+            "Passive"               "1"
+            "IsBuff"	            "1"
+            "IsHidden"              "1"
+
+            "OnCreated"
+            {
+                "RunScript"
+                {
+                    "ScriptFile"	"abilities/units/modifier_controllable_by_team.lua"
+                    "Function"		"OnCreated"
+                }
+            }
+        }
+    }
+}
