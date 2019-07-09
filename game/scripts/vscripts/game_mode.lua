@@ -23,6 +23,13 @@ function GameMode:InitGameMode()
 	self.titan_spawn_radiant = Entities:FindByName(nil, "titan_spawn_radiant")
 	self.titan_spawn_dire = Entities:FindByName(nil, "titan_spawn_dire")
 
+	self.radiant_defense_shop = nil
+	self.radiant_offense_shop = nil
+	self.dire_offense_shop = nil
+	self.dire_defense_shop = nil
+
+	--print(self.radiant_defense_shop:GetHealth())
+
 	GameRules:SetShowcaseTime(0)
 
 	GameRules:SetCustomGameSetupAutoLaunchDelay(3.0)
@@ -139,7 +146,12 @@ end
 function GameMode:OnGameRulesStateChange()
 	local state = GameRules:State_Get()
 	if state == DOTA_GAMERULES_STATE_PRE_GAME then
-		-- Pass
+		self.radiant_defense_shop = CreateUnitByName("radiant_defense_shop", Vector(-5000, -3500, 264), true, nil, nil, DOTA_TEAM_GOODGUYS)
+		self.radiant_offense_shop = CreateUnitByName("radiant_offense_shop", Vector(-3500, -5000, 264), true, nil, nil, DOTA_TEAM_GOODGUYS)
+		self.dire_offense_shop = CreateUnitByName("dire_offense_shop", Vector(5000, 3500, 264), true, nil, nil, DOTA_TEAM_BADGUYS)
+		self.dire_defense_shop = CreateUnitByName("dire_defense_shop", Vector(3500, 5000, 264), true, nil, nil, DOTA_TEAM_BADGUYS)
+
+		print(self.radiant_defense_shop:GetHealth())
 	elseif state == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 		self:SpawnCreeps()
 		GameRules:GetGameModeEntity():SetThink("SpawnCreeps", self, self.creep_interval)

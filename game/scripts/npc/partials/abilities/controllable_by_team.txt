@@ -15,7 +15,7 @@
             {
                 "RunScript"
                 {
-                    "ScriptFile"	"abilities/units/modifier_controllable_by_team.lua"
+                    "ScriptFile"	"abilities/units/controllable_by_team.lua"
                     "Function"		"OnCreated"
                 }
             }
