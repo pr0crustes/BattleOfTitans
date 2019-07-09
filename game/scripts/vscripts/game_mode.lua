@@ -241,7 +241,7 @@ function GameMode:OnEntityKilled(keys)
 	local killed_unit = EntIndexToHScript(keys.entindex_killed)
 	if killed_unit then
 		if killed_unit:IsRealHero() and not killed_unit:IsReincarnating() then
-			killed_unit:SetTimeUntilRespawn(killed_unit:GetRespawnTime() * 0.33)
+			killed_unit:SetTimeUntilRespawn(killed_unit:GetRespawnTime() * 0.20)
 		end
 
 		if killed_unit.is_custom_spawned_creep then
