@@ -233,3 +233,16 @@ function get_team_heroes(team)
 
 	return out
 end
+
+
+function SendErrorMessage(playerID, message)
+	Notifications:ClearBottom(playerID)
+	Notifications:Bottom(playerID, {
+		text = message,
+		style = {
+			color="#E62020"
+		},
+		duration = 2
+	})
+	EmitSoundOnClient("General.Cancel", PlayerResource:GetPlayer(playerID))
+end
