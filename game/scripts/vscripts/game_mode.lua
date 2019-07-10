@@ -152,6 +152,8 @@ function GameMode:OnGameRulesStateChange()
 
 		self.radiant_offense_shop:SetForwardVector(Vector(0, 1, 0))
 		self.dire_defense_shop:SetForwardVector(Vector(0, -1, 0))
+
+		MercenarySpawner:SetupSpawners()
 	elseif state == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 		self:SpawnCreeps()
 		GameRules:GetGameModeEntity():SetThink("SpawnCreeps", self, self.creep_interval)
