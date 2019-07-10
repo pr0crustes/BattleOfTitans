@@ -1,7 +1,7 @@
 "shop_buy_armor_radiant"
 {
     "BaseClass"						"ability_lua"
-    "ScriptFile"					"abilities/units/shop/shop_buy_armor_radiant.lua"
+    "ScriptFile"					"abilities/units/shop_buy.lua"
     "AbilityBehavior"			    "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 
     "AbilityTextureName"            "dragon_knight_dragon_tail"
