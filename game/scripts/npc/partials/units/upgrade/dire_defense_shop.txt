@@ -15,9 +15,9 @@
     "Level"                     "1"
 
     "AbilityLayout"				"12"
-    "Ability1"					"controllable_by_team"
-    "Ability2"					"shop_buff"
-    "Ability3"					"shop_buy_armor"
+    "Ability1"					"shop_buy_armor_dire"
+    "Ability2"					""
+    "Ability3"					""
     "Ability4"					""
     "Ability5"					""
     "Ability6"					""
@@ -25,8 +25,8 @@
     "Ability8"					""
     "Ability9"					""
     "Ability10"					""
-    "Ability11"					""
-    "Ability12"					""
+    "Ability11"					"shop_buff"
+    "Ability12"					"controllable_by_team"
 
     "ArmorPhysical"             "100"
     "StatusHealth"              "100000"

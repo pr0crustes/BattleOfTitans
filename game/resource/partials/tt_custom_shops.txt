@@ -2,3 +2,17 @@
 "dire_offense_shop"                     "Dire Offense Shop"
 "radiant_defense_shop"                  "Radiant Defense Shop"
 "radiant_offense_shop"                  "Radiant Offense Shop"
+
+
+"DOTA_Tooltip_Ability_shop_buy_armor_radiant"					    "Increase Titan Armor"
+"DOTA_Tooltip_Ability_shop_buy_armor_radiant_Description"		    "Increases the armor of your Titan by %armor_bonus%.\n<font color='#F2A93E'>The manacost of this spell is paid as gold.</font>"
+
+"DOTA_Tooltip_modifier_shop_bought_armor_radiant"					"Bonus Titan Armor"
+"DOTA_Tooltip_modifier_shop_bought_armor_radiant_Description"	    "Increasing Titan Armor."
+
+
+"DOTA_Tooltip_Ability_shop_buy_armor_dire"					        "Increase Titan Armor"
+"DOTA_Tooltip_Ability_shop_buy_armor_dire_Description"		        "Increases the armor of your Titan by %armor_bonus%.\n<font color='#F2A93E'>The manacost of this spell is paid as gold.</font>"
+
+"DOTA_Tooltip_modifier_shop_bought_armor_dire"					    "Bonus Titan Armor"
+"DOTA_Tooltip_modifier_shop_bought_armor_dire_Description"		    "Increasing Titan Armor."

@@ -1,0 +1,28 @@
+"shop_buy_armor_radiant"
+{
+    "BaseClass"						"ability_lua"
+    "ScriptFile"					"abilities/units/shop/shop_buy_armor_radiant.lua"
+    "AbilityBehavior"			    "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+
+    "AbilityTextureName"            "dragon_knight_dragon_tail"
+    "MaxLevel"                      "1"
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"						    "FIELD_INTEGER"
+            "base_cost"	                        "300"
+        }
+        "02"
+        {
+            "var_type"						    "FIELD_INTEGER"
+            "cost_increase"	                    "700"
+        }
+        "03"
+        {
+            "var_type"						    "FIELD_INTEGER"
+            "armor_bonus"	                    "1"
+        }
+    }
+}
