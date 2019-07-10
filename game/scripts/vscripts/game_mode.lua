@@ -51,6 +51,7 @@ function GameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetDamageFilter(Dynamic_Wrap(GameMode, "DamageFilter"), self)
 	GameRules:GetGameModeEntity():SetModifyExperienceFilter(Dynamic_Wrap(GameMode, "ExperienceFilter"), self)
 	GameRules:GetGameModeEntity():SetModifyGoldFilter(Dynamic_Wrap(GameMode, "GoldFilter"), self )
+	GameRules:GetGameModeEntity():SetExecuteOrderFilter(Dynamic_Wrap(GameMode, "OrderFilter"), self)
 end
 
 
@@ -159,6 +160,26 @@ function GameMode:OnGameRulesStateChange()
 		GameRules:SetSafeToLeave(true)
 		EndScreen:Setup(self:GetWinningTeam())
 	end
+end
+
+
+function GameMode:OrderFilter(keys)
+	local ability = keys.entindex_ability and EntIndexToHScript(keys.entindex_ability)
+	local target_unit = keys.entindex_target and EntIndexToHScript(keys.entindex_target)
+	local playerID = keys.issuer_player_id_const
+	local order_type = keys.order_type
+	local pos = Vector(keys.position_x, keys.position_y, keys.position_z)
+	local queue = keys.queue
+	local sequence_number = keys.sequence_number_const
+	local units = keys.units
+
+	if order_type == DOTA_UNIT_ORDER_CAST_NO_TARGET then
+		if ability and string.find(ability:GetAbilityName(), "shop_buy_") then
+			ability.buyer = playerID
+		end
+	end
+
+	return true
 end
 
 

@@ -41,6 +41,8 @@ function shop_spell_factory(modifier_name, net_table, net_table_key)
             self.used_count = 0
         end
 
+        local buyer_id = self.buyer
+
         self.used_count = self.used_count + 1
 
         self:GetCaster():FindModifierByName(self:GetIntrinsicModifierName()):SetStackCount(self.used_count)
