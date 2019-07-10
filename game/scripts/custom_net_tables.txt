@@ -3,6 +3,7 @@
   custom_net_tables =
   [
     "end_game_scoreboard",
-    "heroes"
+    "heroes",
+    "custom_shops"
   ]
 }

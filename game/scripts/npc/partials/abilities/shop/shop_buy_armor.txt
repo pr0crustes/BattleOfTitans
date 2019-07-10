@@ -12,12 +12,12 @@
         "01"
         {
             "var_type"						    "FIELD_INTEGER"
-            "base_gold_cost"	                "300"
+            "base_cost"	                        "300"
         }
         "02"
         {
             "var_type"						    "FIELD_INTEGER"
-            "use_gold_cost_increase"	        "700"
+            "cost_increase"	                    "700"
         }
         "03"
         {
