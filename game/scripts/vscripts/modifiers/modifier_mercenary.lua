@@ -42,6 +42,7 @@ if IsServer() then
         self.parent = self:GetParent()
 
         self.init_health = self.parent:GetMaxHealth()
+        self.init_regen = self.parent:GetHealthRegen()
         self.init_damage = self.parent:GetBaseDamageMax()
         self.init_armor = self.parent:GetPhysicalArmorValue(false)
 
@@ -54,7 +55,7 @@ if IsServer() then
     function modifier_mercenary:UpdateStats(time)
         local time_scale = 1 + (time * 0.1)
 
-        local health = self.init_health * time_scale)
+        local health = self.init_health * time_scale
         self.parent:SetMaxHealth(health)
         self.parent:SetBaseMaxHealth(health)
         self.parent:SetHealth(health * self.parent:GetHealthPercent())
@@ -64,6 +65,8 @@ if IsServer() then
         self.parent:SetBaseDamageMax(damage)
 
         self.parent:SetPhysicalArmorBaseValue(self.init_armor * time_scale)
+
+        self.parent:SetBaseHealthRegen(self.init_regen + time)
     end
 
 

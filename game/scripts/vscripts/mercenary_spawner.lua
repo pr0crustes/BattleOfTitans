@@ -9,7 +9,7 @@ end
 
 function MercenarySpawner:SetupSpawners()
     MercenarySpawner:SpawnFromPointName("spawner_mercenary_1", "npc_dota_neutral_prowler_shaman")
-    MercenarySpawner:SpawnFromPointName("spawner_mercenary_2", "npc_dota_neutral_elder_jungle_stalker")
+    MercenarySpawner:SpawnFromPointName("spawner_mercenary_2", "npc_dota_neutral_satyr_trickster")
 end
 
 
