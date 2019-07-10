@@ -37,7 +37,9 @@ end
 
 if IsServer() then
     function modifier_mercenary:OnCreated(keys)
-        self.spawn_pos = keys.spawn_pos
+        self.spawn_pos_x = keys.spawn_pos_x
+        self.spawn_pos_y = keys.spawn_pos_y
+        self.spawn_pos_z = keys.spawn_pos_z
 
         self.parent = self:GetParent()
 
@@ -87,8 +89,25 @@ if IsServer() then
 
 
     function modifier_mercenary:OnDeath(keys)
-        for k, v in pairs(keys) do
-            print("OnDeath ", k)
+        local unit = keys.unit
+        local attacker = keys.attacker
+
+        if self.parent == unit then
+            local new_team = DOTA_TEAM_NEUTRALS
+            local pos = Vector(self.spawn_pos_x, self.spawn_pos_y, self.spawn_pos_z)
+
+            if self.parent:GetTeam() == DOTA_TEAM_NEUTRALS then
+                new_team = attacker:GetTeam()
+            end
+
+            print("Will spawn at pos ", pos)
+
+            local mercenary = CreateUnitByName(self.parent:GetUnitName(), pos, true, nil, nil, new_team)
+            mercenary:AddNewModifier(mercenary, nil, "modifier_mercenary", {
+                spawn_pos_x = self.spawn_pos_x,
+                spawn_pos_y = self.spawn_pos_y,
+                spawn_pos_z = self.spawn_pos_z,
+            })
         end
     end
 end

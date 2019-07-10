@@ -23,5 +23,9 @@ end
 
 function MercenarySpawner:Spawn(pos, mercenary_name)
 	local mercenary = CreateUnitByName(mercenary_name, pos, true, nil, nil, DOTA_TEAM_NEUTRALS)
-	mercenary:AddNewModifier(mercenary, nil, "modifier_mercenary", {spawn_pos = pos})
+	mercenary:AddNewModifier(mercenary, nil, "modifier_mercenary", {
+        spawn_pos_x = pos.x,
+        spawn_pos_y = pos.y,
+        spawn_pos_z = pos.z,
+    })
 end
