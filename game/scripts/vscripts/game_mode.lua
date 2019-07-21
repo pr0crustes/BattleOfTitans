@@ -45,6 +45,7 @@ function GameMode:InitGameMode()
 	ListenToGameEvent("npc_spawned", Dynamic_Wrap(GameMode, "OnEntitySpawned"), self)
 	ListenToGameEvent("entity_killed", Dynamic_Wrap(GameMode, "OnEntityKilled"), self)
 	ListenToGameEvent("game_rules_state_change", Dynamic_Wrap(GameMode, "OnGameRulesStateChange"), self)
+	ListenToGameEvent("player_chat", Dynamic_Wrap(ChatHandler, "OnPlayerChat"), ChatHandler)
 
 	GameRules:GetGameModeEntity():SetThink("OnThink", self, 0.25)
 
