@@ -28,9 +28,6 @@ function TitanSpawner:CalculateStats(round, defense_shop, offense_shop)
 		armor = (2 * round) + TitanSpawner:CalculateShopBonus(defense_shop, "modifier_shop_bought_armor", 1),
 	}
 
-	print("CalculateStats")
-	PrintTable(stats)
-
 	return stats
 end
 

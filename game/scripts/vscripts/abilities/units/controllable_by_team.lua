@@ -4,7 +4,6 @@ function OnCreated(keys)
 
     for playerID = 0, DOTA_MAX_TEAM_PLAYERS - 1 do
         if PlayerResource:GetTeam(playerID) == caster:GetTeam() then
-            print("OnCreated SetControllableByPlayer")
             caster:SetControllableByPlayer(playerID, true)
         end
     end
