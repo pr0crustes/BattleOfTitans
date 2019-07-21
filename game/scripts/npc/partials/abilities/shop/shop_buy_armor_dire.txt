@@ -11,18 +11,18 @@
     {
         "01"
         {
-            "var_type"						    "FIELD_INTEGER"
-            "base_cost"	                        "300"
+            "var_type"				"FIELD_INTEGER"
+            "base_cost"	            "300"
         }
         "02"
         {
-            "var_type"						    "FIELD_INTEGER"
-            "cost_increase"	                    "600"
+            "var_type"				"FIELD_INTEGER"
+            "cost_increase"	        "600"
         }
         "03"
         {
-            "var_type"						    "FIELD_INTEGER"
-            "armor_bonus"	                    "1"
+            "var_type"				"FIELD_INTEGER"
+            "armor_bonus"	        "1"
         }
     }
 }
