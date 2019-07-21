@@ -22,7 +22,7 @@ end
 function TitanSpawner:CalculateStats(round, defense_shop, offense_shop)
 	local stats = {
 		level = round,
-		health = (15000 * round),
+		health = (15000 * round) + TitanSpawner:CalculateShopBonus(defense_shop, "modifier_shop_bought_health", 1000),
 		damage_min = (100 + 100 * round),
 		damage_max = (100 + 100 * round),
 		armor = (2 * round) + TitanSpawner:CalculateShopBonus(defense_shop, "modifier_shop_bought_armor", 1),

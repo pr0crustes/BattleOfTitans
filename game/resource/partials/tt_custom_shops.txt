@@ -13,3 +13,13 @@
 "DOTA_Tooltip_modifier_shop_bought_armor"					        "Bonus Titan Armor"
 "DOTA_Tooltip_modifier_shop_bought_armor_Description"	            "Increasing Titan Armor."
 
+
+"DOTA_Tooltip_Ability_shop_buy_health_radiant"					    "Increase Titan Health"
+"DOTA_Tooltip_Ability_shop_buy_health_radiant_Description"		    "Increases the Health of your Titan by %health_bonus%.\n<font color='#F2A93E'>The manacost of this spell is paid as gold.</font>"
+
+"DOTA_Tooltip_Ability_shop_buy_health_dire"					        "Increase Titan Health"
+"DOTA_Tooltip_Ability_shop_buy_health_dire_Description"		        "Increases the Health of your Titan by %health_bonus%.\n<font color='#F2A93E'>The manacost of this spell is paid as gold.</font>"
+
+"DOTA_Tooltip_modifier_shop_bought_health"					        "Bonus Titan Health"
+"DOTA_Tooltip_modifier_shop_bought_health_Description"	            "Increasing Titan Health."
+

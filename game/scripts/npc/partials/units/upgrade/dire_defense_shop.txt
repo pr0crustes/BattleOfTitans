@@ -16,7 +16,7 @@
 
     "AbilityLayout"				"12"
     "Ability1"					"shop_buy_armor_dire"
-    "Ability2"					""
+    "Ability2"					"shop_buy_health_dire"
     "Ability3"					""
     "Ability4"					""
     "Ability5"					""
