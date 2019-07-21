@@ -1,4 +1,4 @@
-require "lib/shop_spell_factory"
+require "internal/shop_spell_factory"
 
 
 -- Start Armor
