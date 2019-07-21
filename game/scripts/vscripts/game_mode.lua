@@ -224,8 +224,8 @@ end
 
 function GameMode:SpawnTitans()
 	Notifications:TopToAll({text="The Titans Are Emerging", duration=6})
-	TitanSpawner:SpawnTitan(DOTA_TEAM_GOODGUYS, self.titan_spawn_radiant:GetAbsOrigin(), self.ancient_dire, self.titan_round)
-	TitanSpawner:SpawnTitan(DOTA_TEAM_BADGUYS, self.titan_spawn_dire:GetAbsOrigin(), self.ancient_radiant, self.titan_round)
+	TitanSpawner:SpawnTitan(DOTA_TEAM_GOODGUYS, self.titan_spawn_radiant:GetAbsOrigin(), self.ancient_dire, self.titan_round, self.radiant_defense_shop, self.radiant_offense_shop)
+	TitanSpawner:SpawnTitan(DOTA_TEAM_BADGUYS, self.titan_spawn_dire:GetAbsOrigin(), self.ancient_radiant, self.titan_round, self.dire_defense_shop, self.dire_offense_shop)
 
 	self.titan_round = self.titan_round + 1
 end
