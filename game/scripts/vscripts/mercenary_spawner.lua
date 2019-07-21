@@ -1,7 +1,6 @@
 LinkLuaModifier("modifier_mercenary", "modifiers/modifier_mercenary.lua", LUA_MODIFIER_MOTION_NONE)
 
 
-
 if MercenarySpawner == nil then
     MercenarySpawner = class({})
 end

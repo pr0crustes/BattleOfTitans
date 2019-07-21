@@ -1,6 +1,4 @@
-
 LinkLuaModifier("modifier_titan", "modifiers/modifier_titan.lua", LUA_MODIFIER_MOTION_NONE)
-
 
 
 if TitanSpawner == nil then

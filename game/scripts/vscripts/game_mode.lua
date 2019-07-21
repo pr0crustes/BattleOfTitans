@@ -4,7 +4,6 @@ if GameMode == nil then
 end
 
 
-
 function GameMode:InitGameMode()
 	self.titan_round = 1
 	self.creep_round = 1

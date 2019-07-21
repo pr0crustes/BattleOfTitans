@@ -1,5 +1,4 @@
 
-
 function OnDeath(keys)
     local unit = keys.unit
     local caster = keys.caster
@@ -18,4 +17,3 @@ function OnDeath(keys)
         end
     end
 end
-

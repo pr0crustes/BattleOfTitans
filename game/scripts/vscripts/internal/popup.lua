@@ -1,5 +1,3 @@
-
-
 --[[
     A quick function to create popups.
     Example:
@@ -42,4 +40,3 @@ function create_popup(data)
     ParticleManager:SetParticleControl(particle, 2, Vector(duration, size, 0))
     ParticleManager:SetParticleControl(particle, 3, color)
 end
-
