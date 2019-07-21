@@ -6,7 +6,7 @@ shop_buy_armor_dire = shop_spell_factory("modifier_shop_bought_armor", "custom_s
 shop_buy_armor_radiant = shop_spell_factory("modifier_shop_bought_armor", "custom_shops", "shop_buy_armor_radiant")
 
 LinkLuaModifier("modifier_shop_bought_armor", "abilities/units/shop_buy.lua", LUA_MODIFIER_MOTION_NONE)
-modifier_shop_bought_armor = shop_spell_factory_factory("dragon_knight_dragon_tail")
+modifier_shop_bought_armor = shop_spell_factory_factory("shop_armor")
 -- End Armor
 
 
@@ -15,5 +15,5 @@ shop_buy_health_dire = shop_spell_factory("modifier_shop_bought_health", "custom
 shop_buy_health_radiant = shop_spell_factory("modifier_shop_bought_health", "custom_shops", "shop_buy_health_radiant")
 
 LinkLuaModifier("modifier_shop_bought_health", "abilities/units/shop_buy.lua", LUA_MODIFIER_MOTION_NONE)
-modifier_shop_bought_health = shop_spell_factory_factory("dragon_knight_dragon_tail")
+modifier_shop_bought_health = shop_spell_factory_factory("shop_health")
 -- End Health
