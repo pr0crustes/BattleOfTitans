@@ -17,7 +17,7 @@
         "02"
         {
             "var_type"						    "FIELD_INTEGER"
-            "cost_increase"	                    "700"
+            "cost_increase"	                    "600"
         }
         "03"
         {
