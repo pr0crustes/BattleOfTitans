@@ -22,20 +22,23 @@ function modifier_mercenary:IsPermanent()
 end
 
 
-function modifier_mercenary:DeclareFunctions()
-    return {
-        MODIFIER_PROPERTY_PROVIDES_FOW_POSITION,
-        MODIFIER_EVENT_ON_DEATH,
-    }
-end
-
-
-function modifier_mercenary:GetModifierProvidesFOWVision()
-    return 1
-end
-
-
 if IsServer() then
+    function modifier_mercenary:DeclareFunctions()
+        return {
+            MODIFIER_PROPERTY_PROVIDES_FOW_POSITION,
+            MODIFIER_EVENT_ON_DEATH,
+        }
+    end
+
+
+    function modifier_mercenary:GetModifierProvidesFOWVision()
+        if self.parent:GetTeam() == DOTA_TEAM_NEUTRALS then
+            return 0
+        end
+        return 1
+    end
+
+
     function modifier_mercenary:OnCreated(keys)
         self.spawn_pos_x = keys.spawn_pos_x
         self.spawn_pos_y = keys.spawn_pos_y
