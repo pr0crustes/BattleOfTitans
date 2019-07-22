@@ -12,8 +12,8 @@
 .bshop_buy_button
 {
     align: center center;
-    width: 70px;
-    height: 30px;
+    width: 75px;
+    height: 35px;
     background-color: #408c99;
     border-radius: 10px;
 }
@@ -111,7 +111,7 @@
 .bshop_buy
 {
     align: center center;
-    font-size: 24px;
+    font-size: 26px;
     color: rgb(150, 0, 0);
 }
 
