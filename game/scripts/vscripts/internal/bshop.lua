@@ -5,7 +5,6 @@ end
 
 
 function BShop:Init()
-    print("INIT")
     CustomGameEventManager:RegisterListener("bshop_event_buy_health", Dynamic_Wrap(BShop, "BuyHealth"))
 
     function bonus_dict()
@@ -29,8 +28,26 @@ function BShop:Init()
 end
 
 
+function BShop:GetBonus(team, key)
+    local info = BShop:GetInfo(team, key)
+    if info then
+        return info["bonus"]
+    end
+    print("Fatal error at BShop:GetBonus, failed to find team :", team, " | key :", key)
+    return nil
+end
+
+
+function BShop:GetInfo(team, key)
+    if BShop.upgrades and BShop.upgrades[team] then
+        return BShop.upgrades[team][key]
+    end
+    print("Fatal error at BShop:GetInfo, failed to find team :", team, " | key :", key)
+    return nil
+end
+
+
 function BShop:NotifyUpdateTable()
-    print("NotifyUpdateTable")
     if IsServer() then
         CustomNetTables:SetTableValue("bshops", "upgrades", BShop.upgrades)
     end
@@ -55,6 +72,7 @@ function BShop:DoBuy(playerID, team, bonus_key)
 
         BShop.upgrades[team][bonus_key]["own"] = BShop.upgrades[team][bonus_key]["own"] + 1
         BShop.upgrades[team][bonus_key]["cost"] = BShop.upgrades[team][bonus_key]["cost"] + BShop.upgrades[team][bonus_key]["cost_increase"]
+        BShop.upgrades[team][bonus_key]["bonus"] = BShop.upgrades[team][bonus_key]["bonus"] + BShop.upgrades[team][bonus_key]["bonus_per_own"]
 
         BShop:PlayBuyEffect(playerID)
 
@@ -66,8 +84,6 @@ end
 
 
 function BShop:BuyHealth(data)
-    print("BuyHealth")
-    PrintTable(data)
     if data then
         BShop:DoBuy(data.player_id, data.team, "health")
     end

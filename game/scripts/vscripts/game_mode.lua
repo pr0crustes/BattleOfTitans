@@ -22,11 +22,6 @@ function GameMode:InitGameMode()
 	self.titan_spawn_radiant = Entities:FindByName(nil, "titan_spawn_radiant")
 	self.titan_spawn_dire = Entities:FindByName(nil, "titan_spawn_dire")
 
-	self.radiant_defense_shop = nil
-	self.radiant_offense_shop = nil
-	self.dire_offense_shop = nil
-	self.dire_defense_shop = nil
-
 	GameRules:SetShowcaseTime(0)
 
 	GameRules:SetCustomGameSetupAutoLaunchDelay(3.0)
@@ -147,14 +142,6 @@ end
 function GameMode:OnGameRulesStateChange()
 	local state = GameRules:State_Get()
 	if state == DOTA_GAMERULES_STATE_PRE_GAME then
-		self.radiant_defense_shop = CreateUnitByName("radiant_defense_shop", Vector(-5000, -3500, 264), true, nil, nil, DOTA_TEAM_GOODGUYS)
-		self.radiant_offense_shop = CreateUnitByName("radiant_offense_shop", Vector(-3500, -5000, 264), true, nil, nil, DOTA_TEAM_GOODGUYS)
-		self.dire_offense_shop = CreateUnitByName("dire_offense_shop", Vector(5000, 3500, 264), true, nil, nil, DOTA_TEAM_BADGUYS)
-		self.dire_defense_shop = CreateUnitByName("dire_defense_shop", Vector(3500, 5000, 264), true, nil, nil, DOTA_TEAM_BADGUYS)
-
-		self.radiant_offense_shop:SetForwardVector(Vector(0, 1, 0))
-		self.dire_defense_shop:SetForwardVector(Vector(0, -1, 0))
-
 		--MercenarySpawner:SetupSpawners()
 	elseif state == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 		self:SpawnCreeps()
@@ -176,12 +163,6 @@ function GameMode:OrderFilter(keys)
 	local queue = keys.queue
 	local sequence_number = keys.sequence_number_const
 	local units = keys.units
-
-	if order_type == DOTA_UNIT_ORDER_CAST_NO_TARGET then
-		if ability and string.find(ability:GetAbilityName(), "shop_buy_") then
-			ability.buyer = playerID
-		end
-	end
 
 	return true
 end
@@ -226,8 +207,8 @@ end
 
 function GameMode:SpawnTitans()
 	Notifications:TopToAll({text="The Titans Are Emerging", duration=6})
-	TitanSpawner:SpawnTitan(DOTA_TEAM_GOODGUYS, self.titan_spawn_radiant:GetAbsOrigin(), self.ancient_dire, self.titan_round, self.radiant_defense_shop, self.radiant_offense_shop)
-	TitanSpawner:SpawnTitan(DOTA_TEAM_BADGUYS, self.titan_spawn_dire:GetAbsOrigin(), self.ancient_radiant, self.titan_round, self.dire_defense_shop, self.dire_offense_shop)
+	TitanSpawner:SpawnTitan(DOTA_TEAM_GOODGUYS, self.titan_spawn_radiant:GetAbsOrigin(), self.ancient_dire, self.titan_round)
+	TitanSpawner:SpawnTitan(DOTA_TEAM_BADGUYS, self.titan_spawn_dire:GetAbsOrigin(), self.ancient_radiant, self.titan_round)
 
 	self.titan_round = self.titan_round + 1
 end
