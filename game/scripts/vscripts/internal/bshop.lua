@@ -28,7 +28,7 @@ end
 
 
 function BShop:NotifyUpdateTable()
-    CustomNetTables:SetTableValue("bshops", "updrades", BShop.upgrades)
+    CustomNetTables:SetTableValue("bshops", "upgrades", BShop.upgrades)
 end
 
 
