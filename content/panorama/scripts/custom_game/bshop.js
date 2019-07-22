@@ -29,8 +29,6 @@ function OnBShopChange(table, key, data) {
 		return;
     }
 
-    $.Msg("OnBShopChange");
-
     var team_info = data[GetPlayerTeam()];
     if (team_info) {
         Object.keys(team_info).forEach(function(key) {
