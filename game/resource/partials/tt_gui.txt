@@ -3,4 +3,4 @@
 
 "bshop_title"               "Titanic Shop"
 "bshop_buy"                 "Buy"
-"bshop_health_description"  "Increases Titan health by 1000."
+"bshop_health_description"  "+1000 Titan Health."
