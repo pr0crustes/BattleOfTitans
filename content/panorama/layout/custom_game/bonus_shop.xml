@@ -15,7 +15,7 @@
 
         <Panel class="bonus_shop_panel">
             <Panel class="title_panel">
-                <Label class="title" text="#game_info_game_name"/>
+                <Label class="title" text="#bonus_shop_title"/>
             </Panel>
 
             <Panel class="description_root_panel">
