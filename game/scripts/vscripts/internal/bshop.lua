@@ -42,29 +42,31 @@ function BShop:PlayBuyEffect(playerID)
 end
 
 
+function BShop:DoBuy(playerID, team, bonus_key)
+    local cost = BShop.upgrades[team][bonus_key]["cost"]
+
+    if PlayerResource:GetGold(playerID) >= cost then
+        PlayerResource:ModifyGold(playerID, -1 * cost, false, DOTA_ModifyGold_Building)
+
+        BShop.upgrades[team][bonus_key]["own"] = BShop.upgrades[team][bonus_key]["own"] + 1
+        BShop.upgrades[team][bonus_key]["cost"] = BShop.upgrades[team][bonus_key]["cost"] + BShop.upgrades[team][bonus_key]["cost_increase"]
+
+        BShop:PlayBuyEffect(playerID)
+
+        if IsServer() then
+            BShop:NotifyUpdateTable()
+        end
+    else
+        SendErrorMessage(playerID, "#dota_hud_error_not_enough_gold")
+    end
+end
+
+
 function BShop:BuyHealth(data)
     print("BuyHealth")
     PrintTable(data)
     if data then
-        local playerID = data.player_id
-        local team = data.team
-
-        local cost = BShop.upgrades[team]["health"]["cost"]
-
-        if PlayerResource:GetGold(playerID) >= cost then
-            PlayerResource:ModifyGold(playerID, -1 * cost, false, DOTA_ModifyGold_Building)
-
-            BShop.upgrades[team]["health"]["own"] = BShop.upgrades[team]["health"]["own"] + 1
-            BShop.upgrades[team]["health"]["cost"] = BShop.upgrades[team]["health"]["cost"] + BShop.upgrades[team]["health"]["cost_increase"]
-
-            BShop:PlayBuyEffect(playerID)
-
-            if IsServer() then
-                BShop:NotifyUpdateTable()
-            end
-        else
-            SendErrorMessage(playerID, "#dota_hud_error_not_enough_gold")
-        end
+        BShop:DoBuy(data.player_id, data.team, "health")
     end
 end
 
