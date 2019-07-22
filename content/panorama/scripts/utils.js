@@ -11,3 +11,9 @@ function get_hud() {
 function find_hud_element(find) {
     return get_hud().FindChildTraverse(find)
 }
+
+
+function GetPlayerTeam() {
+    return Players.GetTeam(Players.GetLocalPlayer());
+}
+
