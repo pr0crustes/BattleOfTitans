@@ -10,8 +10,8 @@ function TitanSpawner:CalculateStats(team, round)
 	return {
 		level = round,
 		health = (15000 * round) + BShop:GetBonus(team, "health"),
-		damage_min = (100 + 100 * round),
-		damage_max = (100 + 100 * round),
+		damage_min = (100 + 100 * round) + BShop:GetBonus(team, "damage"),
+		damage_max = (100 + 100 * round) + BShop:GetBonus(team, "damage"),
 		armor = (2 * round) + BShop:GetBonus(team, "armor"),
 	}
 end

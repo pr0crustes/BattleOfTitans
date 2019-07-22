@@ -5,5 +5,6 @@
 "bshop_buy"                 "BUY"
 "bshop_health_description"  "+1000 Titan Health."
 "bshop_armor_description"   "+1 Titan Armor."
+"bshop_damage_description"  "+100 Titan Damage."
 "bshop_own"                 "Own: {d:own}"
 "bshop_cost"                "Cost: {d:cost}"
