@@ -18,6 +18,11 @@
     border-radius: 10px;
 }
 
+.bshop_buy_button:hover
+{
+    brightness: 5.0;
+}
+
 #bshop_button
 {
     width: 40px;
@@ -92,15 +97,29 @@
     flow-children: down;
 }
 
-.description
+.bshop_buy
 {
     align: center center;
     font-size: 24px;
+    color: rgb(150, 0, 0);
+}
+
+.bshop_buy:hover
+{
+    brightness: 5.0;
+}
+
+.bshop_description
+{
+    align: center center;
+    font-size: 20px;
     color: azure;
+    overflow: squish scroll;
 }
 
 .bshop_cost
 {
+    align: center center;
     font-size: 18px;
     color: rgb(255, 255, 0);
 }
