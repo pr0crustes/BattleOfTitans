@@ -1,12 +1,21 @@
 .bonus_shop_root
 {
-    width: 500px;
+    width: 300px;
     height: 100%;
     horizontal-align: left;
     transition-property: transform;
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
-    transform: translateX(-460px);
+    transform: translateX(-260px);
+}
+
+.bonus_shop_buy_button
+{
+    align: center center;
+    width: 70px;
+    height: 30px;
+    background-color: #408c99;
+    border-radius: 10px;
 }
 
 #bonus_shop_button
@@ -28,6 +37,7 @@
     background-color: #202020;
     flow-children: down;
     overflow: squish scroll;
+    align: center center;
 }
 
 .bonus_shop_icon
@@ -69,6 +79,8 @@
     width: 100%;
     margin-top: 25px;
     flow-children: down;
+    horizontal-align: middle;
+    vertical-align: middle;
 }
 
 .bonus_shop_shop_entry
@@ -76,14 +88,21 @@
     margin-top: 30px;
     width: 85%;
     text-align: left;
-    horizontal-align: middle;
+    align: center center;
     flow-children: down;
 }
 
 .description
 {
-    font-size: 18px;
+    align: center center;
+    font-size: 24px;
     color: azure;
+}
+
+.bonus_shop_cost
+{
+    font-size: 18px;
+    color: rgb(255, 255, 0);
 }
 
 .sideway
@@ -106,7 +125,8 @@
     margin-bottom: 10px;
     margin-right: 10px;
     margin-left: 10px;
-    border-radius: 20px;
+    border-radius: 15px;
+    align: center center;
 }
 
 .icon_description

@@ -23,7 +23,7 @@
                     <Image class="image_icon" src="file://{images}/custom_game/shops/shop_health.png" />
                     <Label class="bonus_shop_cost"/>
                     <Button class="bonus_shop_buy_button" onactivate="BuyHealth()">
-                        <Label class="description" text="#bonus_shop_buy"/>
+                        <Label class="shop_description" text="#bonus_shop_buy"/>
                     </Button>
                 </Panel>
             </Panel>
