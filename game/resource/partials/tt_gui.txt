@@ -2,5 +2,5 @@
 "titan_timer_before"        "Waiting Game Start"
 
 "bshop_title"               "Titanic Shop"
-"bshop_buy"                 "Buy"
+"bshop_buy"                 "BUY"
 "bshop_health_description"  "+1000 Titan Health."
