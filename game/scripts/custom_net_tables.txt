@@ -4,6 +4,6 @@
   [
     "end_game_scoreboard",
     "heroes",
-    "custom_shops"
+    "bshops"
   ]
 }

@@ -41,6 +41,8 @@ function GameMode:InitGameMode()
 	GameRules:SetGoldPerTick(1.0)
 	GameRules:SetGoldTickTime(0.4)
 
+	BShop:Init()
+
 	ListenToGameEvent("npc_spawned", Dynamic_Wrap(GameMode, "OnEntitySpawned"), self)
 	ListenToGameEvent("entity_killed", Dynamic_Wrap(GameMode, "OnEntityKilled"), self)
 	ListenToGameEvent("game_rules_state_change", Dynamic_Wrap(GameMode, "OnGameRulesStateChange"), self)
