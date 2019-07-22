@@ -1,6 +1,0 @@
-"shop_buff"
-{
-    "BaseClass"						"ability_lua"
-    "ScriptFile"					"abilities/units/shop_buff.lua"
-    "AbilityBehavior"			    "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-}
