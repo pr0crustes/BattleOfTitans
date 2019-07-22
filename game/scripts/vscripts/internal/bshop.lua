@@ -30,6 +30,7 @@ end
 
 
 function BShop:NotifyUpdateTable()
+    print("NotifyUpdateTable")
     if IsServer() then
         CustomNetTables:SetTableValue("bshops", "upgrades", BShop.upgrades)
     end

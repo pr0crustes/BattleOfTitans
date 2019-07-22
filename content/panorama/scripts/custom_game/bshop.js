@@ -1,5 +1,3 @@
-CustomNetTables.SubscribeNetTableListener("bshops", OnBShopChange);
-
 
 var open = false;
 
@@ -42,3 +40,14 @@ function OnBShopChange(table, key, data) {
         });
     }
 }
+
+
+// On Init
+(function() {
+    function SubscribeAndInit(table, key, handle) {
+        CustomNetTables.SubscribeNetTableListener(table, handle);
+        OnBShopChange(table, key, CustomNetTables.GetTableValue(table, key))
+    }
+
+    SubscribeAndInit("bshops", "upgrades", OnBShopChange);
+}())
