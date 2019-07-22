@@ -18,51 +18,15 @@
                 <Label class="title" text="#bonus_shop_title"/>
             </Panel>
 
-            <Panel class="description_root_panel">
-
-                <Panel class="description_panel">
-                    <Label class="description" text="#game_info_objective"/>
-                </Panel>
-
-                <Panel class="description_panel">
-                    <Label class="description" text="#game_info_loose_condition"/>
-                </Panel>
-
-                <Panel class="description_panel">
-                    <Panel class="sideway">
-                        <Image class="image_icon" src="file://{images}/custom_game/custom_game_info/tombstone.png" />
-                        <Label class="description icon_description" text="#game_info_tombstone"/>
-                    </Panel>
-                </Panel> 
-
-                <Panel class="description_panel">
-                    <Panel class="rsideway">
-                        <Image class="image_icon" src="file://{images}/custom_game/custom_game_info/gold_bag.png" />
-                        <Label class="description icon_description" text="#game_info_drops"/>
-                    </Panel>
-                </Panel> 
-
-                <Panel class="description_panel">
-                    <Panel class="sideway">
-                        <Image class="image_icon" src="file://{images}/custom_game/custom_game_info/items.png" />
-                        <Label class="description icon_description" text="#game_info_items"/>
-                    </Panel>
-                </Panel> 
-
-                <Panel class="description_panel">
-                    <Panel class="rsideway">
-                        <Image class="image_icon" src="file://{images}/custom_game/custom_game_info/survivability.png" />
-                        <Label class="description icon_description" text="#game_info_survivability"/>
-                    </Panel>
+            <Panel class="bonus_shop_shops">
+                <Panel class="bonus_shop_shop_entry" id="buy_health">
+                    <Image class="image_icon" src="file://{images}/custom_game/shops/shop_health.png" />
+                    <Label class="bonus_shop_cost"/>
+                    <Button class="bonus_shop_buy_button" onactivate="BuyHealth()">
+                        <Label class="description" text="#bonus_shop_buy"/>
+                    </Button>
                 </Panel>
             </Panel>
-
-            <Panel class="footer_panel">
-                <Label class="footer" text="#game_info_footer"/>
-            </Panel>
-
         </Panel>
-
     </Panel>
-
 </root>

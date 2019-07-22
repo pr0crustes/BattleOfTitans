@@ -6,4 +6,6 @@ function OnBonusShopButtonClick() {
     open = !open;
 }
 
-
+function BuyHealth() {
+    $.Msg("BuyHealth");
+}

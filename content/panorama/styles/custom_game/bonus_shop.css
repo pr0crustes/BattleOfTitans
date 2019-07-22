@@ -64,14 +64,14 @@
     text-align: center;
 }
 
-.description_root_panel
+.bonus_shop_shops
 {
     width: 100%;
     margin-top: 25px;
     flow-children: down;
 }
 
-.description_panel
+.bonus_shop_shop_entry
 {
     margin-top: 30px;
     width: 85%;
@@ -100,12 +100,13 @@
 
 .image_icon
 {
-    width: 100px;
-    height: 100px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    width: 128px;
+    height: 128px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin-right: 10px;
     margin-left: 10px;
+    border-radius: 20px;
 }
 
 .icon_description

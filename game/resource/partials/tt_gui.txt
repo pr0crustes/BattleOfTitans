@@ -2,3 +2,4 @@
 "titan_timer_before"        "Waiting Game Start"
 
 "bonus_shop_title"          "Titanic Shop"
+"bonus_shop_buy"            "Buy"
