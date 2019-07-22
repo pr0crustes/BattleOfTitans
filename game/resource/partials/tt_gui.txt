@@ -1,5 +1,6 @@
 "titan_timer"               "Next Titans In"
 "titan_timer_before"        "Waiting Game Start"
 
-"bshop_title"          "Titanic Shop"
-"bshop_buy"            "Buy"
+"bshop_title"               "Titanic Shop"
+"bshop_buy"                 "Buy"
+"bshop_health_description"  "Increases Titan health by 1000."
