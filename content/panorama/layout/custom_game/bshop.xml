@@ -30,6 +30,18 @@
                         <Label class="bshop_buy" text="#bshop_buy"/>
                     </Button>
                 </Panel>
+
+                <Panel class="bshop_shop_entry sideway" id="buy_armor">
+                    <Panel class="bshop_info_panel">
+                        <Image class="image_icon" src="file://{images}/custom_game/shops/shop_armor.png" />
+                        <Label class="bshop_own" text="bshop_own"/>
+                        <Label class="bshop_cost" text="bshop_cost"/>
+                    </Panel>
+                    <Label class="bshop_description" text="#bshop_armor_description"/>
+                    <Button class="bshop_buy_button" onactivate="BuyBuff('armor')">
+                        <Label class="bshop_buy" text="#bshop_buy"/>
+                    </Button>
+                </Panel>
             </Panel>
         </Panel>
     </Panel>

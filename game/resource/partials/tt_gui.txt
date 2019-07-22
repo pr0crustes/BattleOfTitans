@@ -4,5 +4,6 @@
 "bshop_title"               "Titanic Shop"
 "bshop_buy"                 "BUY"
 "bshop_health_description"  "+1000 Titan Health."
+"bshop_armor_description"   "+1 Titan Armor."
 "bshop_own"                 "Own: {d:own}"
 "bshop_cost"                "Cost: {d:cost}"

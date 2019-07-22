@@ -16,6 +16,13 @@ function BShop:Init()
                 ["cost_increase"] = 300,
                 ["own"] = 0,
             },
+            ["armor"] = {
+                ["bonus"] = 0,
+                ["bonus_per_own"] = 1,
+                ["cost"] = 300,  -- Base cost
+                ["cost_increase"] = 600,
+                ["own"] = 0,
+            },
         }
     end
 
