@@ -24,11 +24,15 @@ function BShop:Init()
         [DOTA_TEAM_GOODGUYS] = bonus_dict(),
         [DOTA_TEAM_BADGUYS] = bonus_dict(),
     }
+
+    BShop:NotifyUpdateTable()
 end
 
 
 function BShop:NotifyUpdateTable()
-    CustomNetTables:SetTableValue("bshops", "upgrades", BShop.upgrades)
+    if IsServer() then
+        CustomNetTables:SetTableValue("bshops", "upgrades", BShop.upgrades)
+    end
 end
 
 
@@ -53,9 +57,7 @@ function BShop:DoBuy(playerID, team, bonus_key)
 
         BShop:PlayBuyEffect(playerID)
 
-        if IsServer() then
-            BShop:NotifyUpdateTable()
-        end
+        BShop:NotifyUpdateTable()
     else
         SendErrorMessage(playerID, "#dota_hud_error_not_enough_gold")
     end
