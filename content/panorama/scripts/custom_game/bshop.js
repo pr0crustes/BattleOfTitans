@@ -6,14 +6,14 @@ function OnBonusShopButtonClick() {
     open = !open;
 }
 
-function BuyHealth() {
-    $.Msg("BuyHealth ", Players.GetLocalPlayer());
 
+function BuyBuff(shop_buff) {
     var data = [];
     data["player_id"] = Players.GetLocalPlayer();
     data["team"] = GetPlayerTeam();
+    data["shop_buff"] = shop_buff;
 
-	GameEvents.SendCustomGameEventToServer("bshop_event_buy_health", data);
+	GameEvents.SendCustomGameEventToServer("bshop_event_buy_buff", data);
 }
 
 
@@ -50,4 +50,4 @@ function OnBShopChange(table, key, data) {
     }
 
     SubscribeAndInit("bshops", "upgrades", OnBShopChange);
-}())
+}());

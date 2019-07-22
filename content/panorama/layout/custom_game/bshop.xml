@@ -26,7 +26,7 @@
                         <Label class="bshop_cost" text="bshop_cost"/>
                     </Panel>
                     <Label class="bshop_description" text="#bshop_health_description"/>
-                    <Button class="bshop_buy_button" onactivate="BuyHealth()">
+                    <Button class="bshop_buy_button" onactivate="BuyBuff('health')">
                         <Label class="bshop_buy" text="#bshop_buy"/>
                     </Button>
                 </Panel>

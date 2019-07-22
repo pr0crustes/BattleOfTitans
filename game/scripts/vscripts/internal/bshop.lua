@@ -5,7 +5,7 @@ end
 
 
 function BShop:Init()
-    CustomGameEventManager:RegisterListener("bshop_event_buy_health", Dynamic_Wrap(BShop, "BuyHealth"))
+    CustomGameEventManager:RegisterListener("bshop_event_buy_buff", Dynamic_Wrap(BShop, "BuyBuff"))
 
     function bonus_dict()
         return {
@@ -83,9 +83,9 @@ function BShop:DoBuy(playerID, team, bonus_key)
 end
 
 
-function BShop:BuyHealth(data)
+function BShop:BuyBuff(data)
     if data then
-        BShop:DoBuy(data.player_id, data.team, "health")
+        BShop:DoBuy(data.player_id, data.team, data.shop_buff)
     end
 end
 
