@@ -22,8 +22,8 @@
                 <Panel class="bshop_shop_entry sideway" id="buy_health">
                     <Panel class="bshop_info_panel">
                         <Image class="image_icon" src="file://{images}/custom_game/shops/shop_health.png" />
-                        <Label class="bshop_own" text="0"/>
-                        <Label class="bshop_cost" text="0"/>
+                        <Label class="bshop_own" text="bshop_own"/>
+                        <Label class="bshop_cost" text="bshop_cost"/>
                     </Panel>
                     <Label class="bshop_description" text="#bshop_health_description"/>
                     <Button class="bshop_buy_button" onactivate="BuyHealth()">

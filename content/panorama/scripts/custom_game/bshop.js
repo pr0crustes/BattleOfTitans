@@ -21,8 +21,8 @@ function BuyHealth() {
 
 function UpdateBShop(shop_name, cost, own) {
     var panel = find_hud_element("buy_" + shop_name);
-    panel.FindChildTraverse("bshop_cost").SetDialogVariable("cost", cost);
-    panel.FindChildTraverse("bshop_own").SetDialogVariable("own", own);
+    panel.FindChildrenWithClassTraverse("bshop_cost")[0].SetDialogVariableInt("cost", cost);
+    panel.FindChildrenWithClassTraverse("bshop_own")[0].SetDialogVariableInt("own", own);
 }
 
 
@@ -41,10 +41,4 @@ function OnBShopChange(table, key, data) {
             UpdateBShop(key, info.cost, info.own);
         });
     }
-
-//    if (GetPlayerTeam() == data.team) {
-//        var panel = find_hud_element("buy_health");
-//        panel.FindChildTraverse("bshop_own").text = data.owned;
-//        panel.FindChildTraverse("bshop_cost").text = data.cost;
-//    }
 }
