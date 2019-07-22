@@ -1,4 +1,4 @@
-.bonus_shop_root
+.bshop_root
 {
     width: 300px;
     height: 100%;
@@ -9,7 +9,7 @@
     transform: translateX(-260px);
 }
 
-.bonus_shop_buy_button
+.bshop_buy_button
 {
     align: center center;
     width: 70px;
@@ -18,7 +18,7 @@
     border-radius: 10px;
 }
 
-#bonus_shop_button
+#bshop_button
 {
     width: 40px;
     height: 45px;
@@ -28,7 +28,7 @@
     margin-top: 20%;
 }
 
-.bonus_shop_panel
+.bshop_panel
 {
     margin-right: 40px;
     width: 100%;
@@ -40,7 +40,7 @@
     align: center center;
 }
 
-.bonus_shop_icon
+.bshop_icon
 {
     horizontal-align: center;
     vertical-align: center;
@@ -53,7 +53,7 @@
     background-position: center;
 }
 
-.bonus_shop_icon:hover
+.bshop_icon:hover
 {
     brightness: 5.0;
 }
@@ -74,7 +74,7 @@
     text-align: center;
 }
 
-.bonus_shop_shops
+.bshop_shops
 {
     width: 100%;
     margin-top: 25px;
@@ -83,7 +83,7 @@
     vertical-align: middle;
 }
 
-.bonus_shop_shop_entry
+.bshop_shop_entry
 {
     margin-top: 30px;
     width: 85%;
@@ -99,7 +99,7 @@
     color: azure;
 }
 
-.bonus_shop_cost
+.bshop_cost
 {
     font-size: 18px;
     color: rgb(255, 255, 0);

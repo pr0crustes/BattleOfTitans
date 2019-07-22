@@ -1,5 +1,5 @@
 "titan_timer"               "Next Titans In"
 "titan_timer_before"        "Waiting Game Start"
 
-"bonus_shop_title"          "Titanic Shop"
-"bonus_shop_buy"            "Buy"
+"bshop_title"          "Titanic Shop"
+"bshop_buy"            "Buy"

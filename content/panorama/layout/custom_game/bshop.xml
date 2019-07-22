@@ -1,0 +1,32 @@
+<root>
+    <styles>
+        <include src="file://{resources}/styles/custom_game/bshop.css"/>
+    </styles>
+
+    <scripts>
+        <include src="file://{resources}/scripts/utils.js"/>
+        <include src="file://{resources}/scripts/custom_game/bshop.js"/>
+    </scripts>
+
+    <Panel class="bshop_root">
+        <Button id="bshop_button" onactivate="OnBonusShopButtonClick()">
+            <Panel class="bshop_icon"/>
+        </Button>
+
+        <Panel class="bshop_panel">
+            <Panel class="title_panel">
+                <Label class="title" text="#bshop_title"/>
+            </Panel>
+
+            <Panel class="bshop_shops">
+                <Panel class="bshop_shop_entry" id="buy_health">
+                    <Image class="image_icon" src="file://{images}/custom_game/shops/shop_health.png" />
+                    <Label class="bshop_cost"/>
+                    <Button class="bshop_buy_button" onactivate="BuyHealth()">
+                        <Label class="shop_description" text="#bshop_buy"/>
+                    </Button>
+                </Panel>
+            </Panel>
+        </Panel>
+    </Panel>
+</root>
