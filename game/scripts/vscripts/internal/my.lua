@@ -246,3 +246,14 @@ function SendErrorMessage(playerID, message)
 	})
 	EmitSoundOnClient("General.Cancel", PlayerResource:GetPlayer(playerID))
 end
+
+
+function GetTeamAncient(team)
+	if team == DOTA_TEAM_GOODGUYS then
+		return Entities:FindByName(nil, "dota_goodguys_fort")
+	end
+	if team == DOTA_TEAM_BADGUYS then
+		return Entities:FindByName(nil, "dota_badguys_fort")
+	end
+	return nil
+end

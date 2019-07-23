@@ -99,7 +99,7 @@ function BShop:DoBuy(playerID, team, bonus_key)
         BShop.upgrades[team][bonus_key]["cost"] = BShop.upgrades[team][bonus_key]["cost"] + BShop.upgrades[team][bonus_key]["cost_increase"]
         BShop.upgrades[team][bonus_key]["bonus"] = BShop.upgrades[team][bonus_key]["bonus"] + BShop.upgrades[team][bonus_key]["bonus_per_own"]
 
-        BShop.upgrades[team][bonus_key]["on_change"](bonus_key)
+        BShop.upgrades[team][bonus_key]["on_change"](team, bonus_key, BShop.upgrades[team][bonus_key])
 
         BShop:PlayBuyEffect(playerID)
 
