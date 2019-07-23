@@ -9,7 +9,7 @@
     transform: translateX(-460px);
 }
 
-.bshop_buy_button
+#bshop_buy_button
 {
     align: center center;
     width: 75px;
@@ -40,6 +40,15 @@
     height: 100%;
     padding: 15px;
     background-color: #202020;
+    flow-children: down;
+    overflow: squish scroll;
+    align: center center;
+}
+
+#bshop_shops_container
+{
+    width: 100%;
+    height: 100%;
     flow-children: down;
     overflow: squish scroll;
     align: center center;
@@ -120,7 +129,7 @@
     brightness: 5.0;
 }
 
-.bshop_description
+#bshop_description
 {
     align: center center;
     font-size: 18px;
@@ -129,7 +138,7 @@
     width: 200px;
 }
 
-.bshop_cost
+#bshop_cost
 {
     align: center bottom;
     font-size: 18px;
@@ -137,7 +146,7 @@
     font-weight: bold;
 }
 
-.bshop_own
+#bshop_own
 {
     align: left top;
     font-size: 18px;
@@ -158,7 +167,7 @@
     flow-children: left;
 }
 
-.image_icon
+#image_icon
 {
     width: 100%;
     height: 100%;

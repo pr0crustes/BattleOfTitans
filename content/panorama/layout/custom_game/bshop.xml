@@ -12,12 +12,12 @@
 		<snippet name="bshop_entry">
                 <Panel class="bshop_shop_entry sideway">
                     <Panel class="bshop_info_panel">
-                        <Image class="image_icon" src="file://{images}/custom_game/shops/shop_health.png" />
-                        <Label class="bshop_own" text="bshop_own"/>
-                        <Label class="bshop_cost" text="bshop_cost"/>
+                        <Image id="image_icon" src="file://{images}/custom_game/shops/shop_health.png" />
+                        <Label id="bshop_own" text="bshop_own"/>
+                        <Label id="bshop_cost" text="bshop_cost"/>
                     </Panel>
-                    <Label class="bshop_description"/>
-                    <Button class="bshop_buy_button">
+                    <Label id="bshop_description"/>
+                    <Button id="bshop_buy_button">
                         <Label class="bshop_buy" text="#bshop_buy"/>
                     </Button>
                 </Panel>
@@ -29,9 +29,11 @@
             <Panel class="bshop_icon"/>
         </Button>
 
-        <Panel class="bshop_panel" id="bshop_panel">
+        <Panel class="bshop_panel">
             <Panel class="title_panel">
                 <Label class="title" text="#bshop_title"/>
+            </Panel>
+            <Panel id="bshop_shops_container">
             </Panel>
         </Panel>
     </Panel>

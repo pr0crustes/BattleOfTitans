@@ -18,9 +18,9 @@ function BuyBuff(shop_buff) {
 
 
 function UpdateBShop(shop_name, cost, own) {
-    var panel = find_hud_element("buy_" + shop_name);
-    panel.FindChildrenWithClassTraverse("bshop_cost")[0].SetDialogVariableInt("cost", cost);
-    panel.FindChildrenWithClassTraverse("bshop_own")[0].SetDialogVariableInt("own", own);
+    var panel = $("#buy_" + shop_name);
+    panel.FindChildTraverse("bshop_cost").SetDialogVariableInt("cost", cost);
+    panel.FindChildTraverse("bshop_own").SetDialogVariableInt("own", own);
 }
 
 
@@ -45,22 +45,22 @@ function OnBShopChange(table, key, data) {
     function CreateShops() {
         var shops = ["health", "armor", "damage"];
 
-        var bshop_panel = find_hud_element("bshop_panel");
+        var bshop_panel = find_hud_element("bshop_shops_container");
 
-        for (var i = 0; i < shops.length; i++) {
-            var shop_name = shops[i];
-
+        $.Each(shops, function(shop_name) {
             var panel_id =  "buy_" + shop_name;
 
             if (bshop_panel.FindChildTraverse(panel_id) == null) {
                 var shop_panel = $.CreatePanel("Panel", bshop_panel, panel_id);
                 shop_panel.BLoadLayoutSnippet("bshop_entry");
-    
-                FindFirstClass(shop_panel, "image_icon").SetImage("file://{images}/custom_game/shops/shop_" + shop_name + ".png");
-                FindFirstClass(shop_panel, "bshop_description").text = $.Localize("bshop_" + shop_name + "_description");
-                FindFirstClass(shop_panel, "bshop_buy_button").onactivate = "BuyBuff('" + shop_name + "')";
+
+                shop_panel.FindChildTraverse("image_icon").SetImage("file://{images}/custom_game/shops/shop_" + shop_name + ".png");
+                shop_panel.FindChildTraverse("bshop_description").text = $.Localize("bshop_" + shop_name + "_description");
+                shop_panel.FindChildTraverse("bshop_buy_button").SetPanelEvent("onactivate", function() {
+                    BuyBuff(shop_name);
+                });
             }
-        }
+        });
     }
 
     function SubscribeAndInit(table, key, handle) {
