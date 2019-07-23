@@ -1,4 +1,8 @@
 <root>
+    <styles>
+        <include src="file://{resources}/styles/custom_game/force_compile.css"/>
+    </styles>
+
 	<script>
 		function findSetVisibility(root, find, newValue) {
 			root.FindChildTraverse(find).style.visibility = newValue;

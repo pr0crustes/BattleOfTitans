@@ -12,7 +12,7 @@
 		<snippet name="bshop_entry">
                 <Panel class="bshop_shop_entry sideway">
                     <Panel class="bshop_info_panel">
-                        <Image id="image_icon" src="file://{images}/custom_game/shops/shop_health.png" />
+                        <Image id="image_icon"/>
                         <Label id="bshop_own" text="bshop_own"/>
                         <Label id="bshop_cost" text="bshop_cost"/>
                     </Panel>

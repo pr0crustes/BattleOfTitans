@@ -1,0 +1,10 @@
+
+/*
+ * Images dynamically loaded are not compiled as needed, and will not display. To fix, we add them here.
+ */
+.ForceCompile {
+	background-image: url("file://{images}/custom_game/shops/shop_health.png");
+	background-image: url("file://{images}/custom_game/shops/shop_armor.png");
+    background-image: url("file://{images}/custom_game/shops/shop_damage.png");
+    background-image: url("file://{images}/custom_game/shops/shop_ancient_armor.png");
+}
