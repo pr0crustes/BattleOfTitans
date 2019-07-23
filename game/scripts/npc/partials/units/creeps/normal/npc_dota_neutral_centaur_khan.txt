@@ -41,8 +41,8 @@
     // Bounty
     //----------------------------------------------------------------
     "BountyXP"					"75"		// Experience earn.
-    "BountyGoldMin"				"33"		// Gold earned min.
-    "BountyGoldMax"				"42"		// Gold earned max.
+    "BountyGoldMin"				"48"		// Gold earned min.
+    "BountyGoldMax"				"48"		// Gold earned max.
 
     // Movement
     //----------------------------------------------------------------
@@ -51,7 +51,7 @@
 
     // Status
     //----------------------------------------------------------------
-    "StatusHealth"				"1100"		// Base health.
+    "StatusHealth"				"500"		// Base health.
     "StatusHealthRegen"			"1"			// Health regeneration rate.
     "StatusMana"				"200"		// Base mana.
     "StatusManaRegen"			"1.0"		// Mana regeneration rate.
