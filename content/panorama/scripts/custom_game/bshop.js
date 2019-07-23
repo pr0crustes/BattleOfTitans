@@ -42,10 +42,32 @@ function OnBShopChange(table, key, data) {
 
 // On Init
 (function() {
+    function CreateShops() {
+        var shops = ["health", "armor", "damage"];
+
+        var bshop_panel = find_hud_element("bshop_panel");
+
+        for (var i = 0; i < shops.length; i++) {
+            var shop_name = shops[i];
+
+            var panel_id =  "buy_" + shop_name;
+
+            if (bshop_panel.FindChildTraverse(panel_id) == null) {
+                var shop_panel = $.CreatePanel("Panel", bshop_panel, panel_id);
+                shop_panel.BLoadLayoutSnippet("bshop_entry");
+    
+                FindFirstClass(shop_panel, "image_icon").SetImage("file://{images}/custom_game/shops/shop_" + shop_name + ".png");
+                FindFirstClass(shop_panel, "bshop_description").text = $.Localize("bshop_" + shop_name + "_description");
+                FindFirstClass(shop_panel, "bshop_buy_button").onactivate = "BuyBuff('" + shop_name + "')";
+            }
+        }
+    }
+
     function SubscribeAndInit(table, key, handle) {
         CustomNetTables.SubscribeNetTableListener(table, handle);
         OnBShopChange(table, key, CustomNetTables.GetTableValue(table, key))
     }
 
+    CreateShops();
     SubscribeAndInit("bshops", "upgrades", OnBShopChange);
 }());

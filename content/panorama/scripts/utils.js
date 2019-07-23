@@ -17,3 +17,7 @@ function GetPlayerTeam() {
     return Players.GetTeam(Players.GetLocalPlayer());
 }
 
+
+function FindFirstClass(root, class_name) {
+    return root.FindChildrenWithClassTraverse(class_name)[0];
+}
