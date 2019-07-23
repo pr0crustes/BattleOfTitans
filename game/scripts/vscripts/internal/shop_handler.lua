@@ -1,13 +1,9 @@
 LinkLuaModifier("ancient_armor", "modifiers/ancient_armor", LUA_MODIFIER_MOTION_NONE)
 
-if ShopHandler == nil then
-    ShopHandler = class({})
-end
 
-
-function ShopHandler:OnAncientArmorChange(team, bonus_key, bonus_dict)
+function ShopHandler_OnAncientArmorChange(team, bonus_key)
     local ancient = GetTeamAncient(team)
-    local bonus = bonus_dict["bonus"]
+    local bonus = BShop:GetBonus(team, bonus_key)
 
     if ancient and bonus then
         if not ancient:HasModifier("ancient_armor") then
