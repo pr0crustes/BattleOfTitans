@@ -1,9 +1,9 @@
 <root>
     <styles>
-        <include src="file://{resources}/styles/titan_countdown.css" />
+        <include src="file://{resources}/styles/custom_game/titan_countdown.css" />
     </styles>
     <scripts>
-        <include src="file://{resources}/scripts/titan_countdown.js"/>
+        <include src="file://{resources}/scripts/custom_game/titan_countdown.js"/>
     </scripts>
 
     <Panel class="TeamOverlay" hittest="false">

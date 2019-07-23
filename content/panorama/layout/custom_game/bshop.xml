@@ -4,7 +4,7 @@
     </styles>
 
     <scripts>
-        <include src="file://{resources}/scripts/utils.js"/>
+        <include src="file://{resources}/scripts/custom_game/utils.js"/>
         <include src="file://{resources}/scripts/custom_game/bshop.js"/>
     </scripts>
 

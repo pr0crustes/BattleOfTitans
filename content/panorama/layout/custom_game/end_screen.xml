@@ -3,12 +3,12 @@
  		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
 		<include src="s2r://panorama/styles/profile_badge.vcss_c" />
 
-		<include src="file://{resources}/styles/end_screen.css" />
+		<include src="file://{resources}/styles/custom_game/end_screen.css" />
     </styles>
 
     <scripts>
-        <include src="file://{resources}/scripts/utils.js"/>
-    	<include src="file://{resources}/scripts/end_screen.js" />
+        <include src="file://{resources}/scripts/custom_game/utils.js"/>
+    	<include src="file://{resources}/scripts/custom_game/end_screen.js" />
     </scripts>
 
 	<snippets>
