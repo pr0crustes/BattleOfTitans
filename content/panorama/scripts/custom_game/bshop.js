@@ -19,8 +19,10 @@ function BuyBuff(shop_buff) {
 
 function UpdateBShop(shop_name, cost, own) {
     var panel = $("#buy_" + shop_name);
-    panel.FindChildTraverse("bshop_cost").SetDialogVariableInt("cost", cost);
-    panel.FindChildTraverse("bshop_own").SetDialogVariableInt("own", own);
+    if (panel) {
+        panel.FindChildTraverse("bshop_cost").SetDialogVariableInt("cost", cost);
+        panel.FindChildTraverse("bshop_own").SetDialogVariableInt("own", own);
+    }
 }
 
 

@@ -1,5 +1,6 @@
 require "lib/timers"
 require "lib/notifications"
+require "internal/constants"
 require "internal/my"
 require "internal/end_screen"
 require "internal/popup"

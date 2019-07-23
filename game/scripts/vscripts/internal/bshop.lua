@@ -15,6 +15,7 @@ function BShop:Init()
                 ["cost"] = 500,  -- Base cost
                 ["cost_increase"] = 300,
                 ["own"] = 0,
+                ["on_change"] = NO_HANDLER,
             },
             ["armor"] = {
                 ["bonus"] = 0,
@@ -22,6 +23,15 @@ function BShop:Init()
                 ["cost"] = 300,  -- Base cost
                 ["cost_increase"] = 600,
                 ["own"] = 0,
+                ["on_change"] = NO_HANDLER,
+            },
+            ["armor_ancient"] = {
+                ["bonus"] = 0,
+                ["bonus_per_own"] = 1,
+                ["cost"] = 500,  -- Base cost
+                ["cost_increase"] = 700,
+                ["own"] = 0,
+                ["on_change"] = NO_HANDLER,
             },
             ["damage"] = {
                 ["bonus"] = 0,
@@ -29,6 +39,7 @@ function BShop:Init()
                 ["cost"] = 1000,  -- Base cost
                 ["cost_increase"] = 250,
                 ["own"] = 0,
+                ["on_change"] = NO_HANDLER,
             },
         }
     end
@@ -87,6 +98,8 @@ function BShop:DoBuy(playerID, team, bonus_key)
         BShop.upgrades[team][bonus_key]["own"] = BShop.upgrades[team][bonus_key]["own"] + 1
         BShop.upgrades[team][bonus_key]["cost"] = BShop.upgrades[team][bonus_key]["cost"] + BShop.upgrades[team][bonus_key]["cost_increase"]
         BShop.upgrades[team][bonus_key]["bonus"] = BShop.upgrades[team][bonus_key]["bonus"] + BShop.upgrades[team][bonus_key]["bonus_per_own"]
+
+        BShop.upgrades[team][bonus_key]["on_change"](bonus_key)
 
         BShop:PlayBuyEffect(playerID)
 
