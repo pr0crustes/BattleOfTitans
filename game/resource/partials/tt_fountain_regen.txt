@@ -1,0 +1,7 @@
+"DOTA_Tooltip_ability_fountain_regen"					"Fountain Regen"
+"DOTA_Tooltip_ability_fountain_regen_Description"		"Quickly restores Health and Mana of nearby allies."
+"DOTA_Tooltip_ability_fountain_regen_hp_regen_pct"		"%HEALTH REGEN:"
+"DOTA_Tooltip_ability_fountain_regen_mp_regen_pct"		"%MANA REGEN:"
+
+"DOTA_Tooltip_modifier_fountain_regen"			        "Fountain Regen"
+"DOTA_Tooltip_modifier_fountain_regen_Description"	    "Restoring health and mana."

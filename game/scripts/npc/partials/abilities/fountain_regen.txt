@@ -1,0 +1,53 @@
+"fountain_regen"
+{
+    "BaseClass"						"ability_datadriven"
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName" 			"rune_regen"
+
+    "AbilityCastRange"				"3000"
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "hp_regen_pct"		    "12"
+        }
+        "02"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "mp_regen_pct"	        "8"
+        }
+        "03"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "radius"                "3000"
+        }
+    }
+    
+    "Modifiers"
+    {
+        "modifier_fountain_regen_aura"
+        {
+            "Passive"               "1"
+            "IsHidden"              "1"
+
+            "Aura"                  "modifier_fountain_regen"
+            "Aura_Radius"           "%radius"
+            "Aura_Teams"            "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+            "Aura_Types"            "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+            "Aura_Flags"            "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+        }
+
+        "modifier_fountain_regen"
+        {
+            "TextureName"		    "rune_regen"
+
+            "Properties" 
+            {
+                "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"        "%hp_regen_pct"
+                "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"     "%mp_regen_pct"
+            }
+        }
+    }
+}

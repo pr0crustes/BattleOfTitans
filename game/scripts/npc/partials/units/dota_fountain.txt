@@ -12,4 +12,6 @@
 
     "VisionDaytimeRange"		"3000"
     "VisionNighttimeRange"		"3000"
+
+    "Ability1"					"fountain_regen"
 }
