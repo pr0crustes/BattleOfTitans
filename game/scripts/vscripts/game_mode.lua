@@ -33,8 +33,8 @@ function GameMode:InitGameMode()
 	GameRules:SetPostGameTime(30.0)
 	GameRules:SetTreeRegrowTime(60.0)
 
-	GameRules:SetGoldPerTick(1.0)
-	GameRules:SetGoldTickTime(0.4)
+	--GameRules:SetGoldPerTick(1.0)
+	--GameRules:SetGoldTickTime(0.4)
 
 	GameRules:GetGameModeEntity():SetFountainPercentageHealthRegen(0)
 	GameRules:GetGameModeEntity():SetFountainPercentageManaRegen(0)
