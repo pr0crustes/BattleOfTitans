@@ -36,6 +36,10 @@ function GameMode:InitGameMode()
 	GameRules:SetGoldPerTick(1.0)
 	GameRules:SetGoldTickTime(0.4)
 
+	GameRules:GetGameModeEntity():SetFountainPercentageHealthRegen(0)
+	GameRules:GetGameModeEntity():SetFountainPercentageManaRegen(0)
+	GameRules:GetGameModeEntity():SetFountainConstantManaRegen(0)
+
 	BShop:Init()
 
 	ListenToGameEvent("npc_spawned", Dynamic_Wrap(GameMode, "OnEntitySpawned"), self)
