@@ -3,7 +3,7 @@
 	"1"
 	{
 		"spawner_name"	    "spawner_creep_easy_1"
-		"disable_amount"	"20"
+		"disable_amount"	"10"
 
 		"creeps"
 		{
@@ -14,7 +14,7 @@
 	"2"
 	{
 		"spawner_name"	    "spawner_creep_easy_2"
-		"disable_amount"	"20"
+		"disable_amount"	"10"
 
 		"creeps"
 		{
@@ -25,7 +25,7 @@
 	"3"
 	{
 		"spawner_name"	    "spawner_creep_easy_3"
-		"disable_amount"	"20"
+		"disable_amount"	"10"
 
 		"creeps"
 		{
@@ -36,7 +36,7 @@
 	"4"
 	{
 		"spawner_name"	    "spawner_creep_hard_1"
-		"disable_amount"	"20"
+		"disable_amount"	"10"
 
 		"creeps"
 		{
@@ -48,7 +48,7 @@
 	"5"
 	{
 		"spawner_name"	    "spawner_creep_hard_2"
-		"disable_amount"	"20"
+		"disable_amount"	"10"
 
 		"creeps"
 		{
