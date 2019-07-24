@@ -1,0 +1,34 @@
+"mercenary_mana_imbuement"
+{
+    "BaseClass"						"ability_lua"
+    "ScriptFile"		            "abilities/units/mercenary_mana_imbuement.lua"
+
+    "AbilityBehavior"			    "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"		    "mercenary_blue"
+    "MaxLevel"					    "1"
+
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "base_mana_regen"	        "3"
+        }
+        "02"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "mana_regen_increase"	    "50"
+        }
+        "03"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "first_duration"	        "180"
+        }
+        "04"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "second_duration"	        "90"
+        }
+    }
+}
