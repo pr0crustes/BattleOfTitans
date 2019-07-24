@@ -7,7 +7,7 @@
     "SoundSet"					"n_creep_Ranged"
     "Level"						"16"
     "IsAncient"					"1"
-    "ModelScale" 				"1.4"
+    "ModelScale" 				"2.0"
     "IsNeutralUnitType"			"1"
 
     // Abilities
@@ -24,8 +24,8 @@
     // Attack
     //----------------------------------------------------------------
     "AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-    "AttackDamageMin"			"100"		// Damage range min.
-    "AttackDamageMax"			"100"		// Damage range max.
+    "AttackDamageMin"			"170"		// Damage range min.
+    "AttackDamageMax"			"200"		// Damage range max.
     "AttackRate"				"1.4"		// Speed of attack.
     "AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
     "AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
@@ -36,7 +36,7 @@
     // Bounds
     //----------------------------------------------------------------
     "RingRadius"				"50"
-    "HealthBarOffset"			"170"
+    "HealthBarOffset"			"280"
 
     // Bounty
     //----------------------------------------------------------------
@@ -52,7 +52,7 @@
     // Status
     //----------------------------------------------------------------
     "StatusHealth"				"3000"		// Base health.
-    "StatusHealthRegen"			"1"		    // Health regeneration rate.
+    "StatusHealthRegen"			"3"		    // Health regeneration rate.
     "StatusMana"				"500"		// Base mana.
     "StatusManaRegen"			"1.0"		// Mana regeneration rate.
 
