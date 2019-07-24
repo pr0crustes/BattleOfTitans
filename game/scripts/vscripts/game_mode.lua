@@ -17,7 +17,9 @@ function GameMode:InitGameMode()
 	self.experience_share = 0.15
 
 	self.ancient_radiant = Entities:FindByName(nil, "dota_goodguys_fort")
+	self.ancient_radiant.is_ancient = true
 	self.ancient_dire = Entities:FindByName(nil, "dota_badguys_fort")
+	self.ancient_dire.is_ancient = true
 
 	self.titan_spawn_radiant = Entities:FindByName(nil, "titan_spawn_radiant")
 	self.titan_spawn_dire = Entities:FindByName(nil, "titan_spawn_dire")
@@ -63,13 +65,8 @@ function GameMode:DamageFilter(keys)
 		local damage_type = keys.damagetype_const
 		local damage = keys.damage
 
-		if attacker_unit and victim_unit then
-			local victim_name = victim_unit:GetUnitName()
-			local attacker_name = attacker_unit:GetUnitName()
-
-			if string.find(victim_name, "_fort") and not string.find(attacker_name, "team_titan") then
-				return false
-			end
+		if attacker_unit and victim_unit and victim_unit.is_ancient and not attacker_unit.is_titan then
+			return false
 		end
 	end
 
