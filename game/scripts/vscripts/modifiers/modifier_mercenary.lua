@@ -33,6 +33,7 @@ if IsServer() then
         self.spawn_pos_x = keys.spawn_pos_x
         self.spawn_pos_y = keys.spawn_pos_y
         self.spawn_pos_z = keys.spawn_pos_z
+        self.respawn_time = keys.respawn_time
 
         self.parent = self:GetParent()
 
@@ -90,13 +91,14 @@ if IsServer() then
             local pos = Vector(self.spawn_pos_x, self.spawn_pos_y, self.spawn_pos_z)
 
             Timers:CreateTimer(
-                60 * 1,
+                self.respawn_time,
                 function()
                     local mercenary = CreateUnitByName(name, pos, true, nil, nil, DOTA_TEAM_NEUTRALS)
                     mercenary:AddNewModifier(mercenary, nil, "modifier_mercenary", {
                         spawn_pos_x = self.spawn_pos_x,
                         spawn_pos_y = self.spawn_pos_y,
                         spawn_pos_z = self.spawn_pos_z,
+                        respawn_time = self.respawn_time,
                     })
                 end
             )
