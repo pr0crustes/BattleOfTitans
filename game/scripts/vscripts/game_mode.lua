@@ -146,9 +146,10 @@ end
 function GameMode:OnGameRulesStateChange()
 	local state = GameRules:State_Get()
 	if state == DOTA_GAMERULES_STATE_PRE_GAME then
-		--MercenarySpawner:SetupSpawners()
+		-- Pass
 	elseif state == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 		self:SpawnCreeps()
+		MercenarySpawner:SetupSpawners()
 		GameRules:GetGameModeEntity():SetThink("SpawnCreeps", self, self.creep_interval)
 		GameRules:GetGameModeEntity():SetThink("TitanThink", self, 1.0)
 	elseif state == DOTA_GAMERULES_STATE_POST_GAME then
