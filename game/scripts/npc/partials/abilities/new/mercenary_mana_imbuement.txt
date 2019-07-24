@@ -1,8 +1,6 @@
 "mercenary_mana_imbuement"
 {
-    "BaseClass"						"ability_lua"
-    "ScriptFile"		            "abilities/units/mercenary_mana_imbuement.lua"
-
+    "BaseClass"					    "ability_datadriven"
     "AbilityBehavior"			    "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "AbilityTextureName"		    "mercenary_blue"
     "MaxLevel"					    "1"
@@ -29,6 +27,27 @@
         {
             "var_type"					"FIELD_INTEGER"
             "second_duration"	        "90"
+        }
+    }
+
+
+    "Modifiers"
+    {
+        "modifier_mercenary_mana_imbuement"
+        {
+            "Passive"               "1"
+            "IsBuff"	            "1"
+            "IsHidden"              "1"
+
+            "OnDeath"
+            {
+                "RunScript"
+                {
+                    "ScriptFile"	"abilities/units/generic.lua"
+                    "Function"		"OnDeathDropItem"
+                    "item_name"     "item_mana_imbuement"
+                }
+            }
         }
     }
 }
