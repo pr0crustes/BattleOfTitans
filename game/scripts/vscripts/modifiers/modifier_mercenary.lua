@@ -1,6 +1,9 @@
 
 modifier_mercenary = class({})
 
+function modifier_mercenary:GetTexture()
+    return "mercenary"
+end
 
 function modifier_mercenary:IsHidden()
     return false

@@ -1,0 +1,2 @@
+"DOTA_Tooltip_modifier_mercenary"			        "Mercenary"
+"DOTA_Tooltip_modifier_mercenary_Description"	    "This unit is a Mercenary. Killing it will grant your team a special reward. Takes longer to respawn."
