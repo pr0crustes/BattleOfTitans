@@ -3,8 +3,8 @@
     "BaseClass"						"item_lua"
     "ScriptFile"                    "items/item_mana_imbuement.lua"
 
-    //"Model"							"models/props_gameplay/aghanim_gem.vmdl"
-    //"Effect"						"particles/generic_gameplay/dropped_gem.vpcf"
+    "Model"							"models/props_gameplay/salve_blue.vmdl"
+    "Effect"						"particles/generic_gameplay/dropped_gem.vpcf"
 
     "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
     "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
