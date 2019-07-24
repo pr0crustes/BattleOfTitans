@@ -18,11 +18,13 @@ function ChatHandler:OnPlayerChat(keys)
                 table.insert(args, s)
             end
 
-            local command = string.lower(args[1])
-            table.remove(args, 1)
+            if #args > 0 then
+                local command = string.lower(args[1])
+                table.remove(args, 1)
 
-            if Cheats[command] then
-                Cheats[command](Cheats, player, args)
+                if Cheats[command] then
+                    Cheats[command](Cheats, player, args)
+                end
             end
         end
     end
