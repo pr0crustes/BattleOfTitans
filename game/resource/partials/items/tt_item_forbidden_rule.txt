@@ -1,0 +1,2 @@
+"DOTA_Tooltip_ability_item_forbidden_rule"                      "Forbidden Rule"
+"DOTA_Tooltip_ability_item_forbidden_rule_Description"			"<h1>Active: Forbidden Rule</h1> Completly blocks Town Portal Scroll and Boots of Travel on the entire map, affecting both teams and lasting for %duration% seconds."

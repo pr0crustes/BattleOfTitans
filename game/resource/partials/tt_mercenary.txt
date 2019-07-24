@@ -4,3 +4,7 @@
 
 "DOTA_Tooltip_ability_mercenary_mana_imbuement"					    "Mercenary: Mana Imbuement"
 "DOTA_Tooltip_ability_mercenary_mana_imbuement_Description"		    "Drops Mana Imbuement on death.\nMana Imbuement can be used to grant a buff to a target ally that increases base mana regen by %base_mana_regen% and restores %mana_regen_pct%% of max mana every second, lasting for %first_duration% seconds.\nIf the original blessed unit by Mana Imbuement dies while having the bonus, the buff is transferred to the killer, lasting for %second_duration%."
+
+
+"DOTA_Tooltip_ability_mercenary_forbidden_rule"					    "Mercenary: Forbidden Rule"
+"DOTA_Tooltip_ability_mercenary_forbidden_rule_Description"		    "Drops Forbidden Rule on death.\nForbidden Rule can be consumed to completly block Town Portal Scroll and Boots of Travel on the entire map, affecting both teams and lasting for %duration% seconds."
