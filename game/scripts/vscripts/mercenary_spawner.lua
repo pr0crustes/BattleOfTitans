@@ -23,6 +23,10 @@ end
 
 function MercenarySpawner:Spawn(pos, mercenary_name, respawn_time)
 	local mercenary = CreateUnitByName(mercenary_name, pos, true, nil, nil, DOTA_TEAM_NEUTRALS)
+
+    local look_direction = (Vector(0, 0, 0) - pos):Normalized()
+    mercenary:SetForwardVector(look_direction)
+
 	mercenary:AddNewModifier(mercenary, nil, "modifier_mercenary", {
         spawn_pos_x = pos.x,
         spawn_pos_y = pos.y,
