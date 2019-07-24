@@ -1,0 +1,37 @@
+"item_forbidden_rule"
+{
+    "BaseClass"						"item_lua"
+    "ScriptFile"                    "items/item_forbidden_rule.lua"
+
+    "Model"							"models/props_gameplay/tpscroll01.vmdl"
+    "Effect"						"particles/generic_gameplay/dropped_gem.vpcf"
+
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+    "AbilityTextureName"			"forbidden_rule"
+    "AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+    "AbilityCooldown"				"1.0"
+
+    "ItemCost"						"0"
+    "ItemPurchasable"				"0"
+
+    "ItemSellable"					"0"
+    "ItemShareability"				"ITEM_FULLY_SHAREABLE"
+
+    "ItemShopTags"					"consumable"
+    "ItemQuality"					"consumable"
+    "ItemPermanent"					"0"
+    "ItemInitialCharges"			"1"
+    "IsTempestDoubleClonable"		"0"
+
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "duration"	            "60"
+        }
+    }
+}

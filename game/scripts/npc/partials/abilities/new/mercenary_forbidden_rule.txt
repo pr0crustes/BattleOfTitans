@@ -1,0 +1,38 @@
+"mercenary_forbidden_rule"
+{
+    "BaseClass"					    "ability_datadriven"
+    "AbilityBehavior"			    "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"		    "mercenary_red"
+    "MaxLevel"					    "1"
+
+
+    "AbilitySpecial"  // These values are only for the tooltips.
+    {
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "duration"	            "60"
+        }
+    }
+
+
+    "Modifiers"
+    {
+        "modifier_mercenary_forbidden_rule"
+        {
+            "Passive"               "1"
+            "IsBuff"	            "1"
+            "IsHidden"              "1"
+
+            "OnDeath"
+            {
+                "RunScript"
+                {
+                    "ScriptFile"	"abilities/units/generic.lua"
+                    "Function"		"OnDeathDropItem"
+                    "item_name"     "item_forbidden_rule"
+                }
+            }
+        }
+    }
+}
