@@ -169,6 +169,14 @@ function GameMode:OrderFilter(keys)
 	local sequence_number = keys.sequence_number_const
 	local units = keys.units
 
+	if playerID and order_type == DOTA_UNIT_ORDER_CAST_POSITION and ability then
+		local ability_name = ability:GetName()
+		if _G.forbidden_rule_active and (ability_name == "item_tpscroll" or ability_name == "item_travel_boots" or ability_name == "item_travel_boots_2") then
+			SendErrorMessage(playerID, "#dota_hud_error_forbidden_rule_active")
+			return false
+		end
+	end
+
 	return true
 end
 

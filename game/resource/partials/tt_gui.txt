@@ -9,3 +9,5 @@
 "bshop_damage_description"  "+100 Titan Damage."
 "bshop_own"                 "Own: {d:own}"
 "bshop_cost"                "Cost: {d:cost}"
+
+"dota_hud_error_forbidden_rule_active"      "Can't teleport while there is a Forbidden Rule Active"
