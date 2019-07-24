@@ -21,6 +21,7 @@ function TitanSpawner:SpawnTitan(team, location, target, round)
 	print("TitanSpawner:SpawnTitan")
 
 	local titan = CreateUnitByName("npc_team_titan", location, true, nil, nil, team)
+	titan.is_titan = true
 	titan:AddNewModifier(titan, nil, "modifier_titan", {})
 
 	local stats = TitanSpawner:CalculateStats(team, round)

@@ -22,7 +22,8 @@ end
 
 
 function MercenarySpawner:Spawn(pos, mercenary_name, respawn_time)
-	local mercenary = CreateUnitByName(mercenary_name, pos, true, nil, nil, DOTA_TEAM_NEUTRALS)
+    local mercenary = CreateUnitByName(mercenary_name, pos, true, nil, nil, DOTA_TEAM_NEUTRALS)
+    mercenary.is_mercenary = true
 
     local look_direction = (Vector(0, 0, 0) - pos):Normalized()
     mercenary:SetForwardVector(look_direction)

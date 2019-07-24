@@ -11,3 +11,4 @@
 "bshop_cost"                "Cost: {d:cost}"
 
 "dota_hud_error_forbidden_rule_active"      "Can't teleport while there is a Forbidden Rule Active"
+"dota_hud_error_forbidden_life_stealer_infest"  "Infest will not work, this is not Mo'rokai"
