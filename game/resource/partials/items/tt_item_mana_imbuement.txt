@@ -1,0 +1,9 @@
+"DOTA_Tooltip_ability_item_mana_imbuement"                      "Mana Imbuement"
+"DOTA_Tooltip_ability_item_mana_imbuement_Description"			"<h1>Active: Mana Imbuement</h1> Grants a buff to the target ally that increases base mana regen by %base_mana_regen% and restores %mana_regen_pct%% of max mana every second, lasting for %first_duration% seconds.\nIf the original blessed unit by Mana Imbuement dies while having the bonus, the buff is transferred to the killer, lasting for %second_duration%."
+"DOTA_Tooltip_ability_item_mana_imbuement_Lore"					"Contains the essence of a powerful satyr."
+
+"DOTA_Tooltip_modifier_mana_imbuement_first"			        "Mana Imbuement"
+"DOTA_Tooltip_modifier_mana_imbuement_first_Description"	    "Provides additional mana regen. If this unit is killed while having Mana Imbuement, it will be transferred to the killer."
+
+"DOTA_Tooltip_modifier_mana_imbuement_second"			        "Mana Imbuement"
+"DOTA_Tooltip_modifier_mana_imbuement_second_Description"	    "Provides additional mana regen."

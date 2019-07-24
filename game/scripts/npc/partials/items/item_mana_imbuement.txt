@@ -1,0 +1,54 @@
+"item_mana_imbuement"
+{
+    "BaseClass"						"item_lua"
+    "ScriptFile"                    "items/item_mana_imbuement.lua"
+
+    //"Model"							"models/props_gameplay/aghanim_gem.vmdl"
+    //"Effect"						"particles/generic_gameplay/dropped_gem.vpcf"
+
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+
+    "AbilityTextureName"			"mana_imbuement"
+    "AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+    "AbilityCooldown"				"0.2"
+
+    "ItemCost"						"0"
+    "ItemPurchasable"				"0"
+
+    "ItemSellable"					"0"
+    "ItemShareability"				"ITEM_FULLY_SHAREABLE"
+
+    "ItemShopTags"					"consumable"
+    "ItemQuality"					"consumable"
+    "ItemPermanent"					"0"
+    "ItemInitialCharges"			"1"
+    "IsTempestDoubleClonable"		"0"
+
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "base_mana_regen"	        "5"
+        }
+        "02"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "mana_regen_pct"	        "1"
+        }
+        "03"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "first_duration"	        "180"
+        }
+        "04"
+        {
+            "var_type"					"FIELD_INTEGER"
+            "second_duration"	        "90"
+        }
+    }
+}

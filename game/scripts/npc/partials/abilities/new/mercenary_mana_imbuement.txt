@@ -8,17 +8,17 @@
     "MaxLevel"					    "1"
 
 
-    "AbilitySpecial"
+    "AbilitySpecial"  // These values are only for the tooltips.
     {
         "01"
         {
             "var_type"					"FIELD_INTEGER"
-            "base_mana_regen"	        "3"
+            "base_mana_regen"	        "5"
         }
         "02"
         {
             "var_type"					"FIELD_INTEGER"
-            "mana_regen_increase"	    "50"
+            "mana_regen_pct"	        "1"
         }
         "03"
         {

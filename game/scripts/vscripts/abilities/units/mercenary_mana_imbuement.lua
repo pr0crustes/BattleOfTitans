@@ -34,7 +34,10 @@ function modifier_mercenary_mana_imbuement:OnDeath(keys)
         local attacker = keys.attacker
 
         if self:GetParent() == unit then
-            
+            local item = CreateItem("item_mana_imbuement", nil, nil)
+            item:SetPurchaseTime(0)
+
+            local drop = CreateItemOnPositionSync(unit:GetAbsOrigin(), item)
         end
     end
 end
