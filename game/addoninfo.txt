@@ -1,6 +1,6 @@
 "AddonInfo"
 {
-	"maps" 					"battle_of_titans"
+	"maps" 					"endless_war"
 	"IsPlayable"  			"1"
 
 	//"EnablePickRules"		"1"
