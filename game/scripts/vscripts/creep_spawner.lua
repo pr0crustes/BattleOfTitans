@@ -41,7 +41,7 @@ end
 
 
 function CreepSpawner:SpawnCreeps(round)
-	print("CreepSpawner:SpawnCreeps")
+	--print("CreepSpawner:SpawnCreeps")
 
 	local min_count = CreepSpawner:MinSpawnAmount(round)
 	local max_count = CreepSpawner:MaxSpawnAmount(round)

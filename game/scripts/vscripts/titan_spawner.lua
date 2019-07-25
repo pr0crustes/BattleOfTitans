@@ -18,7 +18,7 @@ end
 
 
 function TitanSpawner:SpawnTitan(team, location, target, round)
-	print("TitanSpawner:SpawnTitan")
+	--print("TitanSpawner:SpawnTitan")
 
 	local titan = CreateUnitByName("npc_team_titan", location, true, nil, nil, team)
 	titan.is_titan = true
