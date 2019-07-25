@@ -1,0 +1,41 @@
+"mercenary_frost_splash"
+{
+    "BaseClass"					    "ability_lua"
+    "ScriptFile"	                "abilities/units/mercenary_frost_splash.lua"
+
+    "AbilityBehavior"			    "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "AbilityTextureName"		    "crystal_maiden_crystal_nova"
+    "MaxLevel"					    "1"
+
+    "AbilityCooldown"               "8"
+
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "delay"		            "2.0"
+        }
+        "02"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "damage"	            "100"
+        }
+        "03"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "damage_growth"         "13"
+        }
+        "04"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "slow_pct"              "15"
+        }
+        "05"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "slow_duration"         "5"
+        }
+    }
+}
