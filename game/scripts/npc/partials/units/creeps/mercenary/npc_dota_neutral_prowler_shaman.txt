@@ -7,7 +7,7 @@
     "SoundSet"					"n_creep_Melee"
     "Level"						"16"
     "IsAncient"					"1"
-    "ModelScale" 				"1.15"
+    "ModelScale" 				"2.0"
     "IsNeutralUnitType"			"1"
 
     // Abilities
@@ -36,8 +36,8 @@
 
     // Bounds
     //----------------------------------------------------------------
-    "RingRadius"				"80"
-    "HealthBarOffset"			"220"
+    "RingRadius"				"160"
+    "HealthBarOffset"			"300"
 
     // Bounty
     //----------------------------------------------------------------
