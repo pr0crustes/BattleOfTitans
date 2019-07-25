@@ -12,7 +12,7 @@
     "AbilityTextureName"		    "crystal_maiden_crystal_nova"
     "MaxLevel"					    "1"
 
-    "AbilityCooldown"               "8"
+    "AbilityCooldown"               "9"
 
     "precache"
     {
@@ -31,12 +31,12 @@
         "02"
         {
             "var_type"				"FIELD_INTEGER"
-            "damage"	            "100"
+            "damage"	            "60"
         }
         "03"
         {
             "var_type"              "FIELD_INTEGER"
-            "damage_growth"         "13"
+            "damage_growth"         "7"
         }
         "04"
         {
@@ -46,12 +46,12 @@
         "05"
         {
             "var_type"              "FIELD_INTEGER"
-            "slow_pct"              "-10"
+            "slow_pct"              "-12"
         }
         "06"
         {
             "var_type"              "FIELD_INTEGER"
-            "slow_duration"         "5"
+            "slow_duration"         "6"
         }
     }
 }

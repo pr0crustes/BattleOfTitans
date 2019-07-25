@@ -8,10 +8,27 @@ function mercenary_frost_splash:OnSpellStart()
     local caster_pos = caster:GetAbsOrigin()
     local foward_vector = caster:GetForwardVector()
 
+    self:DoSpawnOrbs(Vector(1, 1, 1), 8)
+    self:DoSpawnOrbs(Vector(1, 1, 1), -8)
+
+    self:DoSpawnOrbs(Vector(-1, 1, 1), 8)
+    self:DoSpawnOrbs(Vector(-1, 1, 1), -8)
+
+    self:DoSpawnOrbs(Vector(1, -1, 1), 8)
+    self:DoSpawnOrbs(Vector(1, -1, 1), -8)
+
+    self:DoSpawnOrbs(Vector(-1, -1, 1), 8)
+    self:DoSpawnOrbs(Vector(-1, -1, 1), -8)
+end
+
+
+function mercenary_frost_splash:DoSpawnOrbs(foward_vector, rotation)
+    local caster = self:GetCaster()
+    local caster_pos = caster:GetAbsOrigin()
+
     local distance = 100
     local distance_increase = 50
-    local amount = 10
-    local rotation = 5
+    local amount = 5
 
     for i = 1, amount do
         local pos = caster_pos + (foward_vector * (distance + (i * distance_increase)))
@@ -19,7 +36,7 @@ function mercenary_frost_splash:OnSpellStart()
         local new_pos = RotatePosition(caster_pos, angle, pos)
 
         Timers:CreateTimer(
-            (i - 1) * 0.05,
+            i * 0.2,
             function()
                 self:CreateOrb(new_pos)
             end
