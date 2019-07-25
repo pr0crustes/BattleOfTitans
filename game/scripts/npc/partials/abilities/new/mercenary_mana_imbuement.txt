@@ -5,32 +5,6 @@
     "AbilityTextureName"		    "mercenary_blue"
     "MaxLevel"					    "1"
 
-
-    "AbilitySpecial"  // These values are only for the tooltips.
-    {
-        "01"
-        {
-            "var_type"					"FIELD_INTEGER"
-            "base_mana_regen"	        "5"
-        }
-        "02"
-        {
-            "var_type"					"FIELD_INTEGER"
-            "mana_regen_pct"	        "1"
-        }
-        "03"
-        {
-            "var_type"					"FIELD_INTEGER"
-            "first_duration"	        "180"
-        }
-        "04"
-        {
-            "var_type"					"FIELD_INTEGER"
-            "second_duration"	        "90"
-        }
-    }
-
-
     "Modifiers"
     {
         "modifier_mercenary_mana_imbuement"
@@ -38,6 +12,16 @@
             "Passive"               "1"
             "IsBuff"	            "1"
             "IsHidden"              "1"
+
+            "OnCreated"
+            {
+                "RunScript"
+                {
+                    "ScriptFile"	"abilities/units/generic.lua"
+                    "Function"		"AddItem"
+                    "item_name"     "item_mana_imbuement"
+                }
+            }
 
             "OnDeath"
             {

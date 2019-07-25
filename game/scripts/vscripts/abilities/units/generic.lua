@@ -12,3 +12,11 @@ function OnDeathDropItem(keys)
         local drop = CreateItemOnPositionSync(unit:GetAbsOrigin(), item)
     end
 end
+
+
+function AddItem(keys)
+    local caster = keys.caster
+    local item_name = keys.item_name
+
+    caster:AddItemByName(item_name)
+end

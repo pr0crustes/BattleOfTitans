@@ -5,17 +5,6 @@
     "AbilityTextureName"		    "mercenary_red"
     "MaxLevel"					    "1"
 
-
-    "AbilitySpecial"  // These values are only for the tooltips.
-    {
-        "01"
-        {
-            "var_type"				"FIELD_INTEGER"
-            "duration"	            "45"
-        }
-    }
-
-
     "Modifiers"
     {
         "modifier_mercenary_forbidden_rule"
@@ -23,6 +12,16 @@
             "Passive"               "1"
             "IsBuff"	            "1"
             "IsHidden"              "1"
+
+            "OnCreated"
+            {
+                "RunScript"
+                {
+                    "ScriptFile"	"abilities/units/generic.lua"
+                    "Function"		"AddItem"
+                    "item_name"     "item_forbidden_rule"
+                }
+            }
 
             "OnDeath"
             {
