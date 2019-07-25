@@ -63,18 +63,19 @@ function CreepSpawner:SpawnCreepsAtPoint(point_name, creep_list, min_count, max_
 
 	for i, point in pairs(points) do
 		local spawn_pos = point:GetAbsOrigin()
+		local foward_vector = point:GetForwardVector()
 
 		local nearby_creeps = FindUnitsInRadius(DOTA_TEAM_NEUTRALS, spawn_pos, nil, 700, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_CREEP, 0, 0, false)
 
 		if #nearby_creeps < disable_amount then
 			local count = RandomInt(min_count, max_count)
-			CreepSpawner:SpawnCreepsAtPos(spawn_pos, creep_list, count, round)
+			CreepSpawner:SpawnCreepsAtPos(spawn_pos, foward_vector, creep_list, count, round)
 		end
 	end
 end
 
 
-function CreepSpawner:SpawnCreepsAtPos(pos, creep_list, count, round)
+function CreepSpawner:SpawnCreepsAtPos(pos, foward_vector, creep_list, count, round)
 	--print("CreepSpawner:SpawnCreepsAtPos")
 
 	local round_multiplier = 1 + ((round - 1) * 0.05)
@@ -87,6 +88,8 @@ function CreepSpawner:SpawnCreepsAtPos(pos, creep_list, count, round)
 
 		if creep then
 			creep.is_custom_spawned_creep = true
+
+			creep:SetForwardVector(foward_vector)
 
 			creep:SetDeathXP(creep:GetDeathXP() * round_multiplier_plus)
 

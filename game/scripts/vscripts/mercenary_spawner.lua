@@ -16,17 +16,16 @@ end
 function MercenarySpawner:SpawnFromPointName(point_name, mercenary_name, respawn_time)
 	local points = Entities:FindAllByName(point_name)
 	for i, point in pairs(points) do
-		MercenarySpawner:Spawn(point:GetAbsOrigin(), mercenary_name, respawn_time)
+		MercenarySpawner:Spawn(point:GetAbsOrigin(), point:GetForwardVector(), mercenary_name, respawn_time)
 	end
 end
 
 
-function MercenarySpawner:Spawn(pos, mercenary_name, respawn_time)
+function MercenarySpawner:Spawn(pos, foward_vector, mercenary_name, respawn_time)
     local mercenary = CreateUnitByName(mercenary_name, pos, true, nil, nil, DOTA_TEAM_NEUTRALS)
     mercenary.is_mercenary = true
 
-    local look_direction = (Vector(0, 0, 0) - pos):Normalized()
-    mercenary:SetForwardVector(look_direction)
+    mercenary:SetForwardVector(foward_vector)
 
 	mercenary:AddNewModifier(mercenary, nil, "modifier_mercenary", {
         spawn_pos_x = pos.x,

@@ -68,16 +68,4 @@
 			"2"     "npc_dota_neutral_granite_golem"
 		}
 	}
-
-	"7"
-	{
-		"spawner_name"	    "spawner_creep_ancient_2"
-		"disable_amount"	"10"
-
-		"creeps"
-		{
-			"1"     "npc_dota_neutral_polar_furbolg_champion"
-			"2"     "npc_dota_neutral_granite_golem"
-		}
-	}
 }
