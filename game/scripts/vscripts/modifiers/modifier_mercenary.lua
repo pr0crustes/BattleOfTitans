@@ -54,10 +54,11 @@ if IsServer() then
     function modifier_mercenary:UpdateStats(time)
         local time_scale = 1 + (time * 0.1)
 
+        local previous_health = self.parent:GetMaxHealth()
         local health = self.init_health * time_scale
         self.parent:SetMaxHealth(health)
         self.parent:SetBaseMaxHealth(health)
-        self.parent:SetHealth(health * self.parent:GetHealthPercent())
+        self.parent:Heal(health - previous_health, self.parent)
 
         local damage = self.init_damage * time_scale
         self.parent:SetBaseDamageMin(damage)
