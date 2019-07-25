@@ -257,3 +257,22 @@ function GetTeamAncient(team)
 	end
 	return nil
 end
+
+
+function TimeInMinutes()
+	return math.floor(GameRules:GetGameTime() / 60)
+end
+
+
+function kill_dummy(dummy)
+	Timers:CreateTimer(
+		0.01,
+		function()
+			if dummy and dummy:IsAlive() then
+				dummy:ForceKill(false)
+				return 0.01
+			end
+			return nil
+		end
+	)
+end

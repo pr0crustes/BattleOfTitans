@@ -8,3 +8,16 @@
 
 "DOTA_Tooltip_ability_mercenary_forbidden_rule"					    "Mercenary: Forbidden Rule"
 "DOTA_Tooltip_ability_mercenary_forbidden_rule_Description"		    "Drops Forbidden Rule on death."
+
+"DOTA_Tooltip_ability_mercenary_frost_splash"					    "Mercenary: Frost Splash"
+"DOTA_Tooltip_ability_mercenary_frost_splash_Description"		    "Summons ice spheres that explodes after a short delay. The explosion deals damage and slows."
+"DOTA_Tooltip_ability_mercenary_frost_splash_delay"                 "DELAY:"
+"DOTA_Tooltip_ability_mercenary_frost_splash_damage"                "DAMAGE:"
+"DOTA_Tooltip_ability_mercenary_frost_splash_damage_growth"         "DAMAGE GROWTH:"
+"DOTA_Tooltip_ability_mercenary_frost_splash_damage_radius"         "RADIUS:"
+"DOTA_Tooltip_ability_mercenary_frost_splash_slow_pct"              "%SLOW:"
+"DOTA_Tooltip_ability_mercenary_frost_splash_slow_duration"         "SLOW DURATION:"
+
+"DOTA_Tooltip_modifier_mercenary_frost_splash_slow"			        "Frost Splash Slow"
+"DOTA_Tooltip_modifier_mercenary_frost_splash_slow_Description"	    "Movement speed reduced by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%."
+

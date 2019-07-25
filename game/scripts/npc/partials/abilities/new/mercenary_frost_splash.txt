@@ -4,11 +4,22 @@
     "ScriptFile"	                "abilities/units/mercenary_frost_splash.lua"
 
     "AbilityBehavior"			    "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "AbilityUnitTargetTeam"		    "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"		    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+
+    "AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
     "AbilityTextureName"		    "crystal_maiden_crystal_nova"
     "MaxLevel"					    "1"
 
     "AbilityCooldown"               "8"
 
+    "precache"
+    {
+        "particle"                  "particles/generic_gameplay/generic_slowed_cold.vpcf"
+        "particle"                  "particles/units/heroes/hero_crystalmaiden/maiden_crystal_nova.vpcf"
+        "soundfile"                 "soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts"
+    }
 
     "AbilitySpecial"
     {
@@ -30,9 +41,14 @@
         "04"
         {
             "var_type"              "FIELD_INTEGER"
-            "slow_pct"              "15"
+            "damage_radius"         "200" 
         }
         "05"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "slow_pct"              "-10"
+        }
+        "06"
         {
             "var_type"              "FIELD_INTEGER"
             "slow_duration"         "5"
