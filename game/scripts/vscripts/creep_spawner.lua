@@ -7,36 +7,27 @@ end
 
 
 function CreepSpawner:MinSpawnAmount(round)
-	if round <= 3 then
+	if round <= 4 then
+		return 1
+	end
+	if round <= 16 then
 		return 2
 	end
-	if round <= 9 then
+	if round <= 26 then
 		return 3
 	end
-	if round <= 15 then
+	if round <= 36 then
 		return 4
 	end
-	if round <= 25 then
-		return 5
-	end
-	return 6
+	return 5
 end
 
 
 function CreepSpawner:MaxSpawnAmount(round)
 	if round <= 3 then
-		return 2
+		return 1
 	end
-	if round <= 9 then
-		return 4
-	end
-	if round <= 15 then
-		return 5
-	end
-	if round <= 25 then
-		return 6
-	end
-	return 7
+	return CreepSpawner:MinSpawnAmount(round) + 1
 end
 
 
@@ -78,8 +69,8 @@ end
 function CreepSpawner:SpawnCreepsAtPos(pos, foward_vector, creep_list, count, round)
 	--print("CreepSpawner:SpawnCreepsAtPos")
 
-	local round_multiplier = 1 + ((round - 1) * 0.05)
-	local round_multiplier_plus = 1 + ((round - 1) * 0.12)
+	local stats_multiplier = 1 + ((round - 1) * 0.04)
+	local bounty_multiplier = 1 + ((round - 1) * 0.08)
 
 	for i = 1, count do
 		local creep_name = random_from_table(values_from_dict(creep_list))
@@ -91,18 +82,18 @@ function CreepSpawner:SpawnCreepsAtPos(pos, foward_vector, creep_list, count, ro
 
 			creep:SetForwardVector(foward_vector)
 
-			creep:SetDeathXP(creep:GetDeathXP() * round_multiplier_plus)
+			creep:SetDeathXP(creep:GetDeathXP() * bounty_multiplier)
 
-			creep:SetMinimumGoldBounty(creep:GetMinimumGoldBounty() * round_multiplier_plus + round)
-			creep:SetMaximumGoldBounty(creep:GetMaximumGoldBounty()  * round_multiplier_plus + round)
+			creep:SetMinimumGoldBounty(creep:GetMinimumGoldBounty() * bounty_multiplier + round)
+			creep:SetMaximumGoldBounty(creep:GetMaximumGoldBounty()  * bounty_multiplier + round)
 
-			creep:SetMaxHealth(creep:GetMaxHealth() * round_multiplier)
-			creep:SetBaseMaxHealth(creep:GetBaseMaxHealth() * round_multiplier)
-			creep:SetHealth(creep:GetMaxHealth() * round_multiplier)
+			creep:SetMaxHealth(creep:GetMaxHealth() * stats_multiplier)
+			creep:SetBaseMaxHealth(creep:GetBaseMaxHealth() * stats_multiplier)
+			creep:SetHealth(creep:GetMaxHealth() * stats_multiplier)
 
-			creep:SetBaseDamageMin(creep:GetBaseDamageMin() * round_multiplier)
-			creep:SetBaseDamageMax(creep:GetBaseDamageMax() * round_multiplier)
-			creep:SetBaseMoveSpeed(creep:GetBaseMoveSpeed() * round_multiplier)
+			creep:SetBaseDamageMin(creep:GetBaseDamageMin() * stats_multiplier)
+			creep:SetBaseDamageMax(creep:GetBaseDamageMax() * stats_multiplier)
+			creep:SetBaseMoveSpeed(creep:GetBaseMoveSpeed() * stats_multiplier)
 
 			creep:SetPhysicalArmorBaseValue(creep:GetPhysicalArmorBaseValue() + ((round - 1) * 0.4))
 		end
