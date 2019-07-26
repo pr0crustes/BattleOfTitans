@@ -65,8 +65,15 @@ function GameMode:DamageFilter(keys)
 		local damage_type = keys.damagetype_const
 		local damage = keys.damage
 
-		if attacker_unit and victim_unit and victim_unit.is_ancient and not attacker_unit.is_titan then
-			return false
+		if attacker_unit and victim_unit then
+			if victim_unit.is_ancient and not attacker_unit.is_titan then
+				return false
+			end
+
+			-- titan_scale_armor
+			if victim_unit.is_titan then
+				keys.damage = math.min(keys.damage, victim_unit:GetMaxHealth() * 0.015)
+			end
 		end
 	end
 

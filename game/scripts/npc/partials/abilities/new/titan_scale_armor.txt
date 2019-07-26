@@ -1,0 +1,8 @@
+"titan_scale_armor"
+{
+    "BaseClass"					    "ability_datadriven"
+
+    "AbilityBehavior"			    "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"		    "tidehunter_kraken_shell"
+    "MaxLevel"					    "1"
+}

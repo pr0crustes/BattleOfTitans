@@ -11,8 +11,8 @@
     "HasInventory"				"1"
     "IsAncient"                 "1"
 
-    "Ability1"					"titan_death"
-    "Ability2"					""
+    "Ability1"					"titan_scale_armor"
+    "Ability2"					"titan_death"
 
     "ArmorPhysical"				"0"
     "MagicalResistance"			"-25"
