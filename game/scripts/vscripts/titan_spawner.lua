@@ -17,7 +17,7 @@ function TitanSpawner:CalculateStats(team, round)
 end
 
 
-function TitanSpawner:SpawnTitan(team, location, target, round)
+function TitanSpawner:SpawnTitan(team, location, waypoint, target, round)
 	--print("TitanSpawner:SpawnTitan")
 
 	local titan = CreateUnitByName("npc_team_titan", location, true, nil, nil, team)
@@ -35,21 +35,25 @@ function TitanSpawner:SpawnTitan(team, location, target, round)
 	titan:SetBaseDamageMax(stats.damage_max)
 	titan:SetPhysicalArmorBaseValue(stats.armor)
 
+	titan:SetInitialGoalEntity(waypoint)
+
 	titan:SetContextThink(
 		DoUniqueString("SpawnTitanAttackThink"),
 		function()
 			if (target and not target:IsNull() and target:IsAlive()) and (titan and not titan:IsNull() and titan:IsAlive()) then
-				ExecuteOrderFromTable({
-					UnitIndex = titan:entindex(), 
-					OrderType = DOTA_UNIT_ORDER_ATTACK_TARGET,
-					TargetIndex = target:entindex()
-				})
+				if CalcDistanceBetweenEntityOBB(titan, target) < 2000 then
+					ExecuteOrderFromTable({
+						UnitIndex = titan:entindex(), 
+						OrderType = DOTA_UNIT_ORDER_ATTACK_TARGET,
+						TargetIndex = target:entindex()
+					})
+				end
 
-				return 1.0
+				return 0.5
 			end
 
 			return nil
 		end,
-		0.05
+		0.1
 	)
 end
