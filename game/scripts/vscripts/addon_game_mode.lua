@@ -28,7 +28,7 @@ function Precache(context)
 	}
 
 	local models = {
-
+		"models/props_gameplay/morokai_orb.vmdl",
 	}
 
 	local particles = {
@@ -40,7 +40,7 @@ function Precache(context)
 	}
 
 	local units = {
-
+		"mercenary_frost_splash_orb",
 	}
 
 
