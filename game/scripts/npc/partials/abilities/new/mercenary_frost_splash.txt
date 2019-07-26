@@ -26,7 +26,7 @@
         "01"
         {
             "var_type"				"FIELD_FLOAT"
-            "delay"		            "2.0"
+            "delay"		            "2.5"
         }
         "02"
         {
@@ -51,7 +51,27 @@
         "06"
         {
             "var_type"              "FIELD_INTEGER"
-            "slow_duration"         "6"
+            "slow_duration"         "5"
+        }
+        "07"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "distance"              "100"
+        }
+        "08"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "distance_increase"     "70"
+        }
+        "09"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "amount"                "5"
+        }
+        "10"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "rotation"              "8"
         }
     }
 }

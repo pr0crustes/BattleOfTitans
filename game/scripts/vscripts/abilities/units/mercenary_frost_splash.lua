@@ -5,42 +5,37 @@ mercenary_frost_splash = class({})
 
 function mercenary_frost_splash:OnSpellStart()
     local caster = self:GetCaster()
-    local caster_pos = caster:GetAbsOrigin()
     local foward_vector = caster:GetForwardVector()
 
-    self:DoSpawnOrbs(Vector(1, 1, 1), 8)
-    self:DoSpawnOrbs(Vector(1, 1, 1), -8)
+    local distance = self:GetSpecialValueFor("distance")
+    local distance_increase = self:GetSpecialValueFor("distance_increase")
+    local amount = self:GetSpecialValueFor("amount")
+    local rotation = self:GetSpecialValueFor("rotation")
 
-    self:DoSpawnOrbs(Vector(-1, 1, 1), 8)
-    self:DoSpawnOrbs(Vector(-1, 1, 1), -8)
-
-    self:DoSpawnOrbs(Vector(1, -1, 1), 8)
-    self:DoSpawnOrbs(Vector(1, -1, 1), -8)
-
-    self:DoSpawnOrbs(Vector(-1, -1, 1), 8)
-    self:DoSpawnOrbs(Vector(-1, -1, 1), -8)
+    self:DoSpawnOrbs(foward_vector, rotation, distance, distance_increase, amount)
+    self:DoSpawnOrbs(foward_vector, rotation * -1, distance, distance_increase, amount)
 end
 
 
-function mercenary_frost_splash:DoSpawnOrbs(foward_vector, rotation)
+function mercenary_frost_splash:DoSpawnOrbs(foward_vector, rotation, distance, distance_increase, amount)
     local caster = self:GetCaster()
     local caster_pos = caster:GetAbsOrigin()
 
-    local distance = 100
-    local distance_increase = 50
-    local amount = 5
+    local angles_plus = {0, 90, 180, 270}
 
     for i = 1, amount do
-        local pos = caster_pos + (foward_vector * (distance + (i * distance_increase)))
-        local angle = QAngle(0, i * rotation, 0)
-        local new_pos = RotatePosition(caster_pos, angle, pos)
+        for a = 1, #angles_plus do
+            local pos = caster_pos + (foward_vector * (distance + (i * distance_increase)))
+            local angle = QAngle(0, (i * rotation) + angles_plus[a], 0)
+            local new_pos = RotatePosition(caster_pos, angle, pos)
 
-        Timers:CreateTimer(
-            i * 0.2,
-            function()
-                self:CreateOrb(new_pos)
-            end
-        )
+            Timers:CreateTimer(
+                i * 0.2,
+                function()
+                    self:CreateOrb(new_pos)
+                end
+            )
+        end
     end
 end
 
