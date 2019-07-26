@@ -93,8 +93,8 @@ function CreepSpawner:SpawnCreepsAtPos(pos, foward_vector, creep_list, count, ro
 
 			creep:SetDeathXP(creep:GetDeathXP() * round_multiplier_plus)
 
-			creep:SetMinimumGoldBounty(creep:GetMinimumGoldBounty() * round_multiplier_plus)
-			creep:SetMaximumGoldBounty(creep:GetMaximumGoldBounty()  * round_multiplier_plus)
+			creep:SetMinimumGoldBounty(creep:GetMinimumGoldBounty() * round_multiplier_plus + round)
+			creep:SetMaximumGoldBounty(creep:GetMaximumGoldBounty()  * round_multiplier_plus + round)
 
 			creep:SetMaxHealth(creep:GetMaxHealth() * round_multiplier)
 			creep:SetBaseMaxHealth(creep:GetBaseMaxHealth() * round_multiplier)
