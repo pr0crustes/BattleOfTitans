@@ -21,3 +21,10 @@
 "DOTA_Tooltip_modifier_mercenary_frost_splash_slow"			        "Frost Splash Slow"
 "DOTA_Tooltip_modifier_mercenary_frost_splash_slow_Description"	    "Movement speed reduced by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%."
 
+
+"DOTA_Tooltip_ability_mercenary_forbidden_defense"					"Mercenary: Forbidden Defense"
+"DOTA_Tooltip_ability_mercenary_forbidden_defense_Description"		"Attacks from the Ancient Prowler Shaman completely disables healing for a brief duration."
+"DOTA_Tooltip_ability_mercenary_forbidden_defense_duration"         "DURATION:"
+
+"DOTA_Tooltip_modifier_mercenary_forbidden_defense_debuff"			        "Forbidden Defense"
+"DOTA_Tooltip_modifier_mercenary_forbidden_defense_debuff_Description"	    "Healing denied."
