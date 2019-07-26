@@ -7,7 +7,7 @@ end
 
 
 function MercenarySpawner:SetupSpawners()
-    print("MercenarySpawner:SetupSpawners")
+    --print("MercenarySpawner:SetupSpawners")
     MercenarySpawner:SpawnFromPointName("spawner_mercenary_1", "npc_dota_neutral_prowler_shaman", 60 * 6)
     MercenarySpawner:SpawnFromPointName("spawner_mercenary_2", "npc_dota_neutral_satyr_trickster", 60 * 5)
 end
