@@ -15,7 +15,7 @@
         "02"
         {
             "var_type"						    "FIELD_INTEGER"
-            "gold_per_level"	                "400"
+            "gold_per_level"	                "500"
         }
         "03"
         {
@@ -25,7 +25,7 @@
         "04"
         {
             "var_type"						    "FIELD_INTEGER"
-            "experience_per_level"	            "200"
+            "experience_per_level"	            "300"
         }
     }
 
