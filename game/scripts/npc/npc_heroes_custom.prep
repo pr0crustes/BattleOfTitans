@@ -5,8 +5,4 @@
 
 	$recursive "partials/heroes", ".txt"
 
-	"npc_dota_hero_legion_commander"
-	{
-		"Ability1"		"mercenary_frost_splash"
-	}
 }

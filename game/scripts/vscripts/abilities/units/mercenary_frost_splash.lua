@@ -3,6 +3,11 @@ LinkLuaModifier("modifier_damageless", "modifiers/damageless.lua", LUA_MODIFIER_
 mercenary_frost_splash = class({})
 
 
+function mercenary_frost_splash:GetIntrinsicModifierName()
+    return "modifier_mercenary_frost_splash_thinker"
+end
+
+
 function mercenary_frost_splash:OnSpellStart()
     local caster = self:GetCaster()
     local foward_vector = caster:GetForwardVector()
@@ -92,6 +97,36 @@ function mercenary_frost_splash:ExplodeOrb(orb)
     end
 
     UTIL_Remove(orb)
+end
+
+
+
+LinkLuaModifier("modifier_mercenary_frost_splash_thinker", "abilities/units/mercenary_frost_splash.lua", LUA_MODIFIER_MOTION_NONE)
+
+modifier_mercenary_frost_splash_thinker = class({})
+
+function modifier_mercenary_frost_splash_thinker:IsHidden()
+    return true
+end
+
+if IsServer() then
+    function modifier_mercenary_frost_splash_thinker:OnCreated(keys)
+        self:StartIntervalThink(1.0)
+    end
+
+    function modifier_mercenary_frost_splash_thinker:OnIntervalThink()
+        local parent = self:GetParent()
+        local ability = self:GetAbility()
+
+        if parent and parent:IsAlive() then
+            local attacking = parent:GetAttackTarget()
+
+            if attacking and attacking:IsAlive() and CalcDistanceBetweenEntityOBB(parent, attacking) <= 1000 and ability:IsCooldownReady() then
+                ability:OnSpellStart()
+                ability:StartCooldown(ability:GetCooldown(-1))
+            end
+        end
+    end
 end
 
 
