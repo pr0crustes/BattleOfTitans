@@ -28,3 +28,11 @@
 
 "DOTA_Tooltip_modifier_mercenary_forbidden_defense_debuff"			        "Forbidden Defense"
 "DOTA_Tooltip_modifier_mercenary_forbidden_defense_debuff_Description"	    "Healing denied."
+
+
+"DOTA_Tooltip_Ability_mercenary_reward"					        "Mercenary: Reward"
+"DOTA_Tooltip_Ability_mercenary_reward_Description"		        "Killing this unit rewards everybody on your team with gold and experience."
+"DOTA_Tooltip_Ability_mercenary_reward_base_gold"		        "BASE GOLD:"
+"DOTA_Tooltip_Ability_mercenary_reward_gold_per_minute"	        "EXTRA GOLD PER MINUTE:"
+"DOTA_Tooltip_Ability_mercenary_reward_base_experience"		    "BASE EXPERIENCE"
+"DOTA_Tooltip_Ability_mercenary_reward_experience_per_minute"	"EXTRA EXPERIENCE PER MINUTE:"

@@ -14,7 +14,7 @@
     //----------------------------------------------------------------
     "Ability1"					"mercenary_mana_imbuement"			// Ability 1
     "Ability2"					"mercenary_frost_splash"			// Ability 2
-    "Ability3"					""			// Ability 3
+    "Ability3"					"mercenary_reward"			// Ability 3
     "Ability4"					""			// Ability 4
 
     // Armor
