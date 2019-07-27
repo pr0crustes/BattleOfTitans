@@ -86,13 +86,13 @@ function modifier_item_violet_scimitarra:OnAttack(keys)
             for _, enemy in pairs(nearby) do
                 if enemy ~= target then
                     ProjectileManager:CreateTrackingProjectile({
-                        EffectName = "particles/units/heroes/hero_medusa/medusa_base_attack.vpcf",
+                        EffectName = self.projectile_model,
                         Ability = ability,
                         vSpawnOrigin = attacker:GetAbsOrigin(),
                         Target = enemy,
                         Source = attacker,
                         bHasFrontalCone = false,
-                        iMoveSpeed = attacker:GetProjectileSpeed() * 0.85,
+                        iMoveSpeed = self.projectile_speed * 0.85,
                         bReplaceExisting = false,
                         bProvidesVision = false
                     })
@@ -105,5 +105,13 @@ function modifier_item_violet_scimitarra:OnAttack(keys)
                 end
             end
         end
+    end
+end
+
+if IsServer() then
+    function modifier_item_violet_scimitarra:OnCreated(keys)
+        local infos = ProjectileInfoForHero(self:GetParent():GetUnitName())
+        self.projectile_model = infos["ProjectileModel"]
+        self.projectile_speed = infos["ProjectileSpeed"]
     end
 end

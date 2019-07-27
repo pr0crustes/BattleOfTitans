@@ -33,7 +33,7 @@ function Precache(context)
 	}
 
 	local particles = {
-
+		"particles/units/heroes/hero_medusa/medusa_base_attack.vpcf",
 	}
 
 	local soundevents = {

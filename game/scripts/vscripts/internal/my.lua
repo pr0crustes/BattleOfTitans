@@ -281,3 +281,12 @@ end
 function AliveAndNonNil(unit)
 	return (unit and not unit:IsNull() and unit:IsAlive())
 end
+
+
+function ProjectileInfoForHero(hero_name)
+	local info = PROJECTILES[hero_name]
+	if info then
+		return info
+	end
+	return ProjectileInfoForHero("default")
+end
