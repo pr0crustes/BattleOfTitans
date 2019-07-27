@@ -15,6 +15,7 @@ function BShop:Init()
                 ["cost"] = 500,  -- Base cost
                 ["cost_increase"] = 300,
                 ["own"] = 0,
+                ["max"] = -1,
                 ["on_change"] = NO_HANDLER,
             },
             ["armor"] = {
@@ -23,6 +24,7 @@ function BShop:Init()
                 ["cost"] = 300,  -- Base cost
                 ["cost_increase"] = 600,
                 ["own"] = 0,
+                ["max"] = -1,
                 ["on_change"] = NO_HANDLER,
             },
             ["ancient_armor"] = {
@@ -31,6 +33,7 @@ function BShop:Init()
                 ["cost"] = 500,  -- Base cost
                 ["cost_increase"] = 700,
                 ["own"] = 0,
+                ["max"] = -1,
                 ["on_change"] = ShopHandler_OnAncientArmorChange,
             },
             ["damage"] = {
@@ -39,6 +42,16 @@ function BShop:Init()
                 ["cost"] = 1000,  -- Base cost
                 ["cost_increase"] = 250,
                 ["own"] = 0,
+                ["max"] = -1,
+                ["on_change"] = NO_HANDLER,
+            },
+            ["magical_res"] = {
+                ["bonus"] = 0,
+                ["bonus_per_own"] = 10,
+                ["cost"] = 1300,  -- Base cost
+                ["cost_increase"] = 1000,
+                ["own"] = 0,
+                ["max"] = -1,
                 ["on_change"] = NO_HANDLER,
             },
         }
@@ -93,17 +106,21 @@ function BShop:DoBuy(playerID, team, bonus_key)
     local cost = BShop.upgrades[team][bonus_key]["cost"]
 
     if PlayerResource:GetGold(playerID) >= cost then
-        PlayerResource:ModifyGold(playerID, -1 * cost, false, DOTA_ModifyGold_Building)
+        if BShop.upgrades[team][bonus_key]["max"] == -1 or BShop.upgrades[team][bonus_key]["own"] < BShop.upgrades[team][bonus_key]["max"] then
+            PlayerResource:ModifyGold(playerID, -1 * cost, false, DOTA_ModifyGold_Building)
 
-        BShop.upgrades[team][bonus_key]["own"] = BShop.upgrades[team][bonus_key]["own"] + 1
-        BShop.upgrades[team][bonus_key]["cost"] = BShop.upgrades[team][bonus_key]["cost"] + BShop.upgrades[team][bonus_key]["cost_increase"]
-        BShop.upgrades[team][bonus_key]["bonus"] = BShop.upgrades[team][bonus_key]["bonus"] + BShop.upgrades[team][bonus_key]["bonus_per_own"]
+            BShop.upgrades[team][bonus_key]["own"] = BShop.upgrades[team][bonus_key]["own"] + 1
+            BShop.upgrades[team][bonus_key]["cost"] = BShop.upgrades[team][bonus_key]["cost"] + BShop.upgrades[team][bonus_key]["cost_increase"]
+            BShop.upgrades[team][bonus_key]["bonus"] = BShop.upgrades[team][bonus_key]["bonus"] + BShop.upgrades[team][bonus_key]["bonus_per_own"]
 
-        BShop.upgrades[team][bonus_key]["on_change"](team, bonus_key)
+            BShop.upgrades[team][bonus_key]["on_change"](team, bonus_key)
 
-        BShop:PlayBuyEffect(playerID)
+            BShop:PlayBuyEffect(playerID)
 
-        BShop:NotifyUpdateTable()
+            BShop:NotifyUpdateTable()
+        else
+            SendErrorMessage(playerID, "#dota_hud_error_max_buff_own")
+        end
     else
         SendErrorMessage(playerID, "#dota_hud_error_not_enough_gold")
     end

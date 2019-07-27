@@ -12,3 +12,4 @@
 
 "dota_hud_error_forbidden_rule_active"      "Can't teleport while there is a Forbidden Rule Active"
 "dota_hud_error_forbidden_life_stealer_infest"  "Infest will not work, this is not Mo'rokai"
+"dota_hud_error_max_buff_own"       "Buff is already maxed out"
