@@ -24,9 +24,6 @@ function GameMode:InitGameMode()
 	self.titan_spawn_radiant = Entities:FindByName(nil, "titan_spawn_radiant")
 	self.titan_spawn_dire = Entities:FindByName(nil, "titan_spawn_dire")
 
-	self.waypoint_radiant = Entities:FindByName(nil, "waypoint_radiant_1")
-	self.waypoint_dire = Entities:FindByName(nil, "waypoint_dire_1")
-
 	GameRules:SetShowcaseTime(0)
 
 	GameRules:SetCustomGameSetupAutoLaunchDelay(3.0)
@@ -237,8 +234,8 @@ end
 
 function GameMode:SpawnTitans()
 	Notifications:TopToAll({text="The Titans Are Emerging", duration=6})
-	TitanSpawner:SpawnTitan(DOTA_TEAM_GOODGUYS, self.titan_spawn_radiant:GetAbsOrigin(), self.waypoint_radiant, self.ancient_dire, self.titan_round)
-	TitanSpawner:SpawnTitan(DOTA_TEAM_BADGUYS, self.titan_spawn_dire:GetAbsOrigin(), self.waypoint_dire, self.ancient_radiant, self.titan_round)
+	TitanSpawner:SpawnTitan(DOTA_TEAM_GOODGUYS, self.titan_spawn_radiant:GetAbsOrigin(), self.ancient_dire, self.titan_round)
+	TitanSpawner:SpawnTitan(DOTA_TEAM_BADGUYS, self.titan_spawn_dire:GetAbsOrigin(), self.ancient_radiant, self.titan_round)
 
 	self.titan_round = self.titan_round + 1
 end

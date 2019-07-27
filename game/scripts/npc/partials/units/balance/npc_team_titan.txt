@@ -1,5 +1,7 @@
 "npc_team_titan"
 {
+    "vscripts"					"ai/ai_titan.lua"
+
     "Model"						"models/creeps/roshan/roshan.vmdl"
     "BaseClass"					"npc_dota_creature"
     "SoundSet"					"Roshan"

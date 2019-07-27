@@ -276,3 +276,8 @@ function kill_dummy(dummy)
 		end
 	)
 end
+
+
+function AliveAndNonNil(unit)
+	return (unit and not unit:IsNull() and unit:IsAlive())
+end
