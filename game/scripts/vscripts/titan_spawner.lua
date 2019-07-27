@@ -17,14 +17,7 @@ function TitanSpawner:CalculateStats(team, round)
 end
 
 
-function TitanSpawner:SpawnTitan(team, location, target, round)
-	--print("TitanSpawner:SpawnTitan")
-
-	local titan = CreateUnitByName("npc_team_titan", location, true, nil, nil, team)
-	titan.is_titan = true
-	titan:AddNewModifier(titan, nil, "modifier_titan", {})
-
-	local stats = TitanSpawner:CalculateStats(team, round)
+function TitanSpawner:ApplyStats(titan, stats)
 	titan:CreatureLevelUp(stats.level)
 
 	titan:SetMaxHealth(stats.health)
@@ -34,4 +27,16 @@ function TitanSpawner:SpawnTitan(team, location, target, round)
 	titan:SetBaseDamageMin(stats.damage_min)
 	titan:SetBaseDamageMax(stats.damage_max)
 	titan:SetPhysicalArmorBaseValue(stats.armor)
+end
+
+
+function TitanSpawner:SpawnTitan(team, location, target, round)
+	--print("TitanSpawner:SpawnTitan")
+
+	local titan = CreateUnitByName("npc_team_titan", location, true, nil, nil, team)
+	titan.is_titan = true
+	titan:AddNewModifier(titan, nil, "modifier_titan", {})
+
+	local stats = TitanSpawner:CalculateStats(team, round)
+	TitanSpawner:ApplyStats(titan, stats)
 end
