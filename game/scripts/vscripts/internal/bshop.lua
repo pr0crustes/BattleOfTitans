@@ -4,80 +4,81 @@ if BShop == nil then
 end
 
 
+function BShop:DefaultDict()
+    return {
+        ["health"] = {
+            ["bonus"] = 0,
+            ["bonus_per_own"] = 1000,
+            ["cost"] = 500,  -- Base cost
+            ["cost_increase"] = 300,
+            ["own"] = 0,
+            ["max"] = -1,
+            ["on_change"] = NO_HANDLER,
+        },
+        ["armor"] = {
+            ["bonus"] = 0,
+            ["bonus_per_own"] = 1,
+            ["cost"] = 300,  -- Base cost
+            ["cost_increase"] = 600,
+            ["own"] = 0,
+            ["max"] = -1,
+            ["on_change"] = NO_HANDLER,
+        },
+        ["ancient_armor"] = {
+            ["bonus"] = 0,
+            ["bonus_per_own"] = 1,
+            ["cost"] = 500,  -- Base cost
+            ["cost_increase"] = 700,
+            ["own"] = 0,
+            ["max"] = -1,
+            ["on_change"] = ShopHandler_OnAncientArmorChange,
+        },
+        ["damage"] = {
+            ["bonus"] = 0,
+            ["bonus_per_own"] = 100,
+            ["cost"] = 1000,  -- Base cost
+            ["cost_increase"] = 250,
+            ["own"] = 0,
+            ["max"] = -1,
+            ["on_change"] = NO_HANDLER,
+        },
+        ["magical_res"] = {
+            ["bonus"] = 0,
+            ["bonus_per_own"] = 10,
+            ["cost"] = 1300,  -- Base cost
+            ["cost_increase"] = 1000,
+            ["own"] = 0,
+            ["max"] = 6,
+            ["on_change"] = NO_HANDLER,
+        },
+        ["heal_aura"] = {
+            ["bonus"] = 0,
+            ["bonus_per_own"] = 1,
+            ["cost"] = 4000,  -- Base cost
+            ["cost_increase"] = 0,
+            ["own"] = 0,
+            ["max"] = 1,
+            ["on_change"] = NO_HANDLER,
+        },
+        ["speed_aura"] = {
+            ["bonus"] = 0,
+            ["bonus_per_own"] = 1,
+            ["cost"] = 4000,  -- Base cost
+            ["cost_increase"] = 0,
+            ["own"] = 0,
+            ["max"] = 1,
+            ["on_change"] = NO_HANDLER,
+        },
+    }
+end
+
+
 function BShop:Init()
     CustomGameEventManager:RegisterListener("bshop_event_buy_buff", Dynamic_Wrap(BShop, "BuyBuff"))
 
-    function bonus_dict()
-        return {
-            ["health"] = {
-                ["bonus"] = 0,
-                ["bonus_per_own"] = 1000,
-                ["cost"] = 500,  -- Base cost
-                ["cost_increase"] = 300,
-                ["own"] = 0,
-                ["max"] = -1,
-                ["on_change"] = NO_HANDLER,
-            },
-            ["armor"] = {
-                ["bonus"] = 0,
-                ["bonus_per_own"] = 1,
-                ["cost"] = 300,  -- Base cost
-                ["cost_increase"] = 600,
-                ["own"] = 0,
-                ["max"] = -1,
-                ["on_change"] = NO_HANDLER,
-            },
-            ["ancient_armor"] = {
-                ["bonus"] = 0,
-                ["bonus_per_own"] = 1,
-                ["cost"] = 500,  -- Base cost
-                ["cost_increase"] = 700,
-                ["own"] = 0,
-                ["max"] = -1,
-                ["on_change"] = ShopHandler_OnAncientArmorChange,
-            },
-            ["damage"] = {
-                ["bonus"] = 0,
-                ["bonus_per_own"] = 100,
-                ["cost"] = 1000,  -- Base cost
-                ["cost_increase"] = 250,
-                ["own"] = 0,
-                ["max"] = -1,
-                ["on_change"] = NO_HANDLER,
-            },
-            ["magical_res"] = {
-                ["bonus"] = 0,
-                ["bonus_per_own"] = 10,
-                ["cost"] = 1300,  -- Base cost
-                ["cost_increase"] = 1000,
-                ["own"] = 0,
-                ["max"] = 6,
-                ["on_change"] = NO_HANDLER,
-            },
-            ["heal_aura"] = {
-                ["bonus"] = 0,
-                ["bonus_per_own"] = 1,
-                ["cost"] = 4000,  -- Base cost
-                ["cost_increase"] = 0,
-                ["own"] = 0,
-                ["max"] = 1,
-                ["on_change"] = NO_HANDLER,
-            },
-            ["speed_aura"] = {
-                ["bonus"] = 0,
-                ["bonus_per_own"] = 1,
-                ["cost"] = 4000,  -- Base cost
-                ["cost_increase"] = 0,
-                ["own"] = 0,
-                ["max"] = 1,
-                ["on_change"] = NO_HANDLER,
-            },
-        }
-    end
-
     BShop.upgrades = {
-        [DOTA_TEAM_GOODGUYS] = bonus_dict(),
-        [DOTA_TEAM_BADGUYS] = bonus_dict(),
+        [DOTA_TEAM_GOODGUYS] = BShop:DefaultDict(),
+        [DOTA_TEAM_BADGUYS] = BShop:DefaultDict(),
     }
 
     BShop:NotifyUpdateTable()
