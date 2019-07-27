@@ -55,6 +55,7 @@ function OnBShopChange(table, key, data) {
             "magical_res",
             "damage",
             "heal_aura",
+            "speed_aura",
             "ancient_armor",
         ];
 

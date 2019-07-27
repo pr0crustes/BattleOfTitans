@@ -15,6 +15,7 @@ function TitanSpawner:CalculateStats(team, round)
 		armor = (2 * round) + BShop:GetBonus(team, "armor"),
 		magical_res = -25 + math.min((round - 1) * 3, 25) + BShop:GetBonus(team, "magical_res"),
 		heal_aura = BShop:GetBonus(team, "heal_aura"),
+		speed_aura = BShop:GetBonus(team, "speed_aura"),
 	}
 end
 
@@ -34,6 +35,9 @@ function TitanSpawner:ApplyStats(titan, stats)
 
 	if stats.heal_aura == 1 then
 		titan:AddAbility("shop_heal_aura"):SetLevel(1)
+	end
+	if stats.speed_aura == 1 then
+		titan:AddAbility("shop_speed_aura"):SetLevel(1)
 	end
 end
 

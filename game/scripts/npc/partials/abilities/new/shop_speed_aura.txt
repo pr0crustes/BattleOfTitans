@@ -1,0 +1,49 @@
+"shop_speed_aura"
+{
+    "BaseClass"						"ability_datadriven"
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName" 			"shop_speed_aura"
+    "MaxLevel"                      "1"
+
+    "AbilityCastRange"				"900"
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "bonus_speed"		    "15"
+        }
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "radius"                "900"
+        }
+    }
+    
+    "Modifiers"
+    {
+        "modifier_shop_speed_aura_aura"
+        {
+            "Passive"               "1"
+            "IsHidden"              "1"
+
+            "Aura"                  "modifier_shop_speed_aura"
+            "Aura_Radius"           "%radius"
+            "Aura_Teams"            "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+            "Aura_Types"            "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+            "Aura_Flags"            "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+            "Aura_ApplyToCaster" 	"0"
+        }
+
+        "modifier_shop_speed_aura"
+        {
+            "TextureName"		    "shop_speed_aura"
+
+            "Properties" 
+            {
+                "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"        "%bonus_speed"
+            }
+        }
+    }
+}

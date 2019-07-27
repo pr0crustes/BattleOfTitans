@@ -1,0 +1,6 @@
+"DOTA_Tooltip_ability_shop_speed_aura"					"Speed Aura"
+"DOTA_Tooltip_ability_shop_speed_aura_Description"		"Increases movespeed of allies in a %radius% radius."
+"DOTA_Tooltip_ability_shop_speed_aura_bonus_speed"		"%BONUS MOVESPEED:"
+
+"DOTA_Tooltip_modifier_shop_speed_aura"			        "Speed Aura"
+"DOTA_Tooltip_modifier_shop_speed_aura_Description"	    "Movespeed increased by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%."
