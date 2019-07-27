@@ -7,6 +7,7 @@
 "bshop_armor_description"   "+1 Titan Armor."
 "bshop_ancient_armor_description"   "+1 Ancient Armor."
 "bshop_damage_description"  "+100 Titan Damage."
+"bshop_magical_res_description"  "+10% Titan Magical Resistance."
 "bshop_own"                 "Own: {d:own}"
 "bshop_cost"                "Cost: {d:cost}"
 

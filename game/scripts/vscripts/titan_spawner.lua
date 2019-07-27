@@ -13,7 +13,7 @@ function TitanSpawner:CalculateStats(team, round)
 		damage_min = (100 + 100 * round) + BShop:GetBonus(team, "damage"),
 		damage_max = (100 + 100 * round) + BShop:GetBonus(team, "damage"),
 		armor = (2 * round) + BShop:GetBonus(team, "armor"),
-		magical_res = -25 + math.min(round, 25) + BShop:GetBonus(team, "magical_res")
+		magical_res = -25 + math.min((round - 1) * 3, 25) + BShop:GetBonus(team, "magical_res")
 	}
 end
 

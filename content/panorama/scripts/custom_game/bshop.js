@@ -45,7 +45,7 @@ function OnBShopChange(table, key, data) {
 // On Init
 (function() {
     function CreateShops() {
-        var shops = ["health", "armor", "damage", "ancient_armor"];
+        var shops = ["health", "armor", "magical_res", "damage", "ancient_armor"];
 
         var bshop_panel = find_hud_element("bshop_shops_container");
 

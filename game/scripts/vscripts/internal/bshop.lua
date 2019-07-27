@@ -51,7 +51,7 @@ function BShop:Init()
                 ["cost"] = 1300,  -- Base cost
                 ["cost_increase"] = 1000,
                 ["own"] = 0,
-                ["max"] = -1,
+                ["max"] = 6,
                 ["on_change"] = NO_HANDLER,
             },
         }
