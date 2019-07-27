@@ -46,7 +46,7 @@ function modifier_titan:GetModifierProvidesFOWVision()
     return 1
 end
 
-
+--[[
 if IsServer() then
     function modifier_titan:OnCreated(keys)
         self:StartIntervalThink(1.0)
@@ -57,3 +57,4 @@ if IsServer() then
 		self:GetParent():RemoveModifierByName("modifier_maledict")
     end
 end
+]]
