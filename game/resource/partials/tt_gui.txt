@@ -8,6 +8,7 @@
 "bshop_ancient_armor_description"   "+1 Ancient Armor."
 "bshop_damage_description"  "+100 Titan Damage."
 "bshop_magical_res_description"  "+10% Titan Magical Resistance."
+"bshop_heal_aura_description"   "Titan periodically heals allies in a 700 radius by 1% of their max hp."
 "bshop_own"                 "Own: {s:own}"
 "bshop_cost"                "Cost: {d:cost}"
 

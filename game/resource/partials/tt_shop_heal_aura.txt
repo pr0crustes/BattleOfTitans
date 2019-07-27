@@ -1,0 +1,6 @@
+"DOTA_Tooltip_ability_shop_heal_aura"					"Heal Aura"
+"DOTA_Tooltip_ability_shop_heal_aura_Description"		"Periodically restores Health of allies in a %radius% radius."
+"DOTA_Tooltip_ability_shop_heal_aura_hp_regen_pct"		"%HEALTH REGEN:"
+
+"DOTA_Tooltip_modifier_shop_heal_aura"			        "Heal Aura"
+"DOTA_Tooltip_modifier_shop_heal_aura_Description"	    "Healing when nearby your titan."

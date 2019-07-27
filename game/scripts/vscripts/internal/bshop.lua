@@ -54,6 +54,15 @@ function BShop:Init()
                 ["max"] = 6,
                 ["on_change"] = NO_HANDLER,
             },
+            ["heal_aura"] = {
+                ["bonus"] = 0,
+                ["bonus_per_own"] = 1,
+                ["cost"] = 4000,  -- Base cost
+                ["cost_increase"] = 0,
+                ["own"] = 0,
+                ["max"] = 1,
+                ["on_change"] = NO_HANDLER,
+            },
         }
     end
 

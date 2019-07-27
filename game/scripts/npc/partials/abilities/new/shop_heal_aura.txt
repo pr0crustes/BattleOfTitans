@@ -1,0 +1,49 @@
+"shop_heal_aura"
+{
+    "BaseClass"						"ability_datadriven"
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName" 			"shop_heal_aura"
+    "MaxLevel"                      "1"
+
+    "AbilityCastRange"				"700"
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "hp_regen_pct"		    "1"
+        }
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "radius"                "700"
+        }
+    }
+    
+    "Modifiers"
+    {
+        "modifier_shop_heal_aura_aura"
+        {
+            "Passive"               "1"
+            "IsHidden"              "1"
+
+            "Aura"                  "modifier_shop_heal_aura"
+            "Aura_Radius"           "%radius"
+            "Aura_Teams"            "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+            "Aura_Types"            "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+            "Aura_Flags"            "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+            "Aura_ApplyToCaster" 	"0"
+        }
+
+        "modifier_shop_heal_aura"
+        {
+            "TextureName"		    "shop_heal_aura"
+
+            "Properties" 
+            {
+                "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"        "%hp_regen_pct"
+            }
+        }
+    }
+}
