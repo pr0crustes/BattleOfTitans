@@ -41,8 +41,8 @@
     // Bounty
     //----------------------------------------------------------------
     "BountyXP"					"90"		// Experience earn.
-    "BountyGoldMin"				"50"		// Gold earned min.
-    "BountyGoldMax"				"50"		// Gold earned max.
+    "BountyGoldMin"				"60"		// Gold earned min.
+    "BountyGoldMax"				"60"		// Gold earned max.
 
     // Movement
     //----------------------------------------------------------------
