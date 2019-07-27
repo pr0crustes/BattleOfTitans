@@ -17,11 +17,15 @@ function BuyBuff(shop_buff) {
 }
 
 
-function UpdateBShop(shop_name, cost, own) {
+function UpdateBShop(shop_name, cost, own, max) {
     var panel = $("#buy_" + shop_name);
     if (panel) {
         panel.FindChildTraverse("bshop_cost").SetDialogVariableInt("cost", cost);
-        panel.FindChildTraverse("bshop_own").SetDialogVariableInt("own", own);
+        var own_text = own.toString();
+        if (max > -1) {
+            own_text += "/" + max.toString();
+        }
+        panel.FindChildTraverse("bshop_own").SetDialogVariable("own", own_text);
     }
 }
 
@@ -36,7 +40,7 @@ function OnBShopChange(table, key, data) {
         Object.keys(team_info).forEach(function(key) {
             var info = team_info[key];
 
-            UpdateBShop(key, info.cost, info.own);
+            UpdateBShop(key, info.cost, info.own, info.max);
         });
     }
 }
