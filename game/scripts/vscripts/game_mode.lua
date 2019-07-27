@@ -42,6 +42,8 @@ function GameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetFountainPercentageManaRegen(0)
 	GameRules:GetGameModeEntity():SetFountainConstantManaRegen(0)
 
+	GameRules:GetGameModeEntity():SetRuneEnabled(DOTA_RUNE_DOUBLEDAMAGE, false)
+
 	BShop:Init()
 
 	ListenToGameEvent("npc_spawned", Dynamic_Wrap(GameMode, "OnEntitySpawned"), self)
