@@ -59,7 +59,9 @@ function OnBShopChange(table, key, data) {
                 shop_panel.FindChildTraverse("image_icon").SetImage("file://{images}/custom_game/shops/shop_" + shop_name + ".png");
                 shop_panel.FindChildTraverse("bshop_description").text = $.Localize("bshop_" + shop_name + "_description");
                 shop_panel.FindChildTraverse("bshop_buy_button").SetPanelEvent("onactivate", function() {
-                    BuyBuff(shop_name);
+                    if (open) {  // Prevents enter and out of window clicks from triggering the button.
+                        BuyBuff(shop_name);
+                    }
                 });
             }
         });
