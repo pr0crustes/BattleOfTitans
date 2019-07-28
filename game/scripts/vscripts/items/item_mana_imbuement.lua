@@ -60,10 +60,8 @@ function modifier_mana_imbuement_first:OnDeath(keys)
                 end
             end
 
-            if killer and killer and killer:IsHero() and killer:IsAlive() and killer:GetTeam() ~= unit:GetTeam() then
-                local ability = self:GetAbility()
-
-                killer:AddNewModifier(unit, ability, "modifier_mana_imbuement_second", { duration = 90 })
+            if killer and killer and killer:IsHero() and killer:IsAlive() and killer:GetTeam() ~= unit:GetTeam() and not killer:HasModifier("modifier_mana_imbuement_first") then
+                killer:AddNewModifier(unit, self:GetAbility(), "modifier_mana_imbuement_second", { duration = 90 })
             end
         end
     end
