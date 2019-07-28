@@ -1,0 +1,4 @@
+"item_tpscroll"
+{
+    "AbilityCooldown"				"100.0"
+}

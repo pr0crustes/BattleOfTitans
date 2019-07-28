@@ -1,0 +1,4 @@
+"item_travel_boots_2"
+{
+    "AbilityCooldown"				"60.0"
+}
