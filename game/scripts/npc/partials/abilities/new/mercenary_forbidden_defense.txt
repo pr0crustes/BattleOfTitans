@@ -8,7 +8,7 @@
 
     "precache"
     {
-        "particle"                  "particles/units/heroes/hero_huskar/huskar_burning_spear_debuff.vpcf"
+        "particle"                  "particles/dev/curlnoise_test.vpcf"
     }
 
     "AbilitySpecial"
@@ -54,7 +54,7 @@
                 "AttachEffect"
                 {
                     "Target"                    "TARGET"
-                    "EffectName"                "particles/units/heroes/hero_huskar/huskar_burning_spear_debuff.vpcf"
+                    "EffectName"                "particles/dev/curlnoise_test.vpcf"
                     "EffectAttachType"          "follow_origin"
                 }
             }
