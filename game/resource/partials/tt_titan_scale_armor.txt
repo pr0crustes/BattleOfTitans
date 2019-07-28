@@ -1,2 +1,2 @@
 "DOTA_Tooltip_ability_titan_scale_armor"							"Scale Armor"
-"DOTA_Tooltip_ability_titan_scale_armor_Description"				"Instances of damage agains this target cannot deal more damage than 1.5% of it max health."
+"DOTA_Tooltip_ability_titan_scale_armor_Description"				"Instances of damage agains this target cannot deal more damage than 2% of it max health."

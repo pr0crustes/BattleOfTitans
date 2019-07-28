@@ -74,7 +74,7 @@ function GameMode:DamageFilter(keys)
 
 			-- titan_scale_armor
 			if victim_unit.is_titan then
-				keys.damage = math.min(keys.damage, victim_unit:GetMaxHealth() * 0.015)
+				keys.damage = math.min(keys.damage, victim_unit:GetMaxHealth() * 0.02)
 			end
 		end
 	end
