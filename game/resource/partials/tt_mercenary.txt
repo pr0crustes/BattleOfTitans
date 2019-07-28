@@ -9,6 +9,14 @@
 "DOTA_Tooltip_ability_mercenary_forbidden_rule"					    "Mercenary: Forbidden Rule"
 "DOTA_Tooltip_ability_mercenary_forbidden_rule_Description"		    "Drops Forbidden Rule on death."
 
+"DOTA_Tooltip_ability_mercenary_forbidden_chaos"					    "Mercenary: Forbidden Chaos"
+"DOTA_Tooltip_ability_mercenary_forbidden_chaos_Description"		    "Periodically drops a powerfull meteor on a nearby enemy that is attacking the Prowler Shaman."
+"DOTA_Tooltip_ability_mercenary_forbidden_chaos_land_time"            "LAND TIME:"
+"DOTA_Tooltip_ability_mercenary_forbidden_chaos_damage"               "DAMAGE:"
+"DOTA_Tooltip_ability_mercenary_forbidden_chaos_damage_growth"        "DAMAGE GROWTH:"
+"DOTA_Tooltip_ability_mercenary_forbidden_chaos_damage_max_hp"        "%MAX HP AS DAMAGE:"
+"DOTA_Tooltip_ability_mercenary_forbidden_chaos_damage_radius"        "DAMAGE RADIUS:"
+
 "DOTA_Tooltip_ability_mercenary_frost_splash"					    "Mercenary: Frost Splash"
 "DOTA_Tooltip_ability_mercenary_frost_splash_Description"		    "Summons ice spheres that explodes after a short delay. The explosion deals damage and slows."
 "DOTA_Tooltip_ability_mercenary_frost_splash_delay"                 "DELAY:"

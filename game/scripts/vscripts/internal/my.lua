@@ -177,8 +177,11 @@ function kill_dummy(dummy)
 end
 
 
-function create_dummy(caster, pos)
-	return CreateUnitByName("npc_dummy_unit", pos, false, caster, caster, caster:GetTeamNumber())
+LinkLuaModifier("modifier_damageless", "modifiers/damageless.lua", LUA_MODIFIER_MOTION_NONE)
+function CreateDummy(caster, pos)
+	local dummy = CreateUnitByName("npc_dummy_unit", pos, false, caster, caster, caster:GetTeamNumber())
+	dummy:AddNewModifier(dummy, nil, "modifier_damageless", {})
+	return dummy
 end
 
 
