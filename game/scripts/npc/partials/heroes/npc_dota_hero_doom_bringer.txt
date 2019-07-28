@@ -1,0 +1,4 @@
+"npc_dota_hero_doom_bringer"
+{
+    "Ability13"		"special_bonus_cooldown_reduction_20"
+}
