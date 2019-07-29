@@ -10,6 +10,7 @@
 "bshop_magical_res_description"  "+10% Titan Magical Resistance."
 "bshop_heal_aura_description"   "Titan periodically heals allies in a 700 radius by 1% of their max hp."
 "bshop_speed_aura_description"   "Titan increases movespeed of allies in a 900 radius by 15%."
+"bshop_ancient_heal_aura_description"   "Ancient periodically heals allies in a 900 radius by 2% of their max hp."
 "bshop_own"                 "Own: {s:own}"
 "bshop_cost"                "Cost: {d:cost}"
 

@@ -57,6 +57,7 @@ function OnBShopChange(table, key, data) {
             "heal_aura",
             "speed_aura",
             "ancient_armor",
+            "ancient_heal_aura",
         ];
 
         var bshop_panel = find_hud_element("bshop_shops_container");
