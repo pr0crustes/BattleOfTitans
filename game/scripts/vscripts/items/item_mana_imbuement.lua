@@ -19,6 +19,13 @@ LinkLuaModifier("modifier_mana_imbuement_first", "items/item_mana_imbuement.lua"
 
 modifier_mana_imbuement_first = class({})
 
+function modifier_mana_imbuement_first:GetEffectName()
+    return "particles/custom/mana_imbuement.vpcf"
+end
+
+function modifier_mana_imbuement_first:GetEffectAttachType()
+    return PATTACH_OVERHEAD_FOLLOW
+end
 
 function modifier_mana_imbuement_first:GetTexture()
     return "mercenary_blue"
@@ -91,6 +98,13 @@ LinkLuaModifier("modifier_mana_imbuement_second", "items/item_mana_imbuement.lua
 
 modifier_mana_imbuement_second = class({})
 
+function modifier_mana_imbuement_second:GetEffectName()
+    return "particles/custom/mana_imbuement.vpcf"
+end
+
+function modifier_mana_imbuement_second:GetEffectAttachType()
+    return PATTACH_OVERHEAD_FOLLOW
+end
 
 function modifier_mana_imbuement_second:GetTexture()
     return "mercenary_blue"
