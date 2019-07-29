@@ -45,7 +45,7 @@ function BShop:DefaultDict()
         ["damage"] = {
             ["bonus"] = 0,
             ["bonus_per_own"] = 100,
-            ["cost"] = 1000,  -- Base cost
+            ["cost"] = 750,  -- Base cost
             ["cost_increase"] = 250,
             ["own"] = 0,
             ["max"] = -1,
@@ -54,7 +54,7 @@ function BShop:DefaultDict()
         ["magical_res"] = {
             ["bonus"] = 0,
             ["bonus_per_own"] = 10,
-            ["cost"] = 1300,  -- Base cost
+            ["cost"] = 1000,  -- Base cost
             ["cost_increase"] = 1000,
             ["own"] = 0,
             ["max"] = 6,
