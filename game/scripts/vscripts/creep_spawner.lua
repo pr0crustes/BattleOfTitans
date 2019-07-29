@@ -69,7 +69,7 @@ end
 function CreepSpawner:SpawnCreepsAtPos(pos, foward_vector, creep_list, count, round)
 	--print("CreepSpawner:SpawnCreepsAtPos")
 
-	local stats_multiplier = 1 + ((round - 1) * 0.04)
+	local stats_multiplier = 1 + ((round - 1) * 0.05)
 	local bounty_multiplier = 1 + ((round - 1) * 0.08)
 
 	for i = 1, count do
