@@ -47,11 +47,6 @@
 			m_flRadiusMin = 60.0
 			m_flRadiusMax = 60.0
 		},
-		{
-			_class = "C_INIT_PositionOffset"
-			m_OffsetMin = [ 0.0, 0.0, 30.0 ]
-			m_OffsetMax = [ 0.0, 0.0, 60.0 ]
-		},
 	]
 	m_Emitters = 
 	[
@@ -73,8 +68,8 @@
 		},
 		{
 			_class = "C_OP_BoxConstraint"
-			m_vecMax = [ 50.0, 50.0, 100.0 ]
-			m_vecMin = [ -50.0, -50.0, 30.0 ]
+			m_vecMax = [ 50.0, 50.0, 20.0 ]
+			m_vecMin = [ -50.0, -50.0, 0.0 ]
 		},
 	]
 	m_Children = 
