@@ -68,6 +68,7 @@ function GameMode:DamageFilter(keys)
 		local damage = keys.damage
 
 		if attacker_unit and victim_unit then
+			-- ancient_damage_guard
 			if victim_unit.is_ancient and not attacker_unit.is_titan then
 				if attacker_unit.GetPlayerID and PlayerResource:IsValidPlayerID(attacker_unit:GetPlayerID()) then
 					SendErrorMessage(attacker_unit:GetPlayerID(), "#dota_hud_error_no_damage_ancient")
