@@ -18,8 +18,8 @@ function BShop:DefaultDict()
         ["armor"] = {
             ["bonus"] = 0,
             ["bonus_per_own"] = 1,
-            ["cost"] = 300,  -- Base cost
-            ["cost_increase"] = 600,
+            ["cost"] = 400,  -- Base cost
+            ["cost_increase"] = 400,
             ["own"] = 0,
             ["max"] = -1,
             ["on_change"] = NO_HANDLER,
